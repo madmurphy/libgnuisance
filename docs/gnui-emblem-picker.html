@@ -1,0 +1,1631 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GnuiEmblemPicker: GNUIsance Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="GNUIsance Reference Manual">
+<link rel="up" href="widgets.html" title="Widgets">
+<link rel="prev" href="widgets.html" title="Widgets">
+<link rel="next" href="gnui-flow.html" title="GnuiFlow">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#gnui-emblem-picker.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#gnui-emblem-picker.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#gnui-emblem-picker.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#gnui-emblem-picker.properties" class="shortcut">Properties</a></span><span id="nav_signals">  <span class="dim">|</span> 
+                  <a href="#gnui-emblem-picker.signals" class="shortcut">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="widgets.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="widgets.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="gnui-flow.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="gnui-emblem-picker"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gnui-emblem-picker.top_of_page"></a>GnuiEmblemPicker</span></h2>
+<p>GnuiEmblemPicker — An emblem picker</p>
+</td>
+<td class="gallery_image" valign="top" align="right"><img src="gnui-emblem-picker-screenshot.png"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="gnui-emblem-picker.stability-level"></a><h2>Stability Level</h2>
+<acronym title="Unstable interfaces are experimental or transitional. They are typically used to
+give outside developers early access to new or rapidly changing technology, or
+to provide an interim solution to a problem where a more general solution is
+anticipated. No claims are made about either source or binary compatibility from
+one minor release to the next.
+
+The Unstable interface level is a warning that these interfaces are  subject to
+change without warning and should not be used in unbundled products.
+
+Given such caveats, customer impact need not be a factor when considering
+incompatible changes to an Unstable interface in a major or minor release.
+Nonetheless, when such changes are introduced, the changes should still be
+mentioned in the release notes for the affected release.
+"><span class="acronym">Unstable</span></acronym>, unless otherwise indicated
+</div>
+<div class="refsect1">
+<a name="gnui-emblem-picker.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPickerForeachFunc" title="GnuiEmblemPickerForeachFunc ()">*GnuiEmblemPickerForeachFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPickerForeachSavedFileFunc" title="GnuiEmblemPickerForeachSavedFileFunc ()">*GnuiEmblemPickerForeachSavedFileFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GtkWidget</span> *
+</td>
+<td class="function_name">
+<a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-new" title="gnui_emblem_picker_new ()">gnui_emblem_picker_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-save" title="gnui_emblem_picker_save ()">gnui_emblem_picker_save</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-refresh-states" title="gnui_emblem_picker_refresh_states ()">gnui_emblem_picker_refresh_states</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-toggle-emblem" title="gnui_emblem_picker_toggle_emblem ()">gnui_emblem_picker_toggle_emblem</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-set-emblem-state" title="gnui_emblem_picker_set_emblem_state ()">gnui_emblem_picker_set_emblem_state</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-peek-mapped-files" title="gnui_emblem_picker_peek_mapped_files ()">gnui_emblem_picker_peek_mapped_files</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-get-mapped-files" title="gnui_emblem_picker_get_mapped_files ()">gnui_emblem_picker_get_mapped_files</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-set-mapped-files" title="gnui_emblem_picker_set_mapped_files ()">gnui_emblem_picker_set_mapped_files</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> * const *
+</td>
+<td class="function_name">
+<a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-peek-forbidden-emblems" title="gnui_emblem_picker_peek_forbidden_emblems ()">gnui_emblem_picker_peek_forbidden_emblems</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+</td>
+<td class="function_name">
+<a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-get-forbidden-emblems" title="gnui_emblem_picker_get_forbidden_emblems ()">gnui_emblem_picker_get_forbidden_emblems</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-set-forbidden-emblems" title="gnui_emblem_picker_set_forbidden_emblems ()">gnui_emblem_picker_set_forbidden_emblems</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-get-ensure-standard" title="gnui_emblem_picker_get_ensure_standard ()">gnui_emblem_picker_get_ensure_standard</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-set-ensure-standard" title="gnui_emblem_picker_set_ensure_standard ()">gnui_emblem_picker_set_ensure_standard</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-get-modified" title="gnui_emblem_picker_get_modified ()">gnui_emblem_picker_get_modified</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-set-modified" title="gnui_emblem_picker_set_modified ()">gnui_emblem_picker_set_modified</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-get-reveal-changes" title="gnui_emblem_picker_get_reveal_changes ()">gnui_emblem_picker_get_reveal_changes</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-set-reveal-changes" title="gnui_emblem_picker_set_reveal_changes ()">gnui_emblem_picker_set_reveal_changes</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-foreach" title="gnui_emblem_picker_foreach ()">gnui_emblem_picker_foreach</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-undo-all-selections" title="gnui_emblem_picker_undo_all_selections ()">gnui_emblem_picker_undo_all_selections</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-set-all-selections" title="gnui_emblem_picker_set_all_selections ()">gnui_emblem_picker_set_all_selections</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPickerSignalHandlerEmblemSelected" title="GnuiEmblemPickerSignalHandlerEmblemSelected ()">*GnuiEmblemPickerSignalHandlerEmblemSelected</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPickerSignalHandlerModifiedChanged" title="GnuiEmblemPickerSignalHandlerModifiedChanged ()">*GnuiEmblemPickerSignalHandlerModifiedChanged</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="gnui-emblem-picker.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker--ensure-standard" title="The “ensure-standard” property">ensure-standard</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-String-Utility-Functions.html#GStrv"><span class="type">GStrv</span></a></td>
+<td class="property_name"><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker--forbidden-emblems" title="The “forbidden-emblems” property">forbidden-emblems</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></td>
+<td class="property_name"><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker--mapped-files" title="The “mapped-files” property">mapped-files</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker--modified" title="The “modified” property">modified</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker--reveal-changes" title="The “reveal-changes” property">reveal-changes</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="gnui-emblem-picker.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="signal_proto_type">
+<col width="300px" class="signal_proto_name">
+<col width="200px" class="signal_proto_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker-emblem-selected" title="The “emblem-selected” signal">emblem-selected</a></td>
+<td class="signal_flags"><a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS">Run First</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker-modified-changed" title="The “modified-changed” signal">modified-changed</a></td>
+<td class="signal_flags"><a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS">Run First</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="GnuiEmblemPicker"></a><div class="refsect1">
+<a name="gnui-emblem-picker.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="gnui-emblem-picker.html#GNUI-TYPE-EMBLEM-PICKER:CAPS" title="GNUI_TYPE_EMBLEM_PICKER">GNUI_TYPE_EMBLEM_PICKER</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="gnui-emblem-picker.html#GnuiEmblemState" title="enum GnuiEmblemState">GnuiEmblemState</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPickerSaveFlags" title="enum GnuiEmblemPickerSaveFlags">GnuiEmblemPickerSaveFlags</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPickerSaveResult" title="enum GnuiEmblemPickerSaveResult">GnuiEmblemPickerSaveResult</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker-struct" title="GnuiEmblemPicker">GnuiEmblemPicker</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="gnui-emblem-picker.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span> GtkWidget
+            <span class="lineart">╰──</span> GnuiEmblemPicker
+</pre>
+</div>
+<div class="refsect1">
+<a name="gnui-emblem-picker.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GnuiEmblemPicker implements
+ GtkAccessible,  GtkBuildable and  GtkConstraintTarget.</p>
+</div>
+<div class="refsect1">
+<a name="gnui-emblem-picker.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;gnuisance/gnui-emblem-picker.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="gnui-emblem-picker.description"></a><h2>Description</h2>
+<p>The <code class="literal">GnuiEmblemPicker</code> widget allows interactively to manipulate the emblem
+    metadata of one or more files, providing support for inconsistent states.</p>
+</div>
+<div class="refsect1">
+<a name="gnui-emblem-picker.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="GnuiEmblemPickerForeachFunc"></a><h3>GnuiEmblemPickerForeachFunc ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<span class="c_punctuation">(</span>*GnuiEmblemPickerForeachFunc<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> *self</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *emblem_name</code></em>,
+                                <em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemState" title="enum GnuiEmblemState"><span class="type">GnuiEmblemState</span></a> saved_state</code></em>,
+                                <em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemState" title="enum GnuiEmblemState"><span class="type">GnuiEmblemState</span></a> current_state</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *inconsistent_group</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>A callback function type for <code class="literal"><a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-foreach" title="gnui_emblem_picker_foreach ()"><code class="function">gnui_emblem_picker_foreach()</code></a></code></p>
+<div class="refsect3">
+<a name="GnuiEmblemPickerForeachFunc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>emblem_name</p></td>
+<td class="parameter_description"><p>The emblem's name. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>saved_state</p></td>
+<td class="parameter_description"><p>The last saved state of the emblem. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>current_state</p></td>
+<td class="parameter_description"><p>The current state of the emblem. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>inconsistent_group</p></td>
+<td class="parameter_description"><p>The inconsistent
+group of files that can have the emblem assigned
+independently of the other files. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>The custom data
+provided by the user. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="GnuiEmblemPickerForeachFunc.returns"></a><h4>Returns</h4>
+<p>    <code class="literal">true</code> if the for-each loop must continue, <code class="literal">false</code> otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiEmblemPickerForeachSavedFileFunc"></a><h3>GnuiEmblemPickerForeachSavedFileFunc ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<span class="c_punctuation">(</span>*GnuiEmblemPickerForeachSavedFileFunc<span class="c_punctuation">)</span>
+                               (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GFile.html#GFile-struct"><span class="type">GFile</span></a> *self</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const *added_emblems</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const *removed_emblems</code></em>,
+                                <em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPickerSaveResult" title="enum GnuiEmblemPickerSaveResult"><span class="type">GnuiEmblemPickerSaveResult</span></a> result</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> *error</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>A callback function type for each saved file</p>
+<div class="refsect3">
+<a name="GnuiEmblemPickerForeachSavedFileFunc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>added_emblems</p></td>
+<td class="parameter_description"><p>The emblems added to
+the file, or <code class="literal">NULL</code>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>removed_emblems</p></td>
+<td class="parameter_description"><p>The emblems removed
+from the file, or <code class="literal">NULL</code>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>result</p></td>
+<td class="parameter_description"><p>The result of the save operation. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>The error. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>The custom data provided
+by the user. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="GnuiEmblemPickerForeachSavedFileFunc.returns"></a><h4>Returns</h4>
+<p>    <code class="literal">true</code> if the saving operations must carry on, <code class="literal">false</code>
+otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-emblem-picker-new"></a><h3>gnui_emblem_picker_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *
+gnui_emblem_picker_new (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> * const file_selection</code></em>,
+                        <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> enforce_xdg</code></em>,
+                        <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const * const forbidden_emblems</code></em>);</pre>
+<p>Create a new emblem picker widget</p>
+<p>    For the list of XDG standard emblems, please refer to
+    <a class="ulink" href="https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-0.4.html#idm45098400102912" target="_top">Icon Naming Specification, Table 6. Standard Emblem Icons</a>.</p>
+<div class="refsect3">
+<a name="gnui-emblem-picker-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>file_selection</p></td>
+<td class="parameter_description"><p>A <code class="literal">GList</code> containing
+<code class="literal">GFile</code> handles to map for their emblems. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>enforce_xdg</p></td>
+<td class="parameter_description"><p>If <code class="literal">true</code>, always show XDG standard emblems in the
+emblem picker, even if these are not supported by the
+current theme</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>forbidden_emblems</p></td>
+<td class="parameter_description"><p>The emblems to exclude. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-emblem-picker-new.returns"></a><h4>Returns</h4>
+<p>    The newly created emblem picker widget</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-emblem-picker-save"></a><h3>gnui_emblem_picker_save ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gnui_emblem_picker_save (<em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> * const self</code></em>,
+                         <em class="parameter"><code>const <a class="link" href="gnui-emblem-picker.html#GnuiEmblemPickerForeachSavedFileFunc" title="GnuiEmblemPickerForeachSavedFileFunc ()"><span class="type">GnuiEmblemPickerForeachSavedFileFunc</span></a> for_each_file</code></em>,
+                         <em class="parameter"><code>const <a class="link" href="gnui-emblem-picker.html#GnuiEmblemPickerSaveFlags" title="enum GnuiEmblemPickerSaveFlags"><span class="type">GnuiEmblemPickerSaveFlags</span></a> flags</code></em>,
+                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> * const cancellable</code></em>,
+                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> ** const error</code></em>,
+                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> for_each_data</code></em>);</pre>
+<p>Save the emblems currently selected into the files' metadata</p>
+<div class="refsect3">
+<a name="gnui-emblem-picker-save.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>for_each_file</p></td>
+<td class="parameter_description"><p>A function to call for each saved file
+according to the conditions expressed by the <em class="parameter"><code>flag</code></em>
+parameter. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>flags</p></td>
+<td class="parameter_description"><p>Save options flags</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>cancellable</p></td>
+<td class="parameter_description"><p>A <code class="literal">GCancellable</code>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>A <code class="literal">GError</code> or <code class="literal">NULL</code>; ignored unless
+<code class="literal">GNUI_EMBLEM_PICKER_SAVE_FLAG_ABORT_MODE</code> is present in
+<em class="parameter"><code>flags</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>for_each_data</p></td>
+<td class="parameter_description"><p>The custom data to pass to <em class="parameter"><code>for_each_file</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-emblem-picker-save.returns"></a><h4>Returns</h4>
+<p>    <code class="literal">true</code> if all the emblems were successfully saved, <code class="literal">false</code>
+otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-emblem-picker-refresh-states"></a><h3>gnui_emblem_picker_refresh_states ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_emblem_picker_refresh_states (<em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> * const self</code></em>);</pre>
+<p>Refresh the emblem picker's indicator glyphs</p>
+<p>    This function is useless unless you have just invoked
+    <code class="literal"><a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-save" title="gnui_emblem_picker_save ()"><code class="function">gnui_emblem_picker_save()</code></a></code> with
+    <code class="literal">GNUI_EMBLEM_PICKER_SAVE_FLAG_DONT_REFRESH</code>.</p>
+<div class="refsect3">
+<a name="gnui-emblem-picker-refresh-states.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-emblem-picker-toggle-emblem"></a><h3>gnui_emblem_picker_toggle_emblem ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gnui_emblem_picker_toggle_emblem (<em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> * const self</code></em>,
+                                  <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const emblem_name</code></em>);</pre>
+<p>Toggle/untoggle an emblem picker's emblem</p>
+<p>    This function behaves exactly like toggling/untoggling an emblem via user
+    input.</p>
+<div class="refsect3">
+<a name="gnui-emblem-picker-toggle-emblem.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>emblem_name</p></td>
+<td class="parameter_description"><p>The name of the emblem to
+toggle. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-emblem-picker-set-emblem-state"></a><h3>gnui_emblem_picker_set_emblem_state ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gnui_emblem_picker_set_emblem_state (<em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> * const self</code></em>,
+                                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const emblem_name</code></em>,
+                                     <em class="parameter"><code>const <a class="link" href="gnui-emblem-picker.html#GnuiEmblemState" title="enum GnuiEmblemState"><span class="type">GnuiEmblemState</span></a> state</code></em>,
+                                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> add_if_missing</code></em>);</pre>
+<p>Toggle/untoggle an emblem picker's emblem</p>
+<p>    When <em class="parameter"><code>add_if_missing</code></em>
+ is set to false this function behaves exactly like
+    toggling/untoggling an emblem via user input.</p>
+<div class="refsect3">
+<a name="gnui-emblem-picker-set-emblem-state.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>emblem_name</p></td>
+<td class="parameter_description"><p>The name of the emblem
+to set. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>state</p></td>
+<td class="parameter_description"><p>The state to assign to the emblem</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>add_if_missing</p></td>
+<td class="parameter_description"><p>If <code class="literal">true</code>, create the emblem when the emblem is not
+found</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-emblem-picker-peek-mapped-files"></a><h3>gnui_emblem_picker_peek_mapped_files ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+gnui_emblem_picker_peek_mapped_files (<em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> * const self</code></em>);</pre>
+<p>Get the <code class="literal">const</code> list of the files mapped by an emblem picker</p>
+<p><span class="annotation">[get-property mapped-files]</span></p>
+<div class="refsect3">
+<a name="gnui-emblem-picker-peek-mapped-files.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-emblem-picker-peek-mapped-files.returns"></a><h4>Returns</h4>
+<p>A <code class="literal">GList</code> containing <code class="literal">GFile</code> pointers (do not
+free or modify it). </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-emblem-picker-get-mapped-files"></a><h3>gnui_emblem_picker_get_mapped_files ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+gnui_emblem_picker_get_mapped_files (<em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> * const self</code></em>);</pre>
+<p>Get the list of the files mapped by an emblem picker</p>
+<div class="refsect3">
+<a name="gnui-emblem-picker-get-mapped-files.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-emblem-picker-get-mapped-files.returns"></a><h4>Returns</h4>
+<p>A newly allocated <code class="literal">GList</code> containing <code class="literal">GFile</code>
+handles (free it with <code class="literal">g_list_free_full(mapped_files,
+g_object_unref)</code>). </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-emblem-picker-set-mapped-files"></a><h3>gnui_emblem_picker_set_mapped_files ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_emblem_picker_set_mapped_files (<em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> * const self</code></em>,
+                                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> * const file_selection</code></em>);</pre>
+<p>Set the list of the files mapped by an emblem picker</p>
+<p>    Changing the emblem picker's files is similar to starting a new session
+    (i.e. creating a new emblem picker). The current emblem selection will be
+    lost.</p>
+<p><span class="annotation">[set-property mapped-files]</span></p>
+<div class="refsect3">
+<a name="gnui-emblem-picker-set-mapped-files.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>file_selection</p></td>
+<td class="parameter_description"><p>A <code class="literal">GList</code> containing
+pointers to <code class="literal">GFile</code> handles to map for their emblems. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-emblem-picker-peek-forbidden-emblems"></a><h3>gnui_emblem_picker_peek_forbidden_emblems ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> * const *
+gnui_emblem_picker_peek_forbidden_emblems
+                               (<em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> * const self</code></em>);</pre>
+<p>Get the <code class="literal">const</code> array of strings of the emblems that must not be displayed
+    in the emblem picker</p>
+<p><span class="annotation">[get-property forbidden-emblems]</span></p>
+<div class="refsect3">
+<a name="gnui-emblem-picker-peek-forbidden-emblems.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-emblem-picker-peek-forbidden-emblems.returns"></a><h4>Returns</h4>
+<p>An array of strings containing the names of
+the emblems that must not be displayed in the emblem picker (do
+not free or modify it). </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-emblem-picker-get-forbidden-emblems"></a><h3>gnui_emblem_picker_get_forbidden_emblems ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **
+gnui_emblem_picker_get_forbidden_emblems
+                               (<em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> * const self</code></em>);</pre>
+<p>Get the emblems that must not be displayed in the emblem picker</p>
+<div class="refsect3">
+<a name="gnui-emblem-picker-get-forbidden-emblems.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-emblem-picker-get-forbidden-emblems.returns"></a><h4>Returns</h4>
+<p>A newly allocated array of strings containing
+the names of the emblems that must not be displayed in the
+emblem picker (free the returned array with <code class="literal"><a href="/usr/share/gtk-doc/html/glib/glib-String-Utility-Functions.html#g-strfreev"><code class="function">g_strfreev()</code></a></code>). </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-emblem-picker-set-forbidden-emblems"></a><h3>gnui_emblem_picker_set_forbidden_emblems ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_emblem_picker_set_forbidden_emblems
+                               (<em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> * const self</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const * const forbidden_emblems</code></em>);</pre>
+<p>Set the emblems that must not be displayed in the emblem picker</p>
+<p><span class="annotation">[set-property forbidden-emblems]</span></p>
+<div class="refsect3">
+<a name="gnui-emblem-picker-set-forbidden-emblems.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>forbidden_emblems</p></td>
+<td class="parameter_description"><p>An array of strings containing the
+names of the emblems that must not be displayed in the
+emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-emblem-picker-get-ensure-standard"></a><h3>gnui_emblem_picker_get_ensure_standard ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gnui_emblem_picker_get_ensure_standard
+                               (<em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> * const self</code></em>);</pre>
+<p>Get whether XDG standard emblems must always be displayed, even if the
+    current icon theme does not support them</p>
+<p>    For the list of XDG standard emblems, please refer to
+    <a class="ulink" href="https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-0.4.html#idm45098400102912" target="_top">Icon Naming Specification, Table 6. Standard Emblem Icons</a>.</p>
+<p><span class="annotation">[get-property ensure-standard]</span></p>
+<div class="refsect3">
+<a name="gnui-emblem-picker-get-ensure-standard.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-emblem-picker-get-ensure-standard.returns"></a><h4>Returns</h4>
+<p>    <code class="literal">true</code> if XDG standard emblems must always be displayed,
+<code class="literal">false</code> otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-emblem-picker-set-ensure-standard"></a><h3>gnui_emblem_picker_set_ensure_standard ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_emblem_picker_set_ensure_standard
+                               (<em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> * const self</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> ensure_standard</code></em>);</pre>
+<p>Set whether XDG standard emblems must always be displayed, even if the
+    current icon theme does not support them</p>
+<p>    For the list of XDG standard emblems, please refer to
+    <a class="ulink" href="https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-0.4.html#idm45098400102912" target="_top">Icon Naming Specification, Table 6. Standard Emblem Icons</a>.</p>
+<p><span class="annotation">[set-property ensure-standard]</span></p>
+<div class="refsect3">
+<a name="gnui-emblem-picker-set-ensure-standard.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>ensure_standard</p></td>
+<td class="parameter_description"><p><code class="literal">true</code> if XDG standard emblems must always be
+displayed, even if the current icon theme does not
+support them; <code class="literal">false</code> otherwise</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-emblem-picker-get-modified"></a><h3>gnui_emblem_picker_get_modified ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gnui_emblem_picker_get_modified (<em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> * const self</code></em>);</pre>
+<p>Get whether the emblem selection has been modified by the user</p>
+<p><span class="annotation">[get-property modified]</span></p>
+<div class="refsect3">
+<a name="gnui-emblem-picker-get-modified.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-emblem-picker-get-modified.returns"></a><h4>Returns</h4>
+<p>    Whether the emblem selection has been modified by the user</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-emblem-picker-set-modified"></a><h3>gnui_emblem_picker_set_modified ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_emblem_picker_set_modified (<em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> * const self</code></em>,
+                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> modified</code></em>);</pre>
+<p>Set whether the emblem selection has been modified by the user</p>
+<p><span class="annotation">[set-property modified]</span></p>
+<div class="refsect3">
+<a name="gnui-emblem-picker-set-modified.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>modified</p></td>
+<td class="parameter_description"><p><code class="literal">true</code> if the emblem picker's state must be set to "modified",
+<code class="literal">false</code> otherwise</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-emblem-picker-get-reveal-changes"></a><h3>gnui_emblem_picker_get_reveal_changes ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gnui_emblem_picker_get_reveal_changes (<em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> * const self</code></em>);</pre>
+<p>Get whether an indicator glyph must be displayed for each emblem whose
+    selection state has changed since last save</p>
+<p><span class="annotation">[get-property reveal-changes]</span></p>
+<div class="refsect3">
+<a name="gnui-emblem-picker-get-reveal-changes.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-emblem-picker-get-reveal-changes.returns"></a><h4>Returns</h4>
+<p>    <code class="literal">true</code> if an indicator glyph must be displayed for each emblem
+whose selection state has changed, <code class="literal">false</code> otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-emblem-picker-set-reveal-changes"></a><h3>gnui_emblem_picker_set_reveal_changes ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_emblem_picker_set_reveal_changes (<em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> * const self</code></em>,
+                                       <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> reveal_changes</code></em>);</pre>
+<p>Set whether an indicator glyph must be displayed for each emblem whose
+    selection state has changed since last save</p>
+<p><span class="annotation">[set-property reveal-changes]</span></p>
+<div class="refsect3">
+<a name="gnui-emblem-picker-set-reveal-changes.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>reveal_changes</p></td>
+<td class="parameter_description"><p><code class="literal">true</code> if an indicator glyph must be displayed for each
+emblem whose selection state has changed, <code class="literal">false</code>
+otherwise</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-emblem-picker-foreach"></a><h3>gnui_emblem_picker_foreach ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_emblem_picker_foreach (<em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> * const self</code></em>,
+                            <em class="parameter"><code>const <a class="link" href="gnui-emblem-picker.html#GnuiEmblemPickerForeachFunc" title="GnuiEmblemPickerForeachFunc ()"><span class="type">GnuiEmblemPickerForeachFunc</span></a> foreach_func</code></em>,
+                            <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>Call a custom function for each emblem displayed by the emblem picker</p>
+<div class="refsect3">
+<a name="gnui-emblem-picker-foreach.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>foreach_func</p></td>
+<td class="parameter_description"><p>A function called for each emblem displayed
+by the emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>The closure to pass to <em class="parameter"><code>foreach_func</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-emblem-picker-undo-all-selections"></a><h3>gnui_emblem_picker_undo_all_selections ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_emblem_picker_undo_all_selections
+                               (<em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> * const self</code></em>);</pre>
+<p>Bring an emblem picker selection state back to the last saved state</p>
+<div class="refsect3">
+<a name="gnui-emblem-picker-undo-all-selections.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-emblem-picker-set-all-selections"></a><h3>gnui_emblem_picker_set_all_selections ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_emblem_picker_set_all_selections (<em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> * const self</code></em>,
+                                       <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> selected</code></em>);</pre>
+<p>Set the selection state of all the emblems of an emblem picker</p>
+<div class="refsect3">
+<a name="gnui-emblem-picker-set-all-selections.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>selected</p></td>
+<td class="parameter_description"><p><code class="literal">true</code> if the selection state must be set to <code class="literal">selected</code>,
+<code class="literal">false</code> for the opposite</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiEmblemPickerSignalHandlerEmblemSelected"></a><h3>GnuiEmblemPickerSignalHandlerEmblemSelected ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*GnuiEmblemPickerSignalHandlerEmblemSelected<span class="c_punctuation">)</span>
+                               (<em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> *self</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *emblem_name</code></em>,
+                                <em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemState" title="enum GnuiEmblemState"><span class="type">GnuiEmblemState</span></a> saved_state</code></em>,
+                                <em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemState" title="enum GnuiEmblemState"><span class="type">GnuiEmblemState</span></a> current_state</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *inconsistent_group</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>A handler function type for the <a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker-emblem-selected" title="The “emblem-selected” signal"><span class="type">“emblem-selected”</span></a> signal</p>
+<div class="refsect3">
+<a name="GnuiEmblemPickerSignalHandlerEmblemSelected.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>emblem_name</p></td>
+<td class="parameter_description"><p>The
+emblem name. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>saved_state</p></td>
+<td class="parameter_description"><p>(auto) The last saved state of the emblem</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>current_state</p></td>
+<td class="parameter_description"><p>(auto) The current state of the emblem</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>inconsistent_group</p></td>
+<td class="parameter_description"><p>The
+inconsistent group of files that can have
+the emblem assigned independently from the
+other files or <code class="literal">NULL</code>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>The custom
+data passed to the signal. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiEmblemPickerSignalHandlerModifiedChanged"></a><h3>GnuiEmblemPickerSignalHandlerModifiedChanged ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*GnuiEmblemPickerSignalHandlerModifiedChanged<span class="c_punctuation">)</span>
+                               (<em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> modified</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>A handler function type for the <a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker-modified-changed" title="The “modified-changed” signal"><span class="type">“modified-changed”</span></a> signal</p>
+<div class="refsect3">
+<a name="GnuiEmblemPickerSignalHandlerModifiedChanged.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>modified</p></td>
+<td class="parameter_description"><p>The current state of the <code class="literal">"modified"</code> property. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>The custom data passed to the
+signal. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="gnui-emblem-picker.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GNUI-TYPE-EMBLEM-PICKER:CAPS"></a><h3>GNUI_TYPE_EMBLEM_PICKER</h3>
+<pre class="programlisting">#define GNUI_TYPE_EMBLEM_PICKER (gnui_emblem_picker_get_type())
+</pre>
+<p>The <code class="literal">GType</code> of <code class="literal">GnuiEmblemPicker</code></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiEmblemState"></a><h3>enum GnuiEmblemState</h3>
+<p>Possible states of an emblem cell</p>
+<div class="refsect3">
+<a name="GnuiEmblemState.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="enum_member_name"><p><a name="GNUI-EMBLEM-STATES-WITH-PREFIX:CAPS"></a>GNUI_EMBLEM_STATES_WITH_PREFIX</p></td>
+<td> </td>
+<td> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiEmblemPickerSaveFlags"></a><h3>enum GnuiEmblemPickerSaveFlags</h3>
+<p>Possible options for <code class="literal"><a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-save" title="gnui_emblem_picker_save ()"><code class="function">gnui_emblem_picker_save()</code></a></code></p>
+<div class="refsect3">
+<a name="GnuiEmblemPickerSaveFlags.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="GNUI-EMBLEM-PICKER-SAVE-FLAG-NONE:CAPS"></a>GNUI_EMBLEM_PICKER_SAVE_FLAG_NONE</p></td>
+<td class="enum_member_description">
+<p>No flags</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GNUI-EMBLEM-PICKER-SAVE-FLAG-SAVE-UNMODIFIED:CAPS"></a>GNUI_EMBLEM_PICKER_SAVE_FLAG_SAVE_UNMODIFIED</p></td>
+<td class="enum_member_description">
+<p>Re-write the files'
+metadata even if there
+are no changes</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GNUI-EMBLEM-PICKER-SAVE-FLAG-ABORT-MODE:CAPS"></a>GNUI_EMBLEM_PICKER_SAVE_FLAG_ABORT_MODE</p></td>
+<td class="enum_member_description">
+<p>Stop the save
+operations as soon as a
+file cannot be saved
+(without it the save
+operations will
+continue until the end)</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GNUI-EMBLEM-PICKER-SAVE-FLAG-DONT-REFRESH:CAPS"></a>GNUI_EMBLEM_PICKER_SAVE_FLAG_DONT_REFRESH</p></td>
+<td class="enum_member_description">
+<p>Do not refresh the
+state indicators
+(useful if this is a
+last save before
+destroying the emblem
+picker widget)</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GNUI-EMBLEM-PICKER-SAVE-FLAG-CLEAN-INCONSISTENCY:CAPS"></a>GNUI_EMBLEM_PICKER_SAVE_FLAG_CLEAN_INCONSISTENCY</p></td>
+<td class="enum_member_description">
+<p>Erase the information
+about the emblem's
+original inconsistency
+if this is not saved as
+inconsistent</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GNUI-EMBLEM-PICKER-SAVE-FLAG-CALLBACK-ON-ERROR:CAPS"></a>GNUI_EMBLEM_PICKER_SAVE_FLAG_CALLBACK_ON_ERROR</p></td>
+<td class="enum_member_description">
+<p>Invoke the user-given
+callback on errors</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GNUI-EMBLEM-PICKER-SAVE-FLAG-CALLBACK-ON-SUCCESS:CAPS"></a>GNUI_EMBLEM_PICKER_SAVE_FLAG_CALLBACK_ON_SUCCESS</p></td>
+<td class="enum_member_description">
+<p>Invoke the user-given
+callback when the file
+was successfully
+updated with the new
+emblems</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GNUI-EMBLEM-PICKER-SAVE-FLAG-CALLBACK-ON-NOACTION:CAPS"></a>GNUI_EMBLEM_PICKER_SAVE_FLAG_CALLBACK_ON_NOACTION</p></td>
+<td class="enum_member_description">
+<p>Invoke the user-given
+callback when no
+actions were performed
+on the file</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GNUI-EMBLEM-PICKER-SAVE-FLAGGROUP-ALL-CALLBACKS:CAPS"></a>GNUI_EMBLEM_PICKER_SAVE_FLAGGROUP_ALL_CALLBACKS</p></td>
+<td class="enum_member_description">
+<p>Always invoke the
+user-given callback, no
+matter what the save
+result is</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GNUI-EMBLEM-PICKER-SAVE-FLAGGROUP-ALL-FLAGS-SET:CAPS"></a>GNUI_EMBLEM_PICKER_SAVE_FLAGGROUP_ALL_FLAGS_SET</p></td>
+<td class="enum_member_description">
+<p>Convenience identifier
+in which all flags are
+set</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiEmblemPickerSaveResult"></a><h3>enum GnuiEmblemPickerSaveResult</h3>
+<p>Possible results of <code class="literal"><a class="link" href="gnui-emblem-picker.html#gnui-emblem-picker-save" title="gnui_emblem_picker_save ()"><code class="function">gnui_emblem_picker_save()</code></a></code> on each file</p>
+<div class="refsect3">
+<a name="GnuiEmblemPickerSaveResult.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="GNUI-EMBLEM-PICKER-ERROR:CAPS"></a>GNUI_EMBLEM_PICKER_ERROR</p></td>
+<td class="enum_member_description">
+<p>The file's emblem metadata could not be
+saved</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GNUI-EMBLEM-PICKER-NOACTION:CAPS"></a>GNUI_EMBLEM_PICKER_NOACTION</p></td>
+<td class="enum_member_description">
+<p>No actions were necessary for the file's
+metadata</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="GNUI-EMBLEM-PICKER-SUCCESS:CAPS"></a>GNUI_EMBLEM_PICKER_SUCCESS</p></td>
+<td class="enum_member_description">
+<p>The file's emblem metadata were
+successfully saved</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiEmblemPicker-struct"></a><h3>GnuiEmblemPicker</h3>
+<pre class="programlisting">typedef struct _GnuiEmblemPicker GnuiEmblemPicker;</pre>
+<p>The <code class="literal">GnuiEmblemPicker</code> widget</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="gnui-emblem-picker.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GnuiEmblemPicker--ensure-standard"></a><h3>The <code class="literal">“ensure-standard”</code> property</h3>
+<pre class="programlisting">  “ensure-standard”          <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether to ensure XDG emblems, even when not supported by the current theme.</p>
+<p>Owner: GnuiEmblemPicker</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiEmblemPicker--forbidden-emblems"></a><h3>The <code class="literal">“forbidden-emblems”</code> property</h3>
+<pre class="programlisting">  “forbidden-emblems”        <a href="/usr/share/gtk-doc/html/glib/glib-String-Utility-Functions.html#GStrv"><span class="type">GStrv</span></a></pre>
+<p>Array of strings containing the names of the emblems to ignore.</p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p>Owner: GnuiEmblemPicker</p>
+<p>Flags: Read / Write / Construct</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiEmblemPicker--mapped-files"></a><h3>The <code class="literal">“mapped-files”</code> property</h3>
+<pre class="programlisting">  “mapped-files”             <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></pre>
+<p>GList of GFile objects to map.</p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p>Owner: GnuiEmblemPicker</p>
+<p>Flags: Read / Write / Construct</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiEmblemPicker--modified"></a><h3>The <code class="literal">“modified”</code> property</h3>
+<pre class="programlisting">  “modified”                 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether the emblems have changed since last save.</p>
+<p>Owner: GnuiEmblemPicker</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiEmblemPicker--reveal-changes"></a><h3>The <code class="literal">“reveal-changes”</code> property</h3>
+<pre class="programlisting">  “reveal-changes”           <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether changes since last save must be visible.</p>
+<p>Owner: GnuiEmblemPicker</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: FALSE</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="gnui-emblem-picker.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="GnuiEmblemPicker-emblem-selected"></a><h3>The <code class="literal">“emblem-selected”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> *self,
+               <span class="type">char</span>             *emblem_name,
+               <span class="type">int</span>               saved_state,
+               <span class="type">int</span>               current_state,
+               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>          inconsistent_group,
+               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>          user_data)</pre>
+<p>Signal emitted when an emblem is selected/unselected</p>
+<p>	    <a class="link" href="gnui-emblem-picker.html#GnuiEmblemPickerSignalHandlerEmblemSelected" title="GnuiEmblemPickerSignalHandlerEmblemSelected ()"><span class="type">GnuiEmblemPickerSignalHandlerEmblemSelected</span></a> is the function type of
+	    reference for this signal, which takes parameters' constness into
+	    account.</p>
+<div class="refsect3">
+<a name="GnuiEmblemPicker-emblem-selected.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker that
+emitted the signal. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][non-nullable]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>emblem_name</p></td>
+<td class="parameter_description"><p>The
+emblem name (do not free or modify it). </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][non-nullable]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>saved_state</p></td>
+<td class="parameter_description"><p>The last saved state of the emblem. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>current_state</p></td>
+<td class="parameter_description"><p>The current state of the emblem. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>inconsistent_group</p></td>
+<td class="parameter_description"><p>The
+inconsistent group of files that can have the
+emblem assigned independently from the other
+files or <code class="literal">NULL</code>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS">Run First</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiEmblemPicker-modified-changed"></a><h3>The <code class="literal">“modified-changed”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker"><span class="type">GnuiEmblemPicker</span></a> *self,
+               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>          modified,
+               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>          user_data)</pre>
+<p>Signal emitted when the <a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker--modified" title="The “modified” property"><span class="type">“modified”</span></a> property changes</p>
+<p>	    <a class="link" href="gnui-emblem-picker.html#GnuiEmblemPickerSignalHandlerModifiedChanged" title="GnuiEmblemPickerSignalHandlerModifiedChanged ()"><span class="type">GnuiEmblemPickerSignalHandlerModifiedChanged</span></a> is the function type of
+	    reference for this signal, which takes parameters' constness into
+	    account.</p>
+<div class="refsect3">
+<a name="GnuiEmblemPicker-modified-changed.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The emblem picker that emitted the
+signal. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][non-nullable]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>modified</p></td>
+<td class="parameter_description"><p>The new value of the <a class="link" href="gnui-emblem-picker.html#GnuiEmblemPicker--modified" title="The “modified” property"><span class="type">“modified”</span></a>
+property. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS">Run First</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

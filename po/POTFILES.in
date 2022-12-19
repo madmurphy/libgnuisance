@@ -1,0 +1,6 @@
+# List of source files containing translatable strings.
+
+src/gnui-environment.c
+src/widgets/emblem-picker/gnui-emblem-picker.c
+src/widgets/flow/gnui-flow.c
+src/widgets/tagged-entry/gnui-tagged-entry.c

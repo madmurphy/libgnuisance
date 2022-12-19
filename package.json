@@ -1,0 +1,44 @@
+{
+	"name": "libgnuisance",
+	"version": "0.1.0",
+	"description": "GTK new user interfaces",
+	"homepage": "https://gitlab.gnome.org/madmurphy/libgnuisance",
+	"author": "madmurphy333@gmail.com",
+	"license": "GPL-3.0-or-later",
+	"repository": {
+		"type": "git",
+		"url": "https://gitlab.gnome.org/madmurphy/libgnuisance.git"
+	},
+	"dependencies": {
+		"glib": ">=2",
+		"gtk": ">=4",
+		"libadwaita": ">=1"
+	},
+	"devDependencies": {
+		"gettext": ">=0.19",
+		"gtk-doc": ">=1.18",
+		"pkgconfig": ">=0.9.0"
+	},
+	"src": [
+		"src/libgnuisance.c"
+	],
+	"bugs": {
+		"url": "https://gitlab.gnome.org/madmurphy/libgnuisance/issues",
+		"email" : "madmurphy333@gmail.com"
+	},
+	"keywords": [
+		"c",
+		"desktop",
+		"desktop-environment",
+		"file-metadata",
+		"gio",
+		"gnome",
+		"gnu",
+		"graphical-user-interface",
+		"gtk",
+		"gvfs",
+		"gvfs-metadata",
+		"metadata"
+	]
+}
+

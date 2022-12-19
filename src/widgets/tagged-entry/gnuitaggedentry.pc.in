@@ -1,0 +1,14 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+datarootdir=@datarootdir@
+datadir=@datadir@
+includedir=@gnuiincludedir@
+
+Name: gnuitaggedentry
+Description: A tagged entry GTK widget
+Version: @PACKAGE_VERSION@
+Requires.private: @GNUI_TAGGED_ENTRY_REQUIRES_PRIVATE@
+Requires: @GNUI_TAGGED_ENTRY_REQUIRES@
+Libs: -L${libdir} -lgnuitaggedentry
+Cflags: -I${includedir}

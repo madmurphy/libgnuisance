@@ -1,0 +1,124 @@
+GNUIsance Library
+=================
+
+GTK New User Interfaces
+
+
+Widget gallery
+--------------
+
+A tagged entry widget:
+
+![GnuiTaggedEntry](src/widgets/tagged-entry/gnui-tagged-entry-screenshot.png)
+
+A flow container widget:
+
+![GnuiFlow](src/widgets/flow/gnui-flow-screenshot.png)
+
+An emblem picker widget:
+
+![GnuiEmblemPicker](src/widgets/emblem-picker/gnui-emblem-picker-screenshot.png)
+
+
+About
+-----
+
+**GNUIsance** is a **GTK4** library that aims to create a consistent repository
+of widgets and utilities that users might need only from time to time. By
+design, these can be accessed altogether (`-lgnuisance`), or it is possible to
+link only the single widgets required for an application (`-lgnuitaggedentry`,
+`-lgnuiflow`, etc.).
+
+Creating a library of interfaces for **GTK4** might sound pointless after
+projects like **libadwaita**. Yet, an informal repository with an easy
+threshold for contributing, one that modularly fills the small gaps of **GTK**
+and **libadwaita**, might be missing after all.
+
+At the moment **libgnuisance** is a only a tiny repository with few abstract
+utilities, three widgets and a reusable layout manager:
+
+* `GnuiEmblemPicker` – an emblem picker
+* `GnuiFlow` – a flow container
+* `GnuiFlowLayout` – a reusable layout manager that transforms any widget that
+  adopts it into a flow container
+* `GnuiTaggedEntry` – a tagged entry
+
+If you want to experiment with them, under `sandbox/before-install` you can
+play with the interfaces without having to install the library (the package's
+icons will not be loaded).
+
+Despite its modularity, the project aims at remaining consistent in all its
+parts. The collection of widgets might grow in the future, or it might not. In
+the meanwhile, please do have fun with it.
+
+For more information, please visit [the library's documentation][1].
+
+
+Get involved
+------------
+
+This project is truly open to contributions. If you like working with CSS,
+**libgnuisance** really needs you. And if you have GTK widgets that you want to
+share, please do feel free to propose them.
+
+There is need of help with internationalization too. If a translation into your
+language is missing and you wish to get involved, here is what to do.
+
+Let's say you want to create a Dutch translation of **libgnuisance** (`nl`).
+First thing to do is to make sure that **GNU Autotools** and **GNU gettext**
+are installed on your system. Then clone this repository and launch the
+following commands:
+
+``` sh
+./bootstrap
+make -C po libgnuisance.pot
+(cd po && msginit -l nl)
+make bootstrap-clean 
+```
+
+Now edit the `po/LINGUAS` file and add a new line containing the abbreviated
+name of the new language (`nl`).
+
+Finally, open the `po/nl.po` file and translate the strings present. All you
+have to do now is to commit your changes.
+
+For any issue, [drop a message][2].
+
+
+Installation
+------------
+
+On most Unix-like systems, you should be able to install this package using the
+following common steps:
+
+``` sh
+./configure
+make
+make install-strip
+```
+
+If the `strip` utility is not available on your machine, use `make install`
+instead (it will produce larger binaries).
+
+If the `configure` script is missing from your package you need to generate it
+by running the `bootstrap` script. By default, `bootstrap` will also run the
+`configure` script immediately after having generated it, so you may type the
+`make` command directly after `bootstrap`. To list different options use
+`./bootstrap --help`.
+
+For further information, see [INSTALL][3].
+
+
+Free software
+-------------
+
+**libgnuisance** is free software. You can redistribute it and/or modify it
+under the terms of the GPL license version 3 or any later version. See
+[COPYING][4] for details.
+
+
+  [1]: https://madmurphy.github.io/libgnuisance
+  [2]: https://github.com/madmurphy/libgnuisance/issues
+  [3]: INSTALL
+  [4]: COPYING
+

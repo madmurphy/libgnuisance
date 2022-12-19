@@ -1,0 +1,1251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Miscellaneous macros and inline functions: GNUIsance Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="GNUIsance Reference Manual">
+<link rel="up" href="fundamentals.html" title="GNUIsance Fundamentals">
+<link rel="prev" href="fundamentals.html" title="GNUIsance Fundamentals">
+<link rel="next" href="internals.html" title="Part II. API Internals">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#gnui-definitions.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="fundamentals.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="fundamentals.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="internals.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="gnui-definitions"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gnui-definitions.top_of_page"></a>Miscellaneous macros and inline functions</span></h2>
+<p>Miscellaneous macros and inline functions</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="gnui-definitions.stability-level"></a><h2>Stability Level</h2>
+<acronym title="Unstable interfaces are experimental or transitional. They are typically used to
+give outside developers early access to new or rapidly changing technology, or
+to provide an interim solution to a problem where a more general solution is
+anticipated. No claims are made about either source or binary compatibility from
+one minor release to the next.
+
+The Unstable interface level is a warning that these interfaces are  subject to
+change without warning and should not be used in unbundled products.
+
+Given such caveats, customer impact need not be a factor when considering
+incompatible changes to an Unstable interface in a major or minor release.
+Nonetheless, when such changes are introduced, the changes should still be
+mentioned in the release notes for the affected release.
+"><span class="acronym">Unstable</span></acronym>, unless otherwise indicated
+</div>
+<div class="refsect1">
+<a name="gnui-definitions.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#GNUI-PP-CALL:CAPS" title="GNUI_PP_CALL()">GNUI_PP_CALL</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#GNUI-PP-EAT:CAPS" title="GNUI_PP_EAT()">GNUI_PP_EAT</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#GNUI-PP-EXPAND:CAPS" title="GNUI_PP_EXPAND()">GNUI_PP_EXPAND</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#GNUI-PP-PASTE2:CAPS" title="GNUI_PP_PASTE2()">GNUI_PP_PASTE2</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#GNUI-PP-PASTE3:CAPS" title="GNUI_PP_PASTE3()">GNUI_PP_PASTE3</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#GNUI-PP-STRINGIFY:CAPS" title="GNUI_PP_STRINGIFY()">GNUI_PP_STRINGIFY</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#GNUI-PP-BOOL:CAPS" title="GNUI_PP_BOOL()">GNUI_PP_BOOL</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#GNUI-PP-BOOL-NOT:CAPS" title="GNUI_PP_BOOL_NOT()">GNUI_PP_BOOL_NOT</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#GNUI-PP-IF-NONZERO:CAPS" title="GNUI_PP_IF_NONZERO()">GNUI_PP_IF_NONZERO</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#GNUI-PP-IF-ONE-OR-ZERO:CAPS" title="GNUI_PP_IF_ONE_OR_ZERO()">GNUI_PP_IF_ONE_OR_ZERO</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#GNUI-PP-LITERAL-PASTE2:CAPS" title="GNUI_PP_LITERAL_PASTE2()">GNUI_PP_LITERAL_PASTE2</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#GNUI-PP-LITERAL-PASTE3:CAPS" title="GNUI_PP_LITERAL_PASTE3()">GNUI_PP_LITERAL_PASTE3</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#GNUI-PP-LITERAL-STRINGIFY:CAPS" title="GNUI_PP_LITERAL_STRINGIFY()">GNUI_PP_LITERAL_STRINGIFY</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#GNUI-PP-WHEN-NONZERO:CAPS" title="GNUI_PP_WHEN_NONZERO()">GNUI_PP_WHEN_NONZERO</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#GNUI-CONTAINER-OF:CAPS" title="GNUI_CONTAINER_OF()">GNUI_CONTAINER_OF</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#GNUI-SET-POINTED-VALUE-IF-GIVEN--2-1:CAPS" title="GNUI_SET_POINTED_VALUE_IF_GIVEN__2_1()">GNUI_SET_POINTED_VALUE_IF_GIVEN__2_1</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#GNUI-SET-IF-GREATER--2-2:CAPS" title="GNUI_SET_IF_GREATER__2_2()">GNUI_SET_IF_GREATER__2_2</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#GNUI-NORMALIZE-INT-UINT-CAST--2:CAPS" title="GNUI_NORMALIZE_INT_UINT_CAST__2()">GNUI_NORMALIZE_INT_UINT_CAST__2</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#GNUI-ROUND-UINT-DIVISION--1-2:CAPS" title="GNUI_ROUND_UINT_DIVISION__1_2()">GNUI_ROUND_UINT_DIVISION__1_2</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#GNUI-ROUND-INT-DIVISION--2-3:CAPS" title="GNUI_ROUND_INT_DIVISION__2_3()">GNUI_ROUND_INT_DIVISION__2_3</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#GNUI-PERPENDICULAR-ORIENTATION:CAPS" title="GNUI_PERPENDICULAR_ORIENTATION()">GNUI_PERPENDICULAR_ORIENTATION</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#gnui-list-prepend-llink" title="gnui_list_prepend_llink ()">gnui_list_prepend_llink</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#gnui-list-u-detach-and-move-to-next" title="gnui_list_u_detach_and_move_to_next ()">gnui_list_u_detach_and_move_to_next</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#GNUI-LIST-DELETE-AND-MOVE-TO-NEXT:CAPS" title="GNUI_LIST_DELETE_AND_MOVE_TO_NEXT()">GNUI_LIST_DELETE_AND_MOVE_TO_NEXT</a><span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#gnui-list-detach-and-move-to-next" title="gnui_list_detach_and_move_to_next ()">gnui_list_detach_and_move_to_next</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">bool</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#gnui-lists-are-equal" title="gnui_lists_are_equal ()">gnui_lists_are_equal</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#gnui-signal-handlers-block-by-func" title="gnui_signal_handlers_block_by_func ()">gnui_signal_handlers_block_by_func</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-definitions.html#gnui-signal-handlers-unblock-by-func" title="gnui_signal_handlers_unblock_by_func ()">gnui_signal_handlers_unblock_by_func</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="gnui-definitions.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody><tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="gnui-definitions.html#GNUI-GNUC-CONSTRUCTOR:CAPS" title="GNUI_GNUC_CONSTRUCTOR">GNUI_GNUC_CONSTRUCTOR</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="gnui-definitions.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;gnuisance/gnui-definitions.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="gnui-definitions.description"></a><h2>Description</h2>
+<p>These macros provide more specialized features which are not needed so
+    often by application programmers.</p>
+</div>
+<div class="refsect1">
+<a name="gnui-definitions.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="GNUI-PP-CALL:CAPS"></a><h3>GNUI_PP_CALL()</h3>
+<pre class="programlisting">#define GNUI_PP_CALL(MACRO, ...) MACRO(__VA_ARGS__)
+</pre>
+<p>Call a function-like macro</p>
+<div class="refsect3">
+<a name="GNUI-PP-CALL.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>MACRO</p></td>
+<td class="parameter_description"><p>The function-like macro to call</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>The arguments to pass to <em class="parameter"><code>MACRO</code></em>
+</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="GNUI-PP-CALL.returns"></a><h4>Returns</h4>
+<p>    The return value of <em class="parameter"><code>MACRO</code></em>
+</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GNUI-PP-EAT:CAPS"></a><h3>GNUI_PP_EAT()</h3>
+<pre class="programlisting">#define GNUI_PP_EAT(...)
+</pre>
+<p>Eat the given preprocessor code</p>
+<div class="refsect3">
+<a name="GNUI-PP-EAT.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>The preprocessor code to eat</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GNUI-PP-EXPAND:CAPS"></a><h3>GNUI_PP_EXPAND()</h3>
+<pre class="programlisting">#define GNUI_PP_EXPAND(...) __VA_ARGS__
+</pre>
+<p>Expand the given preprocessor code</p>
+<div class="refsect3">
+<a name="GNUI-PP-EXPAND.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>The preprocessor code to expand</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="GNUI-PP-EXPAND.returns"></a><h4>Returns</h4>
+<p>    The expanded preprocessor code</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GNUI-PP-PASTE2:CAPS"></a><h3>GNUI_PP_PASTE2()</h3>
+<pre class="programlisting">#define GNUI_PP_PASTE2(MACRO, ...) GNUI_PP_LITERAL_PASTE2(MACRO, __VA_ARGS__)
+</pre>
+<p>Paste together the expansion of two macros</p>
+<div class="refsect3">
+<a name="GNUI-PP-PASTE2.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>MACRO1</p></td>
+<td class="parameter_description"><p>The first macro name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>MACRO2</p></td>
+<td class="parameter_description"><p>The second macro name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="GNUI-PP-PASTE2.returns"></a><h4>Returns</h4>
+<p>    The expansions of the two macros <em class="parameter"><code>MACRO1</code></em>
+and <em class="parameter"><code>MACRO2</code></em>
+pasted
+together</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GNUI-PP-PASTE3:CAPS"></a><h3>GNUI_PP_PASTE3()</h3>
+<pre class="programlisting">#define             GNUI_PP_PASTE3(MACRO1, MACRO2, ...)</pre>
+<p>Paste together the expansion of three macros</p>
+<div class="refsect3">
+<a name="GNUI-PP-PASTE3.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>MACRO1</p></td>
+<td class="parameter_description"><p>The first macro name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>MACRO2</p></td>
+<td class="parameter_description"><p>The second macro name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>MACRO3</p></td>
+<td class="parameter_description"><p>The third macro name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="GNUI-PP-PASTE3.returns"></a><h4>Returns</h4>
+<p>    The expansions of the three macros <em class="parameter"><code>MACRO1</code></em>
+, <em class="parameter"><code>MACRO2</code></em>
+and <em class="parameter"><code>MACRO3</code></em>
+pasted together</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GNUI-PP-STRINGIFY:CAPS"></a><h3>GNUI_PP_STRINGIFY()</h3>
+<pre class="programlisting">#define GNUI_PP_STRINGIFY(MACRO) GNUI_PP_LITERAL_STRINGIFY(MACRO)
+</pre>
+<p>Stringify the expansion of a macro</p>
+<div class="refsect3">
+<a name="GNUI-PP-STRINGIFY.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>MACRO</p></td>
+<td class="parameter_description"><p>The macro to stringify after being expanded</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="GNUI-PP-STRINGIFY.returns"></a><h4>Returns</h4>
+<p>    The <em class="parameter"><code>MACRO</code></em>
+argument stringified after being expanded</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GNUI-PP-BOOL:CAPS"></a><h3>GNUI_PP_BOOL()</h3>
+<pre class="programlisting">#define GNUI_PP_BOOL(COND) _GNUI_PPX_NEGA_(GNUI_PP_BOOL_NOT(COND))
+</pre>
+<p>Transform a condition into a literal boolean</p>
+<div class="refsect3">
+<a name="GNUI-PP-BOOL.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>COND</p></td>
+<td class="parameter_description"><p>The condition to check</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="GNUI-PP-BOOL.returns"></a><h4>Returns</h4>
+<p>    <code class="literal">1</code> if <em class="parameter"><code>COND</code></em>
+is non-zero or empty, <code class="literal">0</code> otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GNUI-PP-BOOL-NOT:CAPS"></a><h3>GNUI_PP_BOOL_NOT()</h3>
+<pre class="programlisting">#define             GNUI_PP_BOOL_NOT(COND)</pre>
+<p>Transform a condition into a literal boolean and negate the result</p>
+<div class="refsect3">
+<a name="GNUI-PP-BOOL-NOT.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>COND</p></td>
+<td class="parameter_description"><p>The condition to check</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="GNUI-PP-BOOL-NOT.returns"></a><h4>Returns</h4>
+<p>    <code class="literal">0</code> if <em class="parameter"><code>COND</code></em>
+is non-zero or empty, <code class="literal">1</code> otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GNUI-PP-IF-NONZERO:CAPS"></a><h3>GNUI_PP_IF_NONZERO()</h3>
+<pre class="programlisting">#define             GNUI_PP_IF_NONZERO(COND, ...)</pre>
+<p>Inline preprocessor if-else</p>
+<div class="refsect3">
+<a name="GNUI-PP-IF-NONZERO.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>COND</p></td>
+<td class="parameter_description"><p>The condition to check</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>IF_TRUE</p></td>
+<td class="parameter_description"><p>The preprocessor code to expand if <em class="parameter"><code>COND</code></em>
+is non-zero</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>IF_FALSE</p></td>
+<td class="parameter_description"><p>The preprocessor code to expand if <em class="parameter"><code>COND</code></em>
+is zero. </p></td>
+<td class="parameter_annotations"><span class="annotation">[omittable]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="GNUI-PP-IF-NONZERO.returns"></a><h4>Returns</h4>
+<p>    <em class="parameter"><code>IF_TRUE</code></em>
+if <em class="parameter"><code>COND</code></em>
+is non-zero, <em class="parameter"><code>IF_FALSE</code></em>
+otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GNUI-PP-IF-ONE-OR-ZERO:CAPS"></a><h3>GNUI_PP_IF_ONE_OR_ZERO()</h3>
+<pre class="programlisting">#define             GNUI_PP_IF_ONE_OR_ZERO(COND, ...)</pre>
+<p>Check if a condition is exactly one or zero</p>
+<p>    If <em class="parameter"><code>COND</code></em>
+ is neither <code class="literal">0</code> nor <code class="literal">1</code> the behavior is undefined.</p>
+<div class="refsect3">
+<a name="GNUI-PP-IF-ONE-OR-ZERO.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>COND</p></td>
+<td class="parameter_description"><p>The condition to check</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>IF_TRUE</p></td>
+<td class="parameter_description"><p>The preprocessor code to expand if <em class="parameter"><code>COND</code></em>
+is <code class="literal">1</code></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>IF_FALSE</p></td>
+<td class="parameter_description"><p>The preprocessor code to expand if <em class="parameter"><code>COND</code></em>
+is <code class="literal">0</code>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[omittable]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="GNUI-PP-IF-ONE-OR-ZERO.returns"></a><h4>Returns</h4>
+<p>    <em class="parameter"><code>IF_TRUE</code></em>
+if <em class="parameter"><code>COND</code></em>
+is <code class="literal">1</code>, <em class="parameter"><code>IF_FALSE</code></em>
+if <em class="parameter"><code>COND</code></em>
+is <code class="literal">0</code></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GNUI-PP-LITERAL-PASTE2:CAPS"></a><h3>GNUI_PP_LITERAL_PASTE2()</h3>
+<pre class="programlisting">#define GNUI_PP_LITERAL_PASTE2(MACRO, ...) MACRO##__VA_ARGS__
+</pre>
+<p>Paste two macro names without expanding them</p>
+<div class="refsect3">
+<a name="GNUI-PP-LITERAL-PASTE2.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>MACRO1</p></td>
+<td class="parameter_description"><p>The first macro name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>MACRO2</p></td>
+<td class="parameter_description"><p>The second macro name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="GNUI-PP-LITERAL-PASTE2.returns"></a><h4>Returns</h4>
+<p>    The two macro names <em class="parameter"><code>MACRO1</code></em>
+and <em class="parameter"><code>MACRO2</code></em>
+pasted together,
+without performing macro expansion</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GNUI-PP-LITERAL-PASTE3:CAPS"></a><h3>GNUI_PP_LITERAL_PASTE3()</h3>
+<pre class="programlisting">#define GNUI_PP_LITERAL_PASTE3(MACRO1, MACRO2, ...) MACRO1##MACRO2##__VA_ARGS__
+</pre>
+<p>Paste three macro names without expanding them</p>
+<div class="refsect3">
+<a name="GNUI-PP-LITERAL-PASTE3.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>MACRO1</p></td>
+<td class="parameter_description"><p>The first macro name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>MACRO2</p></td>
+<td class="parameter_description"><p>The second macro name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>MACRO3</p></td>
+<td class="parameter_description"><p>The third macro name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="GNUI-PP-LITERAL-PASTE3.returns"></a><h4>Returns</h4>
+<p>    The three macro names <em class="parameter"><code>MACRO1</code></em>
+, <em class="parameter"><code>MACRO2</code></em>
+and <em class="parameter"><code>MACRO3</code></em>
+pasted
+together, without performing macro expansion</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GNUI-PP-LITERAL-STRINGIFY:CAPS"></a><h3>GNUI_PP_LITERAL_STRINGIFY()</h3>
+<pre class="programlisting">#define GNUI_PP_LITERAL_STRINGIFY(MACRO) #MACRO
+</pre>
+<p>Stringify a macro name without expanding it</p>
+<div class="refsect3">
+<a name="GNUI-PP-LITERAL-STRINGIFY.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>MACRO</p></td>
+<td class="parameter_description"><p>The macro name to stringify</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="GNUI-PP-LITERAL-STRINGIFY.returns"></a><h4>Returns</h4>
+<p>    The <em class="parameter"><code>MACRO</code></em>
+argument stringified, without expansions</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GNUI-PP-WHEN-NONZERO:CAPS"></a><h3>GNUI_PP_WHEN_NONZERO()</h3>
+<pre class="programlisting">#define             GNUI_PP_WHEN_NONZERO(MACRO)</pre>
+<p>Expand a macro only if non-zero</p>
+<div class="refsect3">
+<a name="GNUI-PP-WHEN-NONZERO.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>MACRO</p></td>
+<td class="parameter_description"><p>The macro to expand</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="GNUI-PP-WHEN-NONZERO.returns"></a><h4>Returns</h4>
+<p>    The expansion <em class="parameter"><code>MACRO</code></em>
+only if it is non-zero, nothing otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GNUI-CONTAINER-OF:CAPS"></a><h3>GNUI_CONTAINER_OF()</h3>
+<pre class="programlisting">#define             GNUI_CONTAINER_OF(PTR, TYPE, MEMBER)</pre>
+<p>Get the <code class="literal">struct</code> that contains the pointed address as one of its members</p>
+<div class="refsect3">
+<a name="GNUI-CONTAINER-OF.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>PTR</p></td>
+<td class="parameter_description"><p>The pointed address</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>TYPE</p></td>
+<td class="parameter_description"><p>The type of <code class="literal">struct</code> expected</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>MEMBER</p></td>
+<td class="parameter_description"><p>The name of the member the pointed address refers to</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="GNUI-CONTAINER-OF.returns"></a><h4>Returns</h4>
+<p>    The container <code class="literal">struct</code></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GNUI-SET-POINTED-VALUE-IF-GIVEN--2-1:CAPS"></a><h3>GNUI_SET_POINTED_VALUE_IF_GIVEN__2_1()</h3>
+<pre class="programlisting">#define             GNUI_SET_POINTED_VALUE_IF_GIVEN__2_1(PTR, VAL)</pre>
+<p>Set a pointed value only if the pointer is not <code class="literal">NULL</code></p>
+<div class="refsect3">
+<a name="GNUI-SET-POINTED-VALUE-IF-GIVEN--2-1.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>PTR</p></td>
+<td class="parameter_description"><p>The pointer. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>VAL</p></td>
+<td class="parameter_description"><p>The value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GNUI-SET-IF-GREATER--2-2:CAPS"></a><h3>GNUI_SET_IF_GREATER__2_2()</h3>
+<pre class="programlisting">#define             GNUI_SET_IF_GREATER__2_2(VAR, VAL)</pre>
+<p>Assign a value to a variable only if the value to assign is greater than
+    the current value of the variable</p>
+<div class="refsect3">
+<a name="GNUI-SET-IF-GREATER--2-2.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>VAR</p></td>
+<td class="parameter_description"><p>The variable</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>VAL</p></td>
+<td class="parameter_description"><p>The value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GNUI-NORMALIZE-INT-UINT-CAST--2:CAPS"></a><h3>GNUI_NORMALIZE_INT_UINT_CAST__2()</h3>
+<pre class="programlisting">#define             GNUI_NORMALIZE_INT_UINT_CAST__2(UINT)</pre>
+<p>Sanitize a cast between a signed and an unsigned integer</p>
+<div class="refsect3">
+<a name="GNUI-NORMALIZE-INT-UINT-CAST--2.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>UINT</p></td>
+<td class="parameter_description"><p>The unsigned variable to sanitize</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GNUI-ROUND-UINT-DIVISION--1-2:CAPS"></a><h3>GNUI_ROUND_UINT_DIVISION__1_2()</h3>
+<pre class="programlisting">#define             GNUI_ROUND_UINT_DIVISION__1_2(NUM, DEN)</pre>
+<p>Round a division between two unsigned integers without float computations</p>
+<div class="refsect3">
+<a name="GNUI-ROUND-UINT-DIVISION--1-2.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>NUM</p></td>
+<td class="parameter_description"><p>The numerator</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>DEN</p></td>
+<td class="parameter_description"><p>The dividend</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="GNUI-ROUND-UINT-DIVISION--1-2.returns"></a><h4>Returns</h4>
+<p>    The rounded result</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GNUI-ROUND-INT-DIVISION--2-3:CAPS"></a><h3>GNUI_ROUND_INT_DIVISION__2_3()</h3>
+<pre class="programlisting">#define             GNUI_ROUND_INT_DIVISION__2_3(NUM, DEN)</pre>
+<p>Round a division between two signed integers</p>
+<div class="refsect3">
+<a name="GNUI-ROUND-INT-DIVISION--2-3.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>NUM</p></td>
+<td class="parameter_description"><p>The numerator</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>DEN</p></td>
+<td class="parameter_description"><p>The dividend</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="GNUI-ROUND-INT-DIVISION--2-3.returns"></a><h4>Returns</h4>
+<p>    The rounded result</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GNUI-PERPENDICULAR-ORIENTATION:CAPS"></a><h3>GNUI_PERPENDICULAR_ORIENTATION()</h3>
+<pre class="programlisting">#define             GNUI_PERPENDICULAR_ORIENTATION(ORIENTATION)</pre>
+<p>Find the perpendicular <code class="literal">GtkOrientation</code></p>
+<div class="refsect3">
+<a name="GNUI-PERPENDICULAR-ORIENTATION.returns"></a><h4>Returns</h4>
+<p>    The perpendicular <code class="literal">GtkOrientation</code></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-list-prepend-llink"></a><h3>gnui_list_prepend_llink ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+gnui_list_prepend_llink (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> * const list</code></em>,
+                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> * const detached_llink</code></em>);</pre>
+<p>Prepend a detached list link to a list</p>
+<div class="refsect3">
+<a name="gnui-list-prepend-llink.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>list</p></td>
+<td class="parameter_description"><p>The doubly-linked list. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>detached_llink</p></td>
+<td class="parameter_description"><p>A detached list link. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-list-prepend-llink.returns"></a><h4>Returns</h4>
+<p>    The new beginning of the list</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-list-u-detach-and-move-to-next"></a><h3>gnui_list_u_detach_and_move_to_next ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+gnui_list_u_detach_and_move_to_next (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> ** const list</code></em>,
+                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> ** const llink</code></em>);</pre>
+<p>Like <code class="literal"><a class="link" href="gnui-definitions.html#gnui-list-detach-and-move-to-next" title="gnui_list_detach_and_move_to_next ()"><code class="function">gnui_list_detach_and_move_to_next()</code></a></code>, but the <code class="literal">.prev</code> and <code class="literal">.next</code>
+    members of the removed element are not set to <code class="literal">NULL</code> (please use it only if
+    you know what you are doing)</p>
+<p>    Please refer to <code class="literal"><a class="link" href="gnui-definitions.html#gnui-list-detach-and-move-to-next" title="gnui_list_detach_and_move_to_next ()"><code class="function">gnui_list_detach_and_move_to_next()</code></a></code> for an example.</p>
+<div class="refsect3">
+<a name="gnui-list-u-detach-and-move-to-next.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>list</p></td>
+<td class="parameter_description"><p>A pointer to the doubly-linked list. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>llink</p></td>
+<td class="parameter_description"><p>A pointer that before the call must point
+to the member to remove and which after the call will be set to
+the next member in the list. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-list-u-detach-and-move-to-next.returns"></a><h4>Returns</h4>
+<p>    The removed element</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GNUI-LIST-DELETE-AND-MOVE-TO-NEXT:CAPS"></a><h3>GNUI_LIST_DELETE_AND_MOVE_TO_NEXT()</h3>
+<pre class="programlisting">#define             GNUI_LIST_DELETE_AND_MOVE_TO_NEXT(LIST, LLINK)</pre>
+<p>Removes a pointed member from a <code class="literal">GList</code>, set the pointer to the next member
+    in the list (or to <code class="literal">NULL</code> if the list is over) and free the removed
+    element.</p>
+<p>    This function is only sugar for loops (useful for deleting elements from a
+    list while the loop must keep going).</p>
+<p>    Writing</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">GNUI_LIST_DELETE_AND_MOVE_TO_NEXT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">list</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">current</span><span class="p">);</span><span class="w"></span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p></p>
+<p>    is equivalent to writing</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">removed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">current</span><span class="p">;</span><span class="w"></span>
+<span class="n">current</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">current</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span><span class="w"></span>
+<span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_list_remove_link</span><span class="p">(</span><span class="n">list</span><span class="p">,</span><span class="w"> </span><span class="n">removed</span><span class="p">);</span><span class="w"></span>
+<span class="n">g_list_free_1</span><span class="p">(</span><span class="n">removed</span><span class="p">);</span><span class="w"></span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p></p>
+<div class="refsect3">
+<a name="GNUI-LIST-DELETE-AND-MOVE-TO-NEXT.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>LIST</p></td>
+<td class="parameter_description"><p>A pointer to the doubly-linked list. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>LLINK</p></td>
+<td class="parameter_description"><p>A pointer that before the call must point
+to the member to remove and which after the call will be set to
+the next member in the list. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-list-detach-and-move-to-next"></a><h3>gnui_list_detach_and_move_to_next ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+gnui_list_detach_and_move_to_next (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> ** const list</code></em>,
+                                   <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> ** const llink</code></em>);</pre>
+<p>Removes a pointed member from a <code class="literal">GList</code>, set the pointer to the next member
+    in the list (or to <code class="literal">NULL</code> if the list is over) and return the removed
+    element.</p>
+<p>    This function is only sugar for loops (useful for removing elements from a
+    list while the loop must keep going).</p>
+<p>    Writing</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">do_something</span><span class="p">(</span><span class="n">gnui_list_detach_and_move_to_next</span><span class="p">(</span><span class="o">&amp;</span><span class="n">list</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">current</span><span class="p">));</span><span class="w"></span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p></p>
+<p>    is equivalent to writing</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">removed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">current</span><span class="p">;</span><span class="w"></span>
+<span class="n">current</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">current</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span><span class="w"></span>
+<span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g_list_remove_link</span><span class="p">(</span><span class="n">list</span><span class="p">,</span><span class="w"> </span><span class="n">removed</span><span class="p">);</span><span class="w"></span>
+<span class="n">do_something</span><span class="p">(</span><span class="n">removed</span><span class="p">);</span><span class="w"></span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p></p>
+<div class="refsect3">
+<a name="gnui-list-detach-and-move-to-next.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>list</p></td>
+<td class="parameter_description"><p>A pointer to the doubly-linked list. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>llink</p></td>
+<td class="parameter_description"><p>A pointer that before the call must point
+to the member to remove and which after the call will be set to
+the next member in the list. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-list-detach-and-move-to-next.returns"></a><h4>Returns</h4>
+<p>    The removed element</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-lists-are-equal"></a><h3>gnui_lists_are_equal ()</h3>
+<pre class="programlisting"><span class="returnvalue">bool</span>
+gnui_lists_are_equal (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> * const list1</code></em>,
+                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> * const list2</code></em>);</pre>
+<p>Check if two <code class="literal">GLists</code> have the same elements in the same order</p>
+<div class="refsect3">
+<a name="gnui-lists-are-equal.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>list1</p></td>
+<td class="parameter_description"><p>The first list. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>list2</p></td>
+<td class="parameter_description"><p>The second list. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-lists-are-equal.returns"></a><h4>Returns</h4>
+<p>    <code class="literal">true</code> if the two lists are equal, <code class="literal">false</code> otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-signal-handlers-block-by-func"></a><h3>gnui_signal_handlers_block_by_func ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+gnui_signal_handlers_block_by_func (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> instance</code></em>,
+                                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/gobject/gobject-Closures.html#GCallback"><span class="type">GCallback</span></a> func</code></em>,
+                                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>);</pre>
+<p>Like <code class="literal"><a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#g-signal-handlers-block-by-func"><code class="function">g_signal_handlers_block_by_func()</code></a></code>, but suppresses the
+    function-pointer-to-object-pointer cast warning</p>
+<p>    <em class="parameter"><code>return</code></em>
+     The number of handlers that matched</p>
+<div class="refsect3">
+<a name="gnui-signal-handlers-block-by-func.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>instance</p></td>
+<td class="parameter_description"><p>The <code class="literal">GObject</code> instance. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>func</p></td>
+<td class="parameter_description"><p>The event handler to block. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>The closure data of the handlers' closures. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-signal-handlers-unblock-by-func"></a><h3>gnui_signal_handlers_unblock_by_func ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+gnui_signal_handlers_unblock_by_func (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> instance</code></em>,
+                                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/gobject/gobject-Closures.html#GCallback"><span class="type">GCallback</span></a> func</code></em>,
+                                      <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>);</pre>
+<p>Like <code class="literal"><a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#g-signal-handlers-unblock-by-func"><code class="function">g_signal_handlers_unblock_by_func()</code></a></code>, but suppresses the
+    function-pointer-to-object-pointer cast warning</p>
+<div class="refsect3">
+<a name="gnui-signal-handlers-unblock-by-func.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>instance</p></td>
+<td class="parameter_description"><p>The <code class="literal">GObject</code> instance. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>func</p></td>
+<td class="parameter_description"><p>The event handler to unblock. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>data</p></td>
+<td class="parameter_description"><p>The closure data of the handlers' closures. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="gnui-definitions.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GNUI-GNUC-CONSTRUCTOR:CAPS"></a><h3>GNUI_GNUC_CONSTRUCTOR</h3>
+<pre class="programlisting">#define GNUI_GNUC_CONSTRUCTOR __attribute__((constructor))
+</pre>
+<p>Mark a function as auto-init</p>
+<div class="refsect3">
+<a name="GNUI-GNUC-CONSTRUCTOR.returns"></a><h4>Returns</h4>
+<p>    The attribute to include</p>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

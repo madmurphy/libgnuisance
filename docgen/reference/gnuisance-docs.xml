@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+	"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+<!ENTITY version SYSTEM "version.xml">
+]>
+<book xmlns:xi="http://www.w3.org/2003/XInclude" id="index" lang="en">
+	<bookinfo>
+		<title>GNUIsance Reference Manual</title>
+		<subtitle>GNUIsance &ndash; GTK New User Interfaces</subtitle>
+		<releaseinfo>for libgnuisance &version;</releaseinfo>
+	</bookinfo>
+	<part id="reference">
+		<title>API Reference</title>
+		<chapter id="widgets">
+			<title>Widgets</title>
+			<xi:include href="xml/gnui-emblem-picker.xml"><xi:fallback /></xi:include>
+			<xi:include href="xml/gnui-flow.xml"><xi:fallback /></xi:include>
+			<xi:include href="xml/gnui-tagged-entry.xml"><xi:fallback /></xi:include>
+		</chapter>
+		<chapter id="layout-managers">
+			<title>Layout Managers</title>
+			<xi:include href="xml/gnui-flow-layout.xml"><xi:fallback /></xi:include>
+		</chapter>
+		<chapter id="fundamentals">
+			<title>GNUIsance Fundamentals</title>
+			<xi:include href="xml/gnui-definitions.xml"><xi:fallback /></xi:include>
+		</chapter>
+	</part>
+	<part id="internals">
+		<title>API Internals</title>
+		<xi:include href="xml/gnui-environment.xml"><xi:fallback /></xi:include>
+		<chapter id="resources">
+			<title>Per-module resources</title>
+			<xi:include href="xml/gnuisance.gresources.xml"><xi:fallback /></xi:include>
+			<xi:include href="xml/gnui-emblem-picker.gresources.xml"><xi:fallback /></xi:include>
+			<xi:include href="xml/gnui-tagged-entry.gresources.xml"><xi:fallback /></xi:include>
+		</chapter>
+	</part>
+	<index id="api-index-full">
+		<title>Index of all symbols</title>
+		<xi:include href="xml/api-index-full.xml"><xi:fallback /></xi:include>
+	</index>
+	<index id="deprecated">
+		<title>Index of deprecated symbols</title>
+		<xi:include href="xml/api-index-deprecated.xml"><xi:fallback /></xi:include>
+	</index>
+	<xi:include href="xml/annotation-glossary.xml"><xi:fallback /></xi:include>
+</book>

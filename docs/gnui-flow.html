@@ -1,0 +1,1320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GnuiFlow: GNUIsance Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="GNUIsance Reference Manual">
+<link rel="up" href="widgets.html" title="Widgets">
+<link rel="prev" href="gnui-emblem-picker.html" title="GnuiEmblemPicker">
+<link rel="next" href="gnui-tagged-entry.html" title="GnuiTaggedEntry">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#gnui-flow.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#gnui-flow.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#gnui-flow.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#gnui-flow.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="widgets.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="gnui-emblem-picker.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="gnui-tagged-entry.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="gnui-flow"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gnui-flow.top_of_page"></a>GnuiFlow</span></h2>
+<p>GnuiFlow — A flow container</p>
+</td>
+<td class="gallery_image" valign="top" align="right"><img src="gnui-flow-screenshot.png"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="gnui-flow.stability-level"></a><h2>Stability Level</h2>
+<acronym title="Unstable interfaces are experimental or transitional. They are typically used to
+give outside developers early access to new or rapidly changing technology, or
+to provide an interim solution to a problem where a more general solution is
+anticipated. No claims are made about either source or binary compatibility from
+one minor release to the next.
+
+The Unstable interface level is a warning that these interfaces are  subject to
+change without warning and should not be used in unbundled products.
+
+Given such caveats, customer impact need not be a factor when considering
+incompatible changes to an Unstable interface in a major or minor release.
+Nonetheless, when such changes are introduced, the changes should still be
+mentioned in the release notes for the affected release.
+"><span class="acronym">Unstable</span></acronym>, unless otherwise indicated
+</div>
+<div class="refsect1">
+<a name="gnui-flow.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GtkWidget</span> *
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-new" title="gnui_flow_new ()">gnui_flow_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GtkWidget</span> *
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-new-with-params" title="gnui_flow_new_with_params ()">gnui_flow_new_with_params</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GtkWidget</span> *
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-new-with-params-and-children" title="gnui_flow_new_with_params_and_children ()">gnui_flow_new_with_params_and_children</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-append" title="gnui_flow_append ()">gnui_flow_append</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-prepend" title="gnui_flow_prepend ()">gnui_flow_prepend</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-remove" title="gnui_flow_remove ()">gnui_flow_remove</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-insert" title="gnui_flow_insert ()">gnui_flow_insert</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-insert-child-before" title="gnui_flow_insert_child_before ()">gnui_flow_insert_child_before</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-insert-child-after" title="gnui_flow_insert_child_after ()">gnui_flow_insert_child_after</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-populate-before" title="gnui_flow_populate_before ()">gnui_flow_populate_before</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-populate-after" title="gnui_flow_populate_after ()">gnui_flow_populate_after</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-clear" title="gnui_flow_clear ()">gnui_flow_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-get-spacing" title="gnui_flow_get_spacing ()">gnui_flow_get_spacing</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-set-spacing" title="gnui_flow_set_spacing ()">gnui_flow_set_spacing</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-get-leading" title="gnui_flow_get_leading ()">gnui_flow_get_leading</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-set-leading" title="gnui_flow_set_leading ()">gnui_flow_set_leading</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GtkTextDirection</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-get-page-direction" title="gnui_flow_get_page_direction ()">gnui_flow_get_page_direction</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-set-page-direction" title="gnui_flow_set_page_direction ()">gnui_flow_set_page_direction</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GtkJustification</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-get-page-justify" title="gnui_flow_get_page_justify ()">gnui_flow_get_page_justify</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-set-page-justify" title="gnui_flow_set_page_justify ()">gnui_flow_set_page_justify</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GtkOrientation</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-get-orientation" title="gnui_flow_get_orientation ()">gnui_flow_get_orientation</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-set-orientation" title="gnui_flow_set_orientation ()">gnui_flow_set_orientation</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GtkTextDirection</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-get-line-direction" title="gnui_flow_get_line_direction ()">gnui_flow_get_line_direction</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-set-line-direction" title="gnui_flow_set_line_direction ()">gnui_flow_set_line_direction</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GtkJustification</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-get-line-justify" title="gnui_flow_get_line_justify ()">gnui_flow_get_line_justify</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-flow.html#gnui-flow-set-line-justify" title="gnui_flow_set_line_justify ()">gnui_flow_set_line_justify</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="gnui-flow.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><span class="type">int</span></td>
+<td class="property_name"><a class="link" href="gnui-flow.html#GnuiFlow--leading" title="The “leading” property">leading</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">GtkTextDirection</span></td>
+<td class="property_name"><a class="link" href="gnui-flow.html#GnuiFlow--line-direction" title="The “line-direction” property">line-direction</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">GtkJustification</span></td>
+<td class="property_name"><a class="link" href="gnui-flow.html#GnuiFlow--line-justify" title="The “line-justify” property">line-justify</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">GtkTextDirection</span></td>
+<td class="property_name"><a class="link" href="gnui-flow.html#GnuiFlow--page-direction" title="The “page-direction” property">page-direction</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">GtkJustification</span></td>
+<td class="property_name"><a class="link" href="gnui-flow.html#GnuiFlow--page-justify" title="The “page-justify” property">page-justify</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><span class="type">int</span></td>
+<td class="property_name"><a class="link" href="gnui-flow.html#GnuiFlow--spacing" title="The “spacing” property">spacing</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="GnuiFlow"></a><div class="refsect1">
+<a name="gnui-flow.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="gnui-flow.html#GNUI-TYPE-FLOW:CAPS" title="GNUI_TYPE_FLOW">GNUI_TYPE_FLOW</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="gnui-flow.html#GnuiFlowClass" title="struct GnuiFlowClass">GnuiFlowClass</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="gnui-flow.html#GnuiFlow-struct" title="GnuiFlow">GnuiFlow</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="gnui-flow.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span> GtkWidget
+            <span class="lineart">╰──</span> GnuiFlow
+</pre>
+</div>
+<div class="refsect1">
+<a name="gnui-flow.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GnuiFlow implements
+ GtkAccessible,  GtkBuildable,  GtkConstraintTarget and  GtkOrientable.</p>
+</div>
+<div class="refsect1">
+<a name="gnui-flow.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;gnuisance/gnui-flow.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="gnui-flow.description"></a><h2>Description</h2>
+<p><code class="literal">GnuiFlow</code> is a container widget that allocates its children widgets like
+    words in a text.</p>
+<p>    Most of the machinery that allows <code class="literal">GnuiFlow</code> to behave the way it behaves
+    is done by its layout manager, <code class="literal">GnuiFlowLayout</code> (in fact, widgets that
+    adopt <code class="literal">GnuiFlowLayout</code> as their layout manager will behave like
+    <code class="literal">GnuiFlow</code>). However <code class="literal">GnuiFlow</code> offers a rich set of convenience functions
+    for populating its content.</p>
+<p>    <code class="literal">GnuiFlow</code> does not align its children widgets in columns like <code class="literal">GtkFlowBox</code>
+    does. If you need that kind of table-like look, please refer to
+    <code class="literal">GtkFlowBox</code>.</p>
+</div>
+<div class="refsect1">
+<a name="gnui-flow.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="gnui-flow-new"></a><h3>gnui_flow_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *
+gnui_flow_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Create a new flow container widget</p>
+<div class="refsect3">
+<a name="gnui-flow-new.returns"></a><h4>Returns</h4>
+<p>    The newly created flow container</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-new-with-params"></a><h3>gnui_flow_new_with_params ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *
+gnui_flow_new_with_params (<em class="parameter"><code>const <span class="type">GtkOrientation</span> orientation</code></em>,
+                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> spacing</code></em>,
+                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> leading</code></em>);</pre>
+<p>Create a new flow container widget with parameters</p>
+<div class="refsect3">
+<a name="gnui-flow-new-with-params.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>orientation</p></td>
+<td class="parameter_description"><p>The flow container's orientation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>spacing</p></td>
+<td class="parameter_description"><p>The spacing between the children of the flow container in
+pixels (can be negative for overlapping widgets)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>leading</p></td>
+<td class="parameter_description"><p>The leading between the children of the flow container in
+pixels (can be negative for overlapping widgets)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-flow-new-with-params.returns"></a><h4>Returns</h4>
+<p>    The newly created flow container</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-new-with-params-and-children"></a><h3>gnui_flow_new_with_params_and_children ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *
+gnui_flow_new_with_params_and_children
+                               (<em class="parameter"><code>const <span class="type">GtkOrientation</span> orientation</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> spacing</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> leading</code></em>,
+                                <em class="parameter"><code>...</code></em>);</pre>
+<p>Create a new flow container widget with parameters and children</p>
+<p>    Example:</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">gnui_flow_new_with_params_and_children</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">GTK_ORIENTATION_HORIZONTAL</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="mi">6</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="mi">6</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">gtk_label_new</span><span class="p">(</span><span class="s">&quot;Child one&quot;</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">gtk_label_new</span><span class="p">(</span><span class="s">&quot;Child two&quot;</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">gtk_label_new</span><span class="p">(</span><span class="s">&quot;Child three&quot;</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">gtk_label_new</span><span class="p">(</span><span class="s">&quot;etc.&quot;</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="nb">NULL</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p></p>
+<div class="refsect3">
+<a name="gnui-flow-new-with-params-and-children.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>orientation</p></td>
+<td class="parameter_description"><p>The flow container's orientation</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>spacing</p></td>
+<td class="parameter_description"><p>The spacing between the children of the flow container in
+pixels (can be negative for overlapping widgets)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>leading</p></td>
+<td class="parameter_description"><p>The leading between the children of the flow container in
+pixels (can be negative for overlapping widgets)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>Zero or more widgets to insert as children in the newly
+created flow container, followed by <code class="literal">NULL</code></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-flow-new-with-params-and-children.returns"></a><h4>Returns</h4>
+<p>    The newly created flow container</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-append"></a><h3>gnui_flow_append ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_flow_append (<em class="parameter"><code><a class="link" href="gnui-flow.html#GnuiFlow"><span class="type">GnuiFlow</span></a> * const self</code></em>,
+                  <em class="parameter"><code><span class="type">GtkWidget</span> * const widget</code></em>);</pre>
+<p>Append a widget as the last child of a flow container</p>
+<div class="refsect3">
+<a name="gnui-flow-append.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The flow container. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>widget</p></td>
+<td class="parameter_description"><p>The child to append. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-prepend"></a><h3>gnui_flow_prepend ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_flow_prepend (<em class="parameter"><code><a class="link" href="gnui-flow.html#GnuiFlow"><span class="type">GnuiFlow</span></a> * const self</code></em>,
+                   <em class="parameter"><code><span class="type">GtkWidget</span> * const widget</code></em>);</pre>
+<p>Prepend a widget as the first child of a flow container</p>
+<div class="refsect3">
+<a name="gnui-flow-prepend.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The flow container. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>widget</p></td>
+<td class="parameter_description"><p>The child to prepend. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-remove"></a><h3>gnui_flow_remove ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_flow_remove (<em class="parameter"><code><a class="link" href="gnui-flow.html#GnuiFlow"><span class="type">GnuiFlow</span></a> * const self</code></em>,
+                  <em class="parameter"><code><span class="type">GtkWidget</span> * const child</code></em>);</pre>
+<p>Remove a child from a flow container</p>
+<div class="refsect3">
+<a name="gnui-flow-remove.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The flow container. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>widget</p></td>
+<td class="parameter_description"><p>The child to prepend. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-insert"></a><h3>gnui_flow_insert ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_flow_insert (<em class="parameter"><code><a class="link" href="gnui-flow.html#GnuiFlow"><span class="type">GnuiFlow</span></a> * const self</code></em>,
+                  <em class="parameter"><code><span class="type">GtkWidget</span> * const widget</code></em>,
+                  <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> at_index</code></em>);</pre>
+<p>Insert a widget as the nth child of a flow container</p>
+<div class="refsect3">
+<a name="gnui-flow-insert.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The flow container. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>widget</p></td>
+<td class="parameter_description"><p>The child to insert
+<em class="parameter"><code>at_index</code></em>
+The index at which the widget must be inserted; if negative the
+counting will be from the end, with <code class="literal">-1</code> representing the last
+child. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-insert-child-before"></a><h3>gnui_flow_insert_child_before ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_flow_insert_child_before (<em class="parameter"><code><a class="link" href="gnui-flow.html#GnuiFlow"><span class="type">GnuiFlow</span></a> * const self</code></em>,
+                               <em class="parameter"><code><span class="type">GtkWidget</span> * const widget</code></em>,
+                               <em class="parameter"><code><span class="type">GtkWidget</span> * const next_sibling</code></em>);</pre>
+<p>Insert a widget as the nth child of a flow container</p>
+<div class="refsect3">
+<a name="gnui-flow-insert-child-before.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The flow container. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>widget</p></td>
+<td class="parameter_description"><p>The child to insert. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>next_sibling</p></td>
+<td class="parameter_description"><p>The flow child before which the widget must be
+inserted; if <code class="literal">NULL</code> the widget will be appended as the last
+child. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-insert-child-after"></a><h3>gnui_flow_insert_child_after ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_flow_insert_child_after (<em class="parameter"><code><a class="link" href="gnui-flow.html#GnuiFlow"><span class="type">GnuiFlow</span></a> * const self</code></em>,
+                              <em class="parameter"><code><span class="type">GtkWidget</span> * const widget</code></em>,
+                              <em class="parameter"><code><span class="type">GtkWidget</span> * const previous_sibling</code></em>);</pre>
+<p>Insert a widget in a flow container after an existing child</p>
+<div class="refsect3">
+<a name="gnui-flow-insert-child-after.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The flow container. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>widget</p></td>
+<td class="parameter_description"><p>The child to insert. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>previous_sibling</p></td>
+<td class="parameter_description"><p>The flow child after which the widget must
+be inserted; if <code class="literal">NULL</code> the widget will be prepended as
+the first child. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-populate-before"></a><h3>gnui_flow_populate_before ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_flow_populate_before (<em class="parameter"><code><a class="link" href="gnui-flow.html#GnuiFlow"><span class="type">GnuiFlow</span></a> * const self</code></em>,
+                           <em class="parameter"><code><span class="type">GtkWidget</span> * const next_sibling</code></em>,
+                           <em class="parameter"><code><span class="type">GtkWidget</span> * const widget_1</code></em>,
+                           <em class="parameter"><code>...</code></em>);</pre>
+<p>Insert a group of widgets in a flow container before an existing child</p>
+<div class="refsect3">
+<a name="gnui-flow-populate-before.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The flow container. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>widget</p></td>
+<td class="parameter_description"><p>The child to insert. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>next_sibling</p></td>
+<td class="parameter_description"><p>The flow child before which the widgets must be
+inserted; if <code class="literal">NULL</code> the widgets will be appended as the
+last children. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>Zero or more widgets to insert after <em class="parameter"><code>widget_1</code></em>
+but before
+<em class="parameter"><code>next_sibling</code></em>
+, followed by <code class="literal">NULL</code></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-populate-after"></a><h3>gnui_flow_populate_after ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_flow_populate_after (<em class="parameter"><code><a class="link" href="gnui-flow.html#GnuiFlow"><span class="type">GnuiFlow</span></a> * const self</code></em>,
+                          <em class="parameter"><code><span class="type">GtkWidget</span> * const previous_sibling</code></em>,
+                          <em class="parameter"><code><span class="type">GtkWidget</span> * const widget_1</code></em>,
+                          <em class="parameter"><code>...</code></em>);</pre>
+<p>Insert a group of widgets in a flow container after an existing child</p>
+<div class="refsect3">
+<a name="gnui-flow-populate-after.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The flow container. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>widget</p></td>
+<td class="parameter_description"><p>The child to insert. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>previous_sibling</p></td>
+<td class="parameter_description"><p>The flow child after which the widgets must
+be inserted; if <code class="literal">NULL</code> the widgets will be prepended as
+the first children. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>Zero or more widgets to insert after <em class="parameter"><code>widget_1</code></em>
+,
+followed by <code class="literal">NULL</code></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-clear"></a><h3>gnui_flow_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_flow_clear (<em class="parameter"><code><a class="link" href="gnui-flow.html#GnuiFlow"><span class="type">GnuiFlow</span></a> * const self</code></em>);</pre>
+<p>Remove all the children nested inside a flow container</p>
+<div class="refsect3">
+<a name="gnui-flow-clear.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The flow container. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-get-spacing"></a><h3>gnui_flow_get_spacing ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+gnui_flow_get_spacing (<em class="parameter"><code><a class="link" href="gnui-flow.html#GnuiFlow"><span class="type">GnuiFlow</span></a> * const self</code></em>);</pre>
+<p>Get the spacing between the children of a flow container in pixels</p>
+<p><span class="annotation">[get-property spacing]</span></p>
+<div class="refsect3">
+<a name="gnui-flow-get-spacing.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The flow container. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-flow-get-spacing.returns"></a><h4>Returns</h4>
+<p>    The spacing between the children of the flow container in
+pixels (can be negative for overlapping widgets)</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-set-spacing"></a><h3>gnui_flow_set_spacing ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_flow_set_spacing (<em class="parameter"><code><a class="link" href="gnui-flow.html#GnuiFlow"><span class="type">GnuiFlow</span></a> * const self</code></em>,
+                       <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> spacing</code></em>);</pre>
+<p>Set the spacing between the children of a flow container in pixels</p>
+<p><span class="annotation">[set-property spacing]</span></p>
+<div class="refsect3">
+<a name="gnui-flow-set-spacing.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The flow container. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>spacing</p></td>
+<td class="parameter_description"><p>The spacing between the children of the flow container in
+pixels (can be negative for overlapping widgets)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-get-leading"></a><h3>gnui_flow_get_leading ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+gnui_flow_get_leading (<em class="parameter"><code><a class="link" href="gnui-flow.html#GnuiFlow"><span class="type">GnuiFlow</span></a> * const self</code></em>);</pre>
+<p>Get the leading between the children of a flow container in pixels</p>
+<p><span class="annotation">[get-property leading]</span></p>
+<div class="refsect3">
+<a name="gnui-flow-get-leading.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The flow container. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-flow-get-leading.returns"></a><h4>Returns</h4>
+<p>    The leading between the children of the flow container in
+pixels (can be negative for overlapping widgets)</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-set-leading"></a><h3>gnui_flow_set_leading ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_flow_set_leading (<em class="parameter"><code><a class="link" href="gnui-flow.html#GnuiFlow"><span class="type">GnuiFlow</span></a> * const self</code></em>,
+                       <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> leading</code></em>);</pre>
+<p>Set the leading between the children of the flow container in pixels</p>
+<p><span class="annotation">[set-property leading]</span></p>
+<div class="refsect3">
+<a name="gnui-flow-set-leading.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The flow container. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>leading</p></td>
+<td class="parameter_description"><p>The leading between the children of the flow container in
+pixels (can be negative for overlapping widgets)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-get-page-direction"></a><h3>gnui_flow_get_page_direction ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkTextDirection</span>
+gnui_flow_get_page_direction (<em class="parameter"><code><a class="link" href="gnui-flow.html#GnuiFlow"><span class="type">GnuiFlow</span></a> * const self</code></em>);</pre>
+<p>Get the flow container's page direction</p>
+<p><span class="annotation">[get-property page-direction]</span></p>
+<div class="refsect3">
+<a name="gnui-flow-get-page-direction.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The flow container. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-flow-get-page-direction.returns"></a><h4>Returns</h4>
+<p>    The flow container's page direction</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-set-page-direction"></a><h3>gnui_flow_set_page_direction ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_flow_set_page_direction (<em class="parameter"><code><a class="link" href="gnui-flow.html#GnuiFlow"><span class="type">GnuiFlow</span></a> * const self</code></em>,
+                              <em class="parameter"><code>const <span class="type">GtkTextDirection</span> direction</code></em>);</pre>
+<p>Set the flow container's page direction</p>
+<p><span class="annotation">[set-property page-direction]</span></p>
+<div class="refsect3">
+<a name="gnui-flow-set-page-direction.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The flow container. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>direction</p></td>
+<td class="parameter_description"><p>The flow container's page direction</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-get-page-justify"></a><h3>gnui_flow_get_page_justify ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkJustification</span>
+gnui_flow_get_page_justify (<em class="parameter"><code><a class="link" href="gnui-flow.html#GnuiFlow"><span class="type">GnuiFlow</span></a> * const self</code></em>);</pre>
+<p>Get the flow container's page justification</p>
+<p><span class="annotation">[get-property page-justify]</span></p>
+<div class="refsect3">
+<a name="gnui-flow-get-page-justify.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The flow container. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-flow-get-page-justify.returns"></a><h4>Returns</h4>
+<p>    The flow container's page justification</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-set-page-justify"></a><h3>gnui_flow_set_page_justify ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_flow_set_page_justify (<em class="parameter"><code><a class="link" href="gnui-flow.html#GnuiFlow"><span class="type">GnuiFlow</span></a> * const self</code></em>,
+                            <em class="parameter"><code>const <span class="type">GtkJustification</span> justification</code></em>);</pre>
+<p>Set the flow container's page justification</p>
+<p><span class="annotation">[set-property page-justify]</span></p>
+<div class="refsect3">
+<a name="gnui-flow-set-page-justify.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The flow container. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>justification</p></td>
+<td class="parameter_description"><p>The flow container's page justification</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-get-orientation"></a><h3>gnui_flow_get_orientation ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkOrientation</span>
+gnui_flow_get_orientation (<em class="parameter"><code><a class="link" href="gnui-flow.html#GnuiFlow"><span class="type">GnuiFlow</span></a> * const self</code></em>);</pre>
+<p>Get the flow container's orientation</p>
+<p><span class="annotation">[get-property orientation]</span></p>
+<div class="refsect3">
+<a name="gnui-flow-get-orientation.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The flow container. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-flow-get-orientation.returns"></a><h4>Returns</h4>
+<p>    The flow container's orientation</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-set-orientation"></a><h3>gnui_flow_set_orientation ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_flow_set_orientation (<em class="parameter"><code><a class="link" href="gnui-flow.html#GnuiFlow"><span class="type">GnuiFlow</span></a> * const self</code></em>,
+                           <em class="parameter"><code>const <span class="type">GtkOrientation</span> orientation</code></em>);</pre>
+<p>Set the flow container's orientation</p>
+<p><span class="annotation">[set-property orientation]</span></p>
+<div class="refsect3">
+<a name="gnui-flow-set-orientation.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The flow container. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>orientation</p></td>
+<td class="parameter_description"><p>The flow container's justification</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-get-line-direction"></a><h3>gnui_flow_get_line_direction ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkTextDirection</span>
+gnui_flow_get_line_direction (<em class="parameter"><code><a class="link" href="gnui-flow.html#GnuiFlow"><span class="type">GnuiFlow</span></a> * const self</code></em>);</pre>
+<p>Get the flow container's line direction</p>
+<p><span class="annotation">[get-property line-direction]</span></p>
+<div class="refsect3">
+<a name="gnui-flow-get-line-direction.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The flow container. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-flow-get-line-direction.returns"></a><h4>Returns</h4>
+<p>    The flow container's line direction</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-set-line-direction"></a><h3>gnui_flow_set_line_direction ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_flow_set_line_direction (<em class="parameter"><code><a class="link" href="gnui-flow.html#GnuiFlow"><span class="type">GnuiFlow</span></a> * const self</code></em>,
+                              <em class="parameter"><code>const <span class="type">GtkTextDirection</span> direction</code></em>);</pre>
+<p>Set the flow container's line direction</p>
+<p><span class="annotation">[set-property line-direction]</span></p>
+<div class="refsect3">
+<a name="gnui-flow-set-line-direction.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The flow container. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>direction</p></td>
+<td class="parameter_description"><p>The flow container's line direction</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-get-line-justify"></a><h3>gnui_flow_get_line_justify ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkJustification</span>
+gnui_flow_get_line_justify (<em class="parameter"><code><a class="link" href="gnui-flow.html#GnuiFlow"><span class="type">GnuiFlow</span></a> * const self</code></em>);</pre>
+<p>Get the flow container's line justification</p>
+<p><span class="annotation">[get-property line-justify]</span></p>
+<div class="refsect3">
+<a name="gnui-flow-get-line-justify.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The flow container. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-flow-get-line-justify.returns"></a><h4>Returns</h4>
+<p>    The flow container's line justification</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-flow-set-line-justify"></a><h3>gnui_flow_set_line_justify ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_flow_set_line_justify (<em class="parameter"><code><a class="link" href="gnui-flow.html#GnuiFlow"><span class="type">GnuiFlow</span></a> * const self</code></em>,
+                            <em class="parameter"><code>const <span class="type">GtkJustification</span> justification</code></em>);</pre>
+<p>Set the flow container's line justification</p>
+<p><span class="annotation">[set-property line-justify]</span></p>
+<div class="refsect3">
+<a name="gnui-flow-set-line-justify.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The flow container. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>justification</p></td>
+<td class="parameter_description"><p>The flow container's line justification</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="gnui-flow.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GNUI-TYPE-FLOW:CAPS"></a><h3>GNUI_TYPE_FLOW</h3>
+<pre class="programlisting">#define GNUI_TYPE_FLOW (gnui_flow_get_type())
+</pre>
+<p>The <code class="literal">GType</code> of <code class="literal">GnuiFlow</code></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiFlowClass"></a><h3>struct GnuiFlowClass</h3>
+<pre class="programlisting">struct GnuiFlowClass {
+    GtkWidgetClass parent_class;
+};
+</pre>
+<p>The flow widget's class</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiFlow-struct"></a><h3>GnuiFlow</h3>
+<pre class="programlisting">typedef struct _GnuiFlow GnuiFlow;</pre>
+<p>The <code class="literal">GnuiFlow</code> widget</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="gnui-flow.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GnuiFlow--leading"></a><h3>The <code class="literal">“leading”</code> property</h3>
+<pre class="programlisting">  “leading”                  <span class="type">int</span></pre>
+<p>Space between rows of children perpendicularly to the "orientation" axis.</p>
+<p>Owner: GnuiFlow</p>
+<p>Flags: Read / Write</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiFlow--line-direction"></a><h3>The <code class="literal">“line-direction”</code> property</h3>
+<pre class="programlisting">  “line-direction”           <span class="type">GtkTextDirection</span></pre>
+<p>The direction of child placement within the given "orientation" axis.</p>
+<p>Owner: GnuiFlow</p>
+<p>Flags: Read / Write</p>
+<p>Default value: GTK_TEXT_DIR_LTR</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiFlow--line-justify"></a><h3>The <code class="literal">“line-justify”</code> property</h3>
+<pre class="programlisting">  “line-justify”             <span class="type">GtkJustification</span></pre>
+<p>The alignment of the children relative to each other within each line; this does not affect the alignment of the flow widget within its allocation – see "halign" and "valign" for that.</p>
+<p>Owner: GnuiFlow</p>
+<p>Flags: Read / Write</p>
+<p>Default value: GTK_JUSTIFY_LEFT</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiFlow--page-direction"></a><h3>The <code class="literal">“page-direction”</code> property</h3>
+<pre class="programlisting">  “page-direction”           <span class="type">GtkTextDirection</span></pre>
+<p>The direction of child placement perpendicularly to the "orientation" axis.</p>
+<p>Owner: GnuiFlow</p>
+<p>Flags: Read / Write</p>
+<p>Default value: GTK_TEXT_DIR_LTR</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiFlow--page-justify"></a><h3>The <code class="literal">“page-justify”</code> property</h3>
+<pre class="programlisting">  “page-justify”             <span class="type">GtkJustification</span></pre>
+<p>The alignment of the lines of children widgets relative to each other; this does not affect the alignment of the flow widget within its allocation – see "halign" and "valign" for that.</p>
+<p>Owner: GnuiFlow</p>
+<p>Flags: Read / Write</p>
+<p>Default value: GTK_JUSTIFY_LEFT</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiFlow--spacing"></a><h3>The <code class="literal">“spacing”</code> property</h3>
+<pre class="programlisting">  “spacing”                  <span class="type">int</span></pre>
+<p>Space between children along the "orientation" axis.</p>
+<p>Owner: GnuiFlow</p>
+<p>Flags: Read / Write</p>
+<p>Default value: 0</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="gnui-flow.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="gnui-flow-layout.html#GnuiFlowLayout"><span class="type">GnuiFlowLayout</span></a></p>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>

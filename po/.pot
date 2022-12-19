@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR madmurphy333@gmail.com
+# This file is distributed under the same license as the libgnuisance package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: libgnuisance 0.1.0\n"
+"Report-Msgid-Bugs-To: madmurphy333@gmail.com\n"
+"POT-Creation-Date: 2022-12-16 23:19+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/widgets/emblem-picker/gnui-emblem-picker.c:1402
+msgid "Could not read file's emblems"
+msgstr ""
+
+#: src/widgets/emblem-picker/gnui-emblem-picker.c:1403
+msgid "unknown location"
+msgstr ""
+
+#: src/widgets/emblem-picker/gnui-emblem-picker.c:2476
+#: src/widgets/emblem-picker/gnui-emblem-picker.c:2494
+msgid "Unsupported emblems"
+msgstr ""
+
+#. TRANSLATORS: Please keep this text below 30 characters
+#: src/widgets/emblem-picker/gnui-emblem-picker.c:2478
+#: src/widgets/emblem-picker/gnui-emblem-picker.c:2496
+msgid "We coudn't render those :-("
+msgstr ""
+
+#: src/widgets/emblem-picker/gnui-emblem-picker.c:2614
+#, c-format
+msgid ""
+"gnui_emblem_picker_save() - No files were passed to GnuiEmblemPicker widget "
+"with address %p."
+msgstr ""
+
+#: src/widgets/tagged-entry/gnui-tagged-entry.c:2209
+#: src/widgets/tagged-entry/gnui-tagged-entry.c:2272
+#, c-format
+msgid "Delimiter found in tag \"%s\" - skipped\n"
+msgstr ""

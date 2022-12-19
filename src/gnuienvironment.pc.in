@@ -1,0 +1,14 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+datarootdir=@datarootdir@
+datadir=@datadir@
+includedir=@gnuiincludedir@
+
+Name: gnuienvironment
+Description: Stylesheets and icons for libgnuisance
+Version: @PACKAGE_VERSION@
+Requires.private: @GNUI_ENVIRONMENT_REQUIRES_PRIVATE@
+Requires: @GNUI_ENVIRONMENT_REQUIRES@
+Libs: -L${libdir} -lgnuienvironment
+Cflags: -I${includedir}

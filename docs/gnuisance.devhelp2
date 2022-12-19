@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<book xmlns="http://www.devhelp.net/book" title="GNUIsance Reference Manual" link="index.html" author="" name="gnuisance" version="2" language="c">
+  <chapters>
+    <sub name="API Reference" link="reference.html">
+      <sub name="Widgets" link="widgets.html">
+        <sub name="GnuiEmblemPicker" link="gnui-emblem-picker.html"/>
+        <sub name="GnuiFlow" link="gnui-flow.html"/>
+        <sub name="GnuiTaggedEntry" link="gnui-tagged-entry.html"/>
+      </sub>
+      <sub name="Layout Managers" link="layout-managers.html">
+        <sub name="GnuiFlowLayout" link="gnui-flow-layout.html"/>
+      </sub>
+      <sub name="GNUIsance Fundamentals" link="fundamentals.html">
+        <sub name="Miscellaneous macros and inline functions" link="gnui-definitions.html"/>
+      </sub>
+    </sub>
+    <sub name="API Internals" link="internals.html">
+      <sub name="GNUIsance environment" link="gnui-environment.html"/>
+      <sub name="Per-module resources" link="resources.html">
+        <sub name="gnuisance.gresources" link="gnuisance-gnuisance.gresources.html"/>
+        <sub name="gnui-emblem-picker.gresources" link="gnuisance-gnui-emblem-picker.gresources.html"/>
+        <sub name="gnui-tagged-entry.gresources" link="gnuisance-gnui-tagged-entry.gresources.html"/>
+      </sub>
+    </sub>
+    <sub name="Index of all symbols" link="api-index-full.html"/>
+    <sub name="Index of deprecated symbols" link="deprecated.html"/>
+    <sub name="Annotation Glossary" link="annotation-glossary.html"/>
+  </chapters>
+  <functions>
+    <keyword type="function" name="GnuiEmblemPickerForeachFunc ()" link="gnui-emblem-picker.html#GnuiEmblemPickerForeachFunc"/>
+    <keyword type="function" name="GnuiEmblemPickerForeachSavedFileFunc ()" link="gnui-emblem-picker.html#GnuiEmblemPickerForeachSavedFileFunc"/>
+    <keyword type="function" name="gnui_emblem_picker_new ()" link="gnui-emblem-picker.html#gnui-emblem-picker-new"/>
+    <keyword type="function" name="gnui_emblem_picker_save ()" link="gnui-emblem-picker.html#gnui-emblem-picker-save"/>
+    <keyword type="function" name="gnui_emblem_picker_refresh_states ()" link="gnui-emblem-picker.html#gnui-emblem-picker-refresh-states"/>
+    <keyword type="function" name="gnui_emblem_picker_toggle_emblem ()" link="gnui-emblem-picker.html#gnui-emblem-picker-toggle-emblem"/>
+    <keyword type="function" name="gnui_emblem_picker_set_emblem_state ()" link="gnui-emblem-picker.html#gnui-emblem-picker-set-emblem-state"/>
+    <keyword type="function" name="gnui_emblem_picker_peek_mapped_files ()" link="gnui-emblem-picker.html#gnui-emblem-picker-peek-mapped-files"/>
+    <keyword type="function" name="gnui_emblem_picker_get_mapped_files ()" link="gnui-emblem-picker.html#gnui-emblem-picker-get-mapped-files"/>
+    <keyword type="function" name="gnui_emblem_picker_set_mapped_files ()" link="gnui-emblem-picker.html#gnui-emblem-picker-set-mapped-files"/>
+    <keyword type="function" name="gnui_emblem_picker_peek_forbidden_emblems ()" link="gnui-emblem-picker.html#gnui-emblem-picker-peek-forbidden-emblems"/>
+    <keyword type="function" name="gnui_emblem_picker_get_forbidden_emblems ()" link="gnui-emblem-picker.html#gnui-emblem-picker-get-forbidden-emblems"/>
+    <keyword type="function" name="gnui_emblem_picker_set_forbidden_emblems ()" link="gnui-emblem-picker.html#gnui-emblem-picker-set-forbidden-emblems"/>
+    <keyword type="function" name="gnui_emblem_picker_get_ensure_standard ()" link="gnui-emblem-picker.html#gnui-emblem-picker-get-ensure-standard"/>
+    <keyword type="function" name="gnui_emblem_picker_set_ensure_standard ()" link="gnui-emblem-picker.html#gnui-emblem-picker-set-ensure-standard"/>
+    <keyword type="function" name="gnui_emblem_picker_get_modified ()" link="gnui-emblem-picker.html#gnui-emblem-picker-get-modified"/>
+    <keyword type="function" name="gnui_emblem_picker_set_modified ()" link="gnui-emblem-picker.html#gnui-emblem-picker-set-modified"/>
+    <keyword type="function" name="gnui_emblem_picker_get_reveal_changes ()" link="gnui-emblem-picker.html#gnui-emblem-picker-get-reveal-changes"/>
+    <keyword type="function" name="gnui_emblem_picker_set_reveal_changes ()" link="gnui-emblem-picker.html#gnui-emblem-picker-set-reveal-changes"/>
+    <keyword type="function" name="gnui_emblem_picker_foreach ()" link="gnui-emblem-picker.html#gnui-emblem-picker-foreach"/>
+    <keyword type="function" name="gnui_emblem_picker_undo_all_selections ()" link="gnui-emblem-picker.html#gnui-emblem-picker-undo-all-selections"/>
+    <keyword type="function" name="gnui_emblem_picker_set_all_selections ()" link="gnui-emblem-picker.html#gnui-emblem-picker-set-all-selections"/>
+    <keyword type="function" name="GnuiEmblemPickerSignalHandlerEmblemSelected ()" link="gnui-emblem-picker.html#GnuiEmblemPickerSignalHandlerEmblemSelected"/>
+    <keyword type="function" name="GnuiEmblemPickerSignalHandlerModifiedChanged ()" link="gnui-emblem-picker.html#GnuiEmblemPickerSignalHandlerModifiedChanged"/>
+    <keyword type="macro" name="GNUI_TYPE_EMBLEM_PICKER" link="gnui-emblem-picker.html#GNUI-TYPE-EMBLEM-PICKER:CAPS"/>
+    <keyword type="enum" name="enum GnuiEmblemState" link="gnui-emblem-picker.html#GnuiEmblemState"/>
+    <keyword type="enum" name="enum GnuiEmblemPickerSaveFlags" link="gnui-emblem-picker.html#GnuiEmblemPickerSaveFlags"/>
+    <keyword type="enum" name="enum GnuiEmblemPickerSaveResult" link="gnui-emblem-picker.html#GnuiEmblemPickerSaveResult"/>
+    <keyword type="struct" name="GnuiEmblemPicker" link="gnui-emblem-picker.html#GnuiEmblemPicker-struct"/>
+    <keyword type="property" name="The “ensure-standard” property" link="gnui-emblem-picker.html#GnuiEmblemPicker--ensure-standard"/>
+    <keyword type="property" name="The “forbidden-emblems” property" link="gnui-emblem-picker.html#GnuiEmblemPicker--forbidden-emblems"/>
+    <keyword type="property" name="The “mapped-files” property" link="gnui-emblem-picker.html#GnuiEmblemPicker--mapped-files"/>
+    <keyword type="property" name="The “modified” property" link="gnui-emblem-picker.html#GnuiEmblemPicker--modified"/>
+    <keyword type="property" name="The “reveal-changes” property" link="gnui-emblem-picker.html#GnuiEmblemPicker--reveal-changes"/>
+    <keyword type="signal" name="The “emblem-selected” signal" link="gnui-emblem-picker.html#GnuiEmblemPicker-emblem-selected"/>
+    <keyword type="signal" name="The “modified-changed” signal" link="gnui-emblem-picker.html#GnuiEmblemPicker-modified-changed"/>
+    <keyword type="function" name="gnui_flow_new ()" link="gnui-flow.html#gnui-flow-new"/>
+    <keyword type="function" name="gnui_flow_new_with_params ()" link="gnui-flow.html#gnui-flow-new-with-params"/>
+    <keyword type="function" name="gnui_flow_new_with_params_and_children ()" link="gnui-flow.html#gnui-flow-new-with-params-and-children"/>
+    <keyword type="function" name="gnui_flow_append ()" link="gnui-flow.html#gnui-flow-append"/>
+    <keyword type="function" name="gnui_flow_prepend ()" link="gnui-flow.html#gnui-flow-prepend"/>
+    <keyword type="function" name="gnui_flow_remove ()" link="gnui-flow.html#gnui-flow-remove"/>
+    <keyword type="function" name="gnui_flow_insert ()" link="gnui-flow.html#gnui-flow-insert"/>
+    <keyword type="function" name="gnui_flow_insert_child_before ()" link="gnui-flow.html#gnui-flow-insert-child-before"/>
+    <keyword type="function" name="gnui_flow_insert_child_after ()" link="gnui-flow.html#gnui-flow-insert-child-after"/>
+    <keyword type="function" name="gnui_flow_populate_before ()" link="gnui-flow.html#gnui-flow-populate-before"/>
+    <keyword type="function" name="gnui_flow_populate_after ()" link="gnui-flow.html#gnui-flow-populate-after"/>
+    <keyword type="function" name="gnui_flow_clear ()" link="gnui-flow.html#gnui-flow-clear"/>
+    <keyword type="function" name="gnui_flow_get_spacing ()" link="gnui-flow.html#gnui-flow-get-spacing"/>
+    <keyword type="function" name="gnui_flow_set_spacing ()" link="gnui-flow.html#gnui-flow-set-spacing"/>
+    <keyword type="function" name="gnui_flow_get_leading ()" link="gnui-flow.html#gnui-flow-get-leading"/>
+    <keyword type="function" name="gnui_flow_set_leading ()" link="gnui-flow.html#gnui-flow-set-leading"/>
+    <keyword type="function" name="gnui_flow_get_page_direction ()" link="gnui-flow.html#gnui-flow-get-page-direction"/>
+    <keyword type="function" name="gnui_flow_set_page_direction ()" link="gnui-flow.html#gnui-flow-set-page-direction"/>
+    <keyword type="function" name="gnui_flow_get_page_justify ()" link="gnui-flow.html#gnui-flow-get-page-justify"/>
+    <keyword type="function" name="gnui_flow_set_page_justify ()" link="gnui-flow.html#gnui-flow-set-page-justify"/>
+    <keyword type="function" name="gnui_flow_get_orientation ()" link="gnui-flow.html#gnui-flow-get-orientation"/>
+    <keyword type="function" name="gnui_flow_set_orientation ()" link="gnui-flow.html#gnui-flow-set-orientation"/>
+    <keyword type="function" name="gnui_flow_get_line_direction ()" link="gnui-flow.html#gnui-flow-get-line-direction"/>
+    <keyword type="function" name="gnui_flow_set_line_direction ()" link="gnui-flow.html#gnui-flow-set-line-direction"/>
+    <keyword type="function" name="gnui_flow_get_line_justify ()" link="gnui-flow.html#gnui-flow-get-line-justify"/>
+    <keyword type="function" name="gnui_flow_set_line_justify ()" link="gnui-flow.html#gnui-flow-set-line-justify"/>
+    <keyword type="macro" name="GNUI_TYPE_FLOW" link="gnui-flow.html#GNUI-TYPE-FLOW:CAPS"/>
+    <keyword type="struct" name="struct GnuiFlowClass" link="gnui-flow.html#GnuiFlowClass"/>
+    <keyword type="struct" name="GnuiFlow" link="gnui-flow.html#GnuiFlow-struct"/>
+    <keyword type="property" name="The “leading” property" link="gnui-flow.html#GnuiFlow--leading"/>
+    <keyword type="property" name="The “line-direction” property" link="gnui-flow.html#GnuiFlow--line-direction"/>
+    <keyword type="property" name="The “line-justify” property" link="gnui-flow.html#GnuiFlow--line-justify"/>
+    <keyword type="property" name="The “page-direction” property" link="gnui-flow.html#GnuiFlow--page-direction"/>
+    <keyword type="property" name="The “page-justify” property" link="gnui-flow.html#GnuiFlow--page-justify"/>
+    <keyword type="property" name="The “spacing” property" link="gnui-flow.html#GnuiFlow--spacing"/>
+    <keyword type="function" name="GnuiTaggedEntryFilterFunc ()" link="gnui-tagged-entry.html#GnuiTaggedEntryFilterFunc"/>
+    <keyword type="function" name="GnuiTaggedEntryMatchFunc ()" link="gnui-tagged-entry.html#GnuiTaggedEntryMatchFunc"/>
+    <keyword type="function" name="GnuiTaggedEntrySanitizeFunc ()" link="gnui-tagged-entry.html#GnuiTaggedEntrySanitizeFunc"/>
+    <keyword type="function" name="GnuiTaggedEntrySortFunc ()" link="gnui-tagged-entry.html#GnuiTaggedEntrySortFunc"/>
+    <keyword type="function" name="gnui_tagged_entry_new ()" link="gnui-tagged-entry.html#gnui-tagged-entry-new"/>
+    <keyword type="function" name="gnui_tagged_entry_has_tag ()" link="gnui-tagged-entry.html#gnui-tagged-entry-has-tag"/>
+    <keyword type="function" name="gnui_tagged_entry_remove_tag ()" link="gnui-tagged-entry.html#gnui-tagged-entry-remove-tag"/>
+    <keyword type="function" name="gnui_tagged_entry_remove_all_tags ()" link="gnui-tagged-entry.html#gnui-tagged-entry-remove-all-tags"/>
+    <keyword type="function" name="gnui_tagged_entry_populate ()" link="gnui-tagged-entry.html#gnui-tagged-entry-populate"/>
+    <keyword type="function" name="gnui_tagged_entry_populate_strv ()" link="gnui-tagged-entry.html#gnui-tagged-entry-populate-strv"/>
+    <keyword type="function" name="gnui_tagged_entry_add_tag ()" link="gnui-tagged-entry.html#gnui-tagged-entry-add-tag"/>
+    <keyword type="function" name="gnui_tagged_entry_add_tags ()" link="gnui-tagged-entry.html#gnui-tagged-entry-add-tags"/>
+    <keyword type="function" name="gnui_tagged_entry_parse_expression ()" link="gnui-tagged-entry.html#gnui-tagged-entry-parse-expression"/>
+    <keyword type="function" name="gnui_tagged_entry_rename_tag ()" link="gnui-tagged-entry.html#gnui-tagged-entry-rename-tag"/>
+    <keyword type="function" name="gnui_tagged_entry_set_pin ()" link="gnui-tagged-entry.html#gnui-tagged-entry-set-pin"/>
+    <keyword type="function" name="gnui_tagged_entry_set_pins ()" link="gnui-tagged-entry.html#gnui-tagged-entry-set-pins"/>
+    <keyword type="function" name="gnui_tagged_entry_activate ()" link="gnui-tagged-entry.html#gnui-tagged-entry-activate"/>
+    <keyword type="function" name="gnui_tagged_entry_get_delimiter_chars ()" link="gnui-tagged-entry.html#gnui-tagged-entry-get-delimiter-chars"/>
+    <keyword type="function" name="gnui_tagged_entry_set_delimiter_chars ()" link="gnui-tagged-entry.html#gnui-tagged-entry-set-delimiter-chars"/>
+    <keyword type="function" name="gnui_tagged_entry_get_filter_data ()" link="gnui-tagged-entry.html#gnui-tagged-entry-get-filter-data"/>
+    <keyword type="function" name="gnui_tagged_entry_set_filter_data ()" link="gnui-tagged-entry.html#gnui-tagged-entry-set-filter-data"/>
+    <keyword type="function" name="gnui_tagged_entry_get_filter_function ()" link="gnui-tagged-entry.html#gnui-tagged-entry-get-filter-function"/>
+    <keyword type="function" name="gnui_tagged_entry_set_filter_function ()" link="gnui-tagged-entry.html#gnui-tagged-entry-set-filter-function"/>
+    <keyword type="function" name="gnui_tagged_entry_get_invalid ()" link="gnui-tagged-entry.html#gnui-tagged-entry-get-invalid"/>
+    <keyword type="function" name="gnui_tagged_entry_set_invalid ()" link="gnui-tagged-entry.html#gnui-tagged-entry-set-invalid"/>
+    <keyword type="function" name="gnui_tagged_entry_get_match_data ()" link="gnui-tagged-entry.html#gnui-tagged-entry-get-match-data"/>
+    <keyword type="function" name="gnui_tagged_entry_set_match_data ()" link="gnui-tagged-entry.html#gnui-tagged-entry-set-match-data"/>
+    <keyword type="function" name="gnui_tagged_entry_get_match_function ()" link="gnui-tagged-entry.html#gnui-tagged-entry-get-match-function"/>
+    <keyword type="function" name="gnui_tagged_entry_set_match_function ()" link="gnui-tagged-entry.html#gnui-tagged-entry-set-match-function"/>
+    <keyword type="function" name="gnui_tagged_entry_get_modified ()" link="gnui-tagged-entry.html#gnui-tagged-entry-get-modified"/>
+    <keyword type="function" name="gnui_tagged_entry_set_modified ()" link="gnui-tagged-entry.html#gnui-tagged-entry-set-modified"/>
+    <keyword type="function" name="gnui_tagged_entry_get_placeholder_text ()" link="gnui-tagged-entry.html#gnui-tagged-entry-get-placeholder-text"/>
+    <keyword type="function" name="gnui_tagged_entry_set_placeholder_text ()" link="gnui-tagged-entry.html#gnui-tagged-entry-set-placeholder-text"/>
+    <keyword type="function" name="gnui_tagged_entry_get_sanitize_data ()" link="gnui-tagged-entry.html#gnui-tagged-entry-get-sanitize-data"/>
+    <keyword type="function" name="gnui_tagged_entry_set_sanitize_data ()" link="gnui-tagged-entry.html#gnui-tagged-entry-set-sanitize-data"/>
+    <keyword type="function" name="gnui_tagged_entry_get_sanitize_function ()" link="gnui-tagged-entry.html#gnui-tagged-entry-get-sanitize-function"/>
+    <keyword type="function" name="gnui_tagged_entry_set_sanitize_function ()" link="gnui-tagged-entry.html#gnui-tagged-entry-set-sanitize-function"/>
+    <keyword type="function" name="gnui_tagged_entry_get_sort_data ()" link="gnui-tagged-entry.html#gnui-tagged-entry-get-sort-data"/>
+    <keyword type="function" name="gnui_tagged_entry_set_sort_data ()" link="gnui-tagged-entry.html#gnui-tagged-entry-set-sort-data"/>
+    <keyword type="function" name="gnui_tagged_entry_get_sort_function ()" link="gnui-tagged-entry.html#gnui-tagged-entry-get-sort-function"/>
+    <keyword type="function" name="gnui_tagged_entry_set_sort_function ()" link="gnui-tagged-entry.html#gnui-tagged-entry-set-sort-function"/>
+    <keyword type="function" name="gnui_tagged_entry_get_tags ()" link="gnui-tagged-entry.html#gnui-tagged-entry-get-tags"/>
+    <keyword type="function" name="gnui_tagged_entry_set_tags ()" link="gnui-tagged-entry.html#gnui-tagged-entry-set-tags"/>
+    <keyword type="function" name="gnui_tagged_entry_invalidate_filter ()" link="gnui-tagged-entry.html#gnui-tagged-entry-invalidate-filter"/>
+    <keyword type="function" name="gnui_tagged_entry_invalidate_sort ()" link="gnui-tagged-entry.html#gnui-tagged-entry-invalidate-sort"/>
+    <keyword type="function" name="gnui_tagged_entry_get_text_delegate ()" link="gnui-tagged-entry.html#gnui-tagged-entry-get-text-delegate"/>
+    <keyword type="function" name="GnuiTaggedEntrySignalHandlerTagAdded ()" link="gnui-tagged-entry.html#GnuiTaggedEntrySignalHandlerTagAdded"/>
+    <keyword type="function" name="GnuiTaggedEntrySignalHandlerTagRemoved ()" link="gnui-tagged-entry.html#GnuiTaggedEntrySignalHandlerTagRemoved"/>
+    <keyword type="function" name="GnuiTaggedEntrySignalHandlerActivate ()" link="gnui-tagged-entry.html#GnuiTaggedEntrySignalHandlerActivate"/>
+    <keyword type="function" name="GnuiTaggedEntrySignalHandlerModifiedChanged ()" link="gnui-tagged-entry.html#GnuiTaggedEntrySignalHandlerModifiedChanged"/>
+    <keyword type="macro" name="GNUI_TYPE_TAGGED_ENTRY" link="gnui-tagged-entry.html#GNUI-TYPE-TAGGED-ENTRY:CAPS"/>
+    <keyword type="struct" name="GnuiTaggedEntry" link="gnui-tagged-entry.html#GnuiTaggedEntry-struct"/>
+    <keyword type="property" name="The “delimiter-chars” property" link="gnui-tagged-entry.html#GnuiTaggedEntry--delimiter-chars"/>
+    <keyword type="property" name="The “filter-data” property" link="gnui-tagged-entry.html#GnuiTaggedEntry--filter-data"/>
+    <keyword type="property" name="The “filter-function” property" link="gnui-tagged-entry.html#GnuiTaggedEntry--filter-function"/>
+    <keyword type="property" name="The “invalid” property" link="gnui-tagged-entry.html#GnuiTaggedEntry--invalid"/>
+    <keyword type="property" name="The “match-data” property" link="gnui-tagged-entry.html#GnuiTaggedEntry--match-data"/>
+    <keyword type="property" name="The “match-function” property" link="gnui-tagged-entry.html#GnuiTaggedEntry--match-function"/>
+    <keyword type="property" name="The “modified” property" link="gnui-tagged-entry.html#GnuiTaggedEntry--modified"/>
+    <keyword type="property" name="The “placeholder-text” property" link="gnui-tagged-entry.html#GnuiTaggedEntry--placeholder-text"/>
+    <keyword type="property" name="The “sanitize-data” property" link="gnui-tagged-entry.html#GnuiTaggedEntry--sanitize-data"/>
+    <keyword type="property" name="The “sanitize-function” property" link="gnui-tagged-entry.html#GnuiTaggedEntry--sanitize-function"/>
+    <keyword type="property" name="The “sort-data” property" link="gnui-tagged-entry.html#GnuiTaggedEntry--sort-data"/>
+    <keyword type="property" name="The “sort-function” property" link="gnui-tagged-entry.html#GnuiTaggedEntry--sort-function"/>
+    <keyword type="property" name="The “tags” property" link="gnui-tagged-entry.html#GnuiTaggedEntry--tags"/>
+    <keyword type="signal" name="The “activate” signal" link="gnui-tagged-entry.html#GnuiTaggedEntry-activate"/>
+    <keyword type="signal" name="The “modified-changed” signal" link="gnui-tagged-entry.html#GnuiTaggedEntry-modified-changed"/>
+    <keyword type="signal" name="The “tag-added” signal" link="gnui-tagged-entry.html#GnuiTaggedEntry-tag-added"/>
+    <keyword type="signal" name="The “tag-removed” signal" link="gnui-tagged-entry.html#GnuiTaggedEntry-tag-removed"/>
+    <keyword type="function" name="gnui_flow_layout_new ()" link="gnui-flow-layout.html#gnui-flow-layout-new"/>
+    <keyword type="function" name="gnui_flow_layout_get_spacing ()" link="gnui-flow-layout.html#gnui-flow-layout-get-spacing"/>
+    <keyword type="function" name="gnui_flow_layout_set_spacing ()" link="gnui-flow-layout.html#gnui-flow-layout-set-spacing"/>
+    <keyword type="function" name="gnui_flow_layout_get_leading ()" link="gnui-flow-layout.html#gnui-flow-layout-get-leading"/>
+    <keyword type="function" name="gnui_flow_layout_set_leading ()" link="gnui-flow-layout.html#gnui-flow-layout-set-leading"/>
+    <keyword type="function" name="gnui_flow_layout_get_page_direction ()" link="gnui-flow-layout.html#gnui-flow-layout-get-page-direction"/>
+    <keyword type="function" name="gnui_flow_layout_set_page_direction ()" link="gnui-flow-layout.html#gnui-flow-layout-set-page-direction"/>
+    <keyword type="function" name="gnui_flow_layout_get_page_justify ()" link="gnui-flow-layout.html#gnui-flow-layout-get-page-justify"/>
+    <keyword type="function" name="gnui_flow_layout_set_page_justify ()" link="gnui-flow-layout.html#gnui-flow-layout-set-page-justify"/>
+    <keyword type="function" name="gnui_flow_layout_get_orientation ()" link="gnui-flow-layout.html#gnui-flow-layout-get-orientation"/>
+    <keyword type="function" name="gnui_flow_layout_set_orientation ()" link="gnui-flow-layout.html#gnui-flow-layout-set-orientation"/>
+    <keyword type="function" name="gnui_flow_layout_get_line_direction ()" link="gnui-flow-layout.html#gnui-flow-layout-get-line-direction"/>
+    <keyword type="function" name="gnui_flow_layout_set_line_direction ()" link="gnui-flow-layout.html#gnui-flow-layout-set-line-direction"/>
+    <keyword type="function" name="gnui_flow_layout_get_line_justify ()" link="gnui-flow-layout.html#gnui-flow-layout-get-line-justify"/>
+    <keyword type="function" name="gnui_flow_layout_set_line_justify ()" link="gnui-flow-layout.html#gnui-flow-layout-set-line-justify"/>
+    <keyword type="macro" name="GNUI_TYPE_FLOW_LAYOUT" link="gnui-flow-layout.html#GNUI-TYPE-FLOW-LAYOUT:CAPS"/>
+    <keyword type="macro" name="GNUI_TYPE_FLOW_CHILD_LAYOUT" link="gnui-flow-layout.html#GNUI-TYPE-FLOW-CHILD-LAYOUT:CAPS"/>
+    <keyword type="struct" name="struct GnuiFlowChildLayoutClass" link="gnui-flow-layout.html#GnuiFlowChildLayoutClass"/>
+    <keyword type="struct" name="struct GnuiFlowLayoutClass" link="gnui-flow-layout.html#GnuiFlowLayoutClass"/>
+    <keyword type="struct" name="GnuiFlowChildLayout" link="gnui-flow-layout.html#GnuiFlowChildLayout-struct"/>
+    <keyword type="struct" name="GnuiFlowLayout" link="gnui-flow-layout.html#GnuiFlowLayout-struct"/>
+    <keyword type="property" name="The “leading” property" link="gnui-flow-layout.html#GnuiFlowLayout--leading"/>
+    <keyword type="property" name="The “line-direction” property" link="gnui-flow-layout.html#GnuiFlowLayout--line-direction"/>
+    <keyword type="property" name="The “line-justify” property" link="gnui-flow-layout.html#GnuiFlowLayout--line-justify"/>
+    <keyword type="property" name="The “page-direction” property" link="gnui-flow-layout.html#GnuiFlowLayout--page-direction"/>
+    <keyword type="property" name="The “page-justify” property" link="gnui-flow-layout.html#GnuiFlowLayout--page-justify"/>
+    <keyword type="property" name="The “spacing” property" link="gnui-flow-layout.html#GnuiFlowLayout--spacing"/>
+    <keyword type="macro" name="GNUI_PP_CALL()" link="gnui-definitions.html#GNUI-PP-CALL:CAPS"/>
+    <keyword type="macro" name="GNUI_PP_EAT()" link="gnui-definitions.html#GNUI-PP-EAT:CAPS"/>
+    <keyword type="macro" name="GNUI_PP_EXPAND()" link="gnui-definitions.html#GNUI-PP-EXPAND:CAPS"/>
+    <keyword type="macro" name="GNUI_PP_PASTE2()" link="gnui-definitions.html#GNUI-PP-PASTE2:CAPS"/>
+    <keyword type="macro" name="GNUI_PP_PASTE3()" link="gnui-definitions.html#GNUI-PP-PASTE3:CAPS"/>
+    <keyword type="macro" name="GNUI_PP_STRINGIFY()" link="gnui-definitions.html#GNUI-PP-STRINGIFY:CAPS"/>
+    <keyword type="macro" name="GNUI_PP_BOOL()" link="gnui-definitions.html#GNUI-PP-BOOL:CAPS"/>
+    <keyword type="macro" name="GNUI_PP_BOOL_NOT()" link="gnui-definitions.html#GNUI-PP-BOOL-NOT:CAPS"/>
+    <keyword type="macro" name="GNUI_PP_IF_NONZERO()" link="gnui-definitions.html#GNUI-PP-IF-NONZERO:CAPS"/>
+    <keyword type="macro" name="GNUI_PP_IF_ONE_OR_ZERO()" link="gnui-definitions.html#GNUI-PP-IF-ONE-OR-ZERO:CAPS"/>
+    <keyword type="macro" name="GNUI_PP_LITERAL_PASTE2()" link="gnui-definitions.html#GNUI-PP-LITERAL-PASTE2:CAPS"/>
+    <keyword type="macro" name="GNUI_PP_LITERAL_PASTE3()" link="gnui-definitions.html#GNUI-PP-LITERAL-PASTE3:CAPS"/>
+    <keyword type="macro" name="GNUI_PP_LITERAL_STRINGIFY()" link="gnui-definitions.html#GNUI-PP-LITERAL-STRINGIFY:CAPS"/>
+    <keyword type="macro" name="GNUI_PP_WHEN_NONZERO()" link="gnui-definitions.html#GNUI-PP-WHEN-NONZERO:CAPS"/>
+    <keyword type="macro" name="GNUI_CONTAINER_OF()" link="gnui-definitions.html#GNUI-CONTAINER-OF:CAPS"/>
+    <keyword type="macro" name="GNUI_SET_POINTED_VALUE_IF_GIVEN__2_1()" link="gnui-definitions.html#GNUI-SET-POINTED-VALUE-IF-GIVEN--2-1:CAPS"/>
+    <keyword type="macro" name="GNUI_SET_IF_GREATER__2_2()" link="gnui-definitions.html#GNUI-SET-IF-GREATER--2-2:CAPS"/>
+    <keyword type="macro" name="GNUI_NORMALIZE_INT_UINT_CAST__2()" link="gnui-definitions.html#GNUI-NORMALIZE-INT-UINT-CAST--2:CAPS"/>
+    <keyword type="macro" name="GNUI_ROUND_UINT_DIVISION__1_2()" link="gnui-definitions.html#GNUI-ROUND-UINT-DIVISION--1-2:CAPS"/>
+    <keyword type="macro" name="GNUI_ROUND_INT_DIVISION__2_3()" link="gnui-definitions.html#GNUI-ROUND-INT-DIVISION--2-3:CAPS"/>
+    <keyword type="macro" name="GNUI_PERPENDICULAR_ORIENTATION()" link="gnui-definitions.html#GNUI-PERPENDICULAR-ORIENTATION:CAPS"/>
+    <keyword type="function" name="gnui_list_prepend_llink ()" link="gnui-definitions.html#gnui-list-prepend-llink"/>
+    <keyword type="function" name="gnui_list_u_detach_and_move_to_next ()" link="gnui-definitions.html#gnui-list-u-detach-and-move-to-next"/>
+    <keyword type="macro" name="GNUI_LIST_DELETE_AND_MOVE_TO_NEXT()" link="gnui-definitions.html#GNUI-LIST-DELETE-AND-MOVE-TO-NEXT:CAPS"/>
+    <keyword type="function" name="gnui_list_detach_and_move_to_next ()" link="gnui-definitions.html#gnui-list-detach-and-move-to-next"/>
+    <keyword type="function" name="gnui_lists_are_equal ()" link="gnui-definitions.html#gnui-lists-are-equal"/>
+    <keyword type="function" name="gnui_signal_handlers_block_by_func ()" link="gnui-definitions.html#gnui-signal-handlers-block-by-func"/>
+    <keyword type="function" name="gnui_signal_handlers_unblock_by_func ()" link="gnui-definitions.html#gnui-signal-handlers-unblock-by-func"/>
+    <keyword type="macro" name="GNUI_GNUC_CONSTRUCTOR" link="gnui-definitions.html#GNUI-GNUC-CONSTRUCTOR:CAPS"/>
+    <keyword type="function" name="gnuisance_environment_init ()" link="gnui-environment.html#gnuisance-environment-init"/>
+    <keyword type="function" name="gnuisance_environment_get_is_initialized ()" link="gnui-environment.html#gnuisance-environment-get-is-initialized"/>
+    <keyword type="function" name="gnuisance_get_resource ()" link="gnuisance-gnuisance.gresources.html#gnuisance-get-resource"/>
+    <keyword type="function" name="gnui_emblem_picker_get_resource ()" link="gnuisance-gnui-emblem-picker.gresources.html#gnui-emblem-picker-get-resource"/>
+    <keyword type="function" name="gnui_tagged_entry_get_resource ()" link="gnuisance-gnui-tagged-entry.gresources.html#gnui-tagged-entry-get-resource"/>
+    <keyword type="constant" name="GNUI_EMBLEM_STATES_WITH_PREFIX" link="gnui-emblem-picker.html#GNUI-EMBLEM-STATES-WITH-PREFIX:CAPS"/>
+    <keyword type="constant" name="GNUI_EMBLEM_PICKER_SAVE_FLAG_NONE" link="gnui-emblem-picker.html#GNUI-EMBLEM-PICKER-SAVE-FLAG-NONE:CAPS"/>
+    <keyword type="constant" name="GNUI_EMBLEM_PICKER_SAVE_FLAG_SAVE_UNMODIFIED" link="gnui-emblem-picker.html#GNUI-EMBLEM-PICKER-SAVE-FLAG-SAVE-UNMODIFIED:CAPS"/>
+    <keyword type="constant" name="GNUI_EMBLEM_PICKER_SAVE_FLAG_ABORT_MODE" link="gnui-emblem-picker.html#GNUI-EMBLEM-PICKER-SAVE-FLAG-ABORT-MODE:CAPS"/>
+    <keyword type="constant" name="GNUI_EMBLEM_PICKER_SAVE_FLAG_DONT_REFRESH" link="gnui-emblem-picker.html#GNUI-EMBLEM-PICKER-SAVE-FLAG-DONT-REFRESH:CAPS"/>
+    <keyword type="constant" name="GNUI_EMBLEM_PICKER_SAVE_FLAG_CLEAN_INCONSISTENCY" link="gnui-emblem-picker.html#GNUI-EMBLEM-PICKER-SAVE-FLAG-CLEAN-INCONSISTENCY:CAPS"/>
+    <keyword type="constant" name="GNUI_EMBLEM_PICKER_SAVE_FLAG_CALLBACK_ON_ERROR" link="gnui-emblem-picker.html#GNUI-EMBLEM-PICKER-SAVE-FLAG-CALLBACK-ON-ERROR:CAPS"/>
+    <keyword type="constant" name="GNUI_EMBLEM_PICKER_SAVE_FLAG_CALLBACK_ON_SUCCESS" link="gnui-emblem-picker.html#GNUI-EMBLEM-PICKER-SAVE-FLAG-CALLBACK-ON-SUCCESS:CAPS"/>
+    <keyword type="constant" name="GNUI_EMBLEM_PICKER_SAVE_FLAG_CALLBACK_ON_NOACTION" link="gnui-emblem-picker.html#GNUI-EMBLEM-PICKER-SAVE-FLAG-CALLBACK-ON-NOACTION:CAPS"/>
+    <keyword type="constant" name="GNUI_EMBLEM_PICKER_SAVE_FLAGGROUP_ALL_CALLBACKS" link="gnui-emblem-picker.html#GNUI-EMBLEM-PICKER-SAVE-FLAGGROUP-ALL-CALLBACKS:CAPS"/>
+    <keyword type="constant" name="GNUI_EMBLEM_PICKER_SAVE_FLAGGROUP_ALL_FLAGS_SET" link="gnui-emblem-picker.html#GNUI-EMBLEM-PICKER-SAVE-FLAGGROUP-ALL-FLAGS-SET:CAPS"/>
+    <keyword type="constant" name="GNUI_EMBLEM_PICKER_ERROR" link="gnui-emblem-picker.html#GNUI-EMBLEM-PICKER-ERROR:CAPS"/>
+    <keyword type="constant" name="GNUI_EMBLEM_PICKER_NOACTION" link="gnui-emblem-picker.html#GNUI-EMBLEM-PICKER-NOACTION:CAPS"/>
+    <keyword type="constant" name="GNUI_EMBLEM_PICKER_SUCCESS" link="gnui-emblem-picker.html#GNUI-EMBLEM-PICKER-SUCCESS:CAPS"/>
+  </functions>
+</book>

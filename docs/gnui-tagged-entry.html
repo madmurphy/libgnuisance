@@ -1,0 +1,2731 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GnuiTaggedEntry: GNUIsance Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets Vsnapshot">
+<link rel="home" href="index.html" title="GNUIsance Reference Manual">
+<link rel="up" href="widgets.html" title="Widgets">
+<link rel="prev" href="gnui-flow.html" title="GnuiFlow">
+<link rel="next" href="layout-managers.html" title="Layout Managers">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#gnui-tagged-entry.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#gnui-tagged-entry.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#gnui-tagged-entry.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#gnui-tagged-entry.properties" class="shortcut">Properties</a></span><span id="nav_signals">  <span class="dim">|</span> 
+                  <a href="#gnui-tagged-entry.signals" class="shortcut">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="widgets.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="gnui-flow.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="layout-managers.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="gnui-tagged-entry"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gnui-tagged-entry.top_of_page"></a>GnuiTaggedEntry</span></h2>
+<p>GnuiTaggedEntry — A tagged entry</p>
+</td>
+<td class="gallery_image" valign="top" align="right"><img src="gnui-tagged-entry-screenshot.png"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="gnui-tagged-entry.stability-level"></a><h2>Stability Level</h2>
+<acronym title="Unstable interfaces are experimental or transitional. They are typically used to
+give outside developers early access to new or rapidly changing technology, or
+to provide an interim solution to a problem where a more general solution is
+anticipated. No claims are made about either source or binary compatibility from
+one minor release to the next.
+
+The Unstable interface level is a warning that these interfaces are  subject to
+change without warning and should not be used in unbundled products.
+
+Given such caveats, customer impact need not be a factor when considering
+incompatible changes to an Unstable interface in a major or minor release.
+Nonetheless, when such changes are introduced, the changes should still be
+mentioned in the release notes for the affected release.
+"><span class="acronym">Unstable</span></acronym>, unless otherwise indicated
+</div>
+<div class="refsect1">
+<a name="gnui-tagged-entry.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntryFilterFunc" title="GnuiTaggedEntryFilterFunc ()">*GnuiTaggedEntryFilterFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntryMatchFunc" title="GnuiTaggedEntryMatchFunc ()">*GnuiTaggedEntryMatchFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntrySanitizeFunc" title="GnuiTaggedEntrySanitizeFunc ()">*GnuiTaggedEntrySanitizeFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntrySortFunc" title="GnuiTaggedEntrySortFunc ()">*GnuiTaggedEntrySortFunc</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GtkWidget</span> *
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-new" title="gnui_tagged_entry_new ()">gnui_tagged_entry_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-has-tag" title="gnui_tagged_entry_has_tag ()">gnui_tagged_entry_has_tag</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-remove-tag" title="gnui_tagged_entry_remove_tag ()">gnui_tagged_entry_remove_tag</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-remove-all-tags" title="gnui_tagged_entry_remove_all_tags ()">gnui_tagged_entry_remove_all_tags</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-populate" title="gnui_tagged_entry_populate ()">gnui_tagged_entry_populate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-populate-strv" title="gnui_tagged_entry_populate_strv ()">gnui_tagged_entry_populate_strv</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-add-tag" title="gnui_tagged_entry_add_tag ()">gnui_tagged_entry_add_tag</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-add-tags" title="gnui_tagged_entry_add_tags ()">gnui_tagged_entry_add_tags</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gsize"><span class="returnvalue">gsize</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-parse-expression" title="gnui_tagged_entry_parse_expression ()">gnui_tagged_entry_parse_expression</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-rename-tag" title="gnui_tagged_entry_rename_tag ()">gnui_tagged_entry_rename_tag</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-set-pin" title="gnui_tagged_entry_set_pin ()">gnui_tagged_entry_set_pin</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-set-pins" title="gnui_tagged_entry_set_pins ()">gnui_tagged_entry_set_pins</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-activate" title="gnui_tagged_entry_activate ()">gnui_tagged_entry_activate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-get-delimiter-chars" title="gnui_tagged_entry_get_delimiter_chars ()">gnui_tagged_entry_get_delimiter_chars</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-set-delimiter-chars" title="gnui_tagged_entry_set_delimiter_chars ()">gnui_tagged_entry_set_delimiter_chars</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-get-filter-data" title="gnui_tagged_entry_get_filter_data ()">gnui_tagged_entry_get_filter_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-set-filter-data" title="gnui_tagged_entry_set_filter_data ()">gnui_tagged_entry_set_filter_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntryFilterFunc" title="GnuiTaggedEntryFilterFunc ()"><span class="returnvalue">GnuiTaggedEntryFilterFunc</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-get-filter-function" title="gnui_tagged_entry_get_filter_function ()">gnui_tagged_entry_get_filter_function</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-set-filter-function" title="gnui_tagged_entry_set_filter_function ()">gnui_tagged_entry_set_filter_function</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-get-invalid" title="gnui_tagged_entry_get_invalid ()">gnui_tagged_entry_get_invalid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-set-invalid" title="gnui_tagged_entry_set_invalid ()">gnui_tagged_entry_set_invalid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-get-match-data" title="gnui_tagged_entry_get_match_data ()">gnui_tagged_entry_get_match_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-set-match-data" title="gnui_tagged_entry_set_match_data ()">gnui_tagged_entry_set_match_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntryMatchFunc" title="GnuiTaggedEntryMatchFunc ()"><span class="returnvalue">GnuiTaggedEntryMatchFunc</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-get-match-function" title="gnui_tagged_entry_get_match_function ()">gnui_tagged_entry_get_match_function</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-set-match-function" title="gnui_tagged_entry_set_match_function ()">gnui_tagged_entry_set_match_function</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-get-modified" title="gnui_tagged_entry_get_modified ()">gnui_tagged_entry_get_modified</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-set-modified" title="gnui_tagged_entry_set_modified ()">gnui_tagged_entry_set_modified</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-get-placeholder-text" title="gnui_tagged_entry_get_placeholder_text ()">gnui_tagged_entry_get_placeholder_text</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-set-placeholder-text" title="gnui_tagged_entry_set_placeholder_text ()">gnui_tagged_entry_set_placeholder_text</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-get-sanitize-data" title="gnui_tagged_entry_get_sanitize_data ()">gnui_tagged_entry_get_sanitize_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-set-sanitize-data" title="gnui_tagged_entry_set_sanitize_data ()">gnui_tagged_entry_set_sanitize_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntrySanitizeFunc" title="GnuiTaggedEntrySanitizeFunc ()"><span class="returnvalue">GnuiTaggedEntrySanitizeFunc</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-get-sanitize-function" title="gnui_tagged_entry_get_sanitize_function ()">gnui_tagged_entry_get_sanitize_function</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-set-sanitize-function" title="gnui_tagged_entry_set_sanitize_function ()">gnui_tagged_entry_set_sanitize_function</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-get-sort-data" title="gnui_tagged_entry_get_sort_data ()">gnui_tagged_entry_get_sort_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-set-sort-data" title="gnui_tagged_entry_set_sort_data ()">gnui_tagged_entry_set_sort_data</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntrySortFunc" title="GnuiTaggedEntrySortFunc ()"><span class="returnvalue">GnuiTaggedEntrySortFunc</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-get-sort-function" title="gnui_tagged_entry_get_sort_function ()">gnui_tagged_entry_get_sort_function</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-set-sort-function" title="gnui_tagged_entry_set_sort_function ()">gnui_tagged_entry_set_sort_function</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> * const *
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-get-tags" title="gnui_tagged_entry_get_tags ()">gnui_tagged_entry_get_tags</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-set-tags" title="gnui_tagged_entry_set_tags ()">gnui_tagged_entry_set_tags</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-invalidate-filter" title="gnui_tagged_entry_invalidate_filter ()">gnui_tagged_entry_invalidate_filter</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-invalidate-sort" title="gnui_tagged_entry_invalidate_sort ()">gnui_tagged_entry_invalidate_sort</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">GtkText</span> *
+</td>
+<td class="function_name">
+<a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-get-text-delegate" title="gnui_tagged_entry_get_text_delegate ()">gnui_tagged_entry_get_text_delegate</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntrySignalHandlerTagAdded" title="GnuiTaggedEntrySignalHandlerTagAdded ()">*GnuiTaggedEntrySignalHandlerTagAdded</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntrySignalHandlerTagRemoved" title="GnuiTaggedEntrySignalHandlerTagRemoved ()">*GnuiTaggedEntrySignalHandlerTagRemoved</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntrySignalHandlerActivate" title="GnuiTaggedEntrySignalHandlerActivate ()">*GnuiTaggedEntrySignalHandlerActivate</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<span class="c_punctuation">(</span><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntrySignalHandlerModifiedChanged" title="GnuiTaggedEntrySignalHandlerModifiedChanged ()">*GnuiTaggedEntrySignalHandlerModifiedChanged</a><span class="c_punctuation">)</span> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="gnui-tagged-entry.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<span class="type">char</span> *</td>
+<td class="property_name"><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--delimiter-chars" title="The “delimiter-chars” property">delimiter-chars</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></td>
+<td class="property_name"><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--filter-data" title="The “filter-data” property">filter-data</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></td>
+<td class="property_name"><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--filter-function" title="The “filter-function” property">filter-function</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--invalid" title="The “invalid” property">invalid</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></td>
+<td class="property_name"><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--match-data" title="The “match-data” property">match-data</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></td>
+<td class="property_name"><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--match-function" title="The “match-function” property">match-function</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--modified" title="The “modified” property">modified</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type">
+<span class="type">char</span> *</td>
+<td class="property_name"><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--placeholder-text" title="The “placeholder-text” property">placeholder-text</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></td>
+<td class="property_name"><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--sanitize-data" title="The “sanitize-data” property">sanitize-data</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></td>
+<td class="property_name"><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--sanitize-function" title="The “sanitize-function” property">sanitize-function</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></td>
+<td class="property_name"><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--sort-data" title="The “sort-data” property">sort-data</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></td>
+<td class="property_name"><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--sort-function" title="The “sort-function” property">sort-function</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="/usr/share/gtk-doc/html/glib/glib-String-Utility-Functions.html#GStrv"><span class="type">GStrv</span></a></td>
+<td class="property_name"><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--tags" title="The “tags” property">tags</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="gnui-tagged-entry.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="signal_proto_type">
+<col width="300px" class="signal_proto_name">
+<col width="200px" class="signal_proto_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry-activate" title="The “activate” signal">activate</a></td>
+<td class="signal_flags"><a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS">Run First</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry-modified-changed" title="The “modified-changed” signal">modified-changed</a></td>
+<td class="signal_flags"><a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS">Run First</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry-tag-added" title="The “tag-added” signal">tag-added</a></td>
+<td class="signal_flags"><a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS">Run First</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry-tag-removed" title="The “tag-removed” signal">tag-removed</a></td>
+<td class="signal_flags"><a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS">Run First</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="GnuiTaggedEntry"></a><div class="refsect1">
+<a name="gnui-tagged-entry.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="gnui-tagged-entry.html#GNUI-TYPE-TAGGED-ENTRY:CAPS" title="GNUI_TYPE_TAGGED_ENTRY">GNUI_TYPE_TAGGED_ENTRY</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry-struct" title="GnuiTaggedEntry">GnuiTaggedEntry</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="gnui-tagged-entry.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span> GtkWidget
+            <span class="lineart">╰──</span> GnuiTaggedEntry
+</pre>
+</div>
+<div class="refsect1">
+<a name="gnui-tagged-entry.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GnuiTaggedEntry implements
+ GtkAccessible,  GtkBuildable,  GtkConstraintTarget and  GtkEditable.</p>
+</div>
+<div class="refsect1">
+<a name="gnui-tagged-entry.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;gnuisance/gnui-tagged-entry.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="gnui-tagged-entry.description"></a><h2>Description</h2>
+<p><code class="literal">GnuiTaggedEntry</code> is a text entry widget that lets the user provide an
+    array of strings (namely tags).</p>
+</div>
+<div class="refsect1">
+<a name="gnui-tagged-entry.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="GnuiTaggedEntryFilterFunc"></a><h3>GnuiTaggedEntryFilterFunc ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<span class="c_punctuation">(</span>*GnuiTaggedEntryFilterFunc<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> *self</code></em>,
+                              <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *tag</code></em>,
+                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>A function type for determining whether a tag can be added</p>
+<p>    It is granted that the strings passed to the filter function are always
+    non-<code class="literal">NULL</code> and with a length greater than zero, therefore the filter
+    function must not check for <code class="literal">NULL</code> or <code class="literal">""</code>.</p>
+<div class="refsect3">
+<a name="GnuiTaggedEntryFilterFunc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tag</p></td>
+<td class="parameter_description"><p>The
+tag to check. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>][non-zero length][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>The <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--filter-data" title="The “filter-data” property"><span class="type">“filter-data”</span></a>
+property. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="GnuiTaggedEntryFilterFunc.returns"></a><h4>Returns</h4>
+<p>    <code class="literal">true</code> if the tag must be added, <code class="literal">false</code> if it must be
+filtered out</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiTaggedEntryMatchFunc"></a><h3>GnuiTaggedEntryMatchFunc ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+<span class="c_punctuation">(</span>*GnuiTaggedEntryMatchFunc<span class="c_punctuation">)</span> (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *entry_tag</code></em>,
+                             <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *other_tag</code></em>,
+                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>A function type for determining whether two tags match</p>
+<p>    The first argument passed to the match function is always a tag already in
+    the entry, while the second argument is what is being checked for equality.</p>
+<p>    It is granted that the strings passed to the match function are always
+    non-<code class="literal">NULL</code> and with a length greater than zero, therefore the match
+    function must not check for <code class="literal">NULL</code> or <code class="literal">""</code>.</p>
+<div class="refsect3">
+<a name="GnuiTaggedEntryMatchFunc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>entry_tag</p></td>
+<td class="parameter_description"><p>A tag
+from the tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>][non-zero length][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>other_tag</p></td>
+<td class="parameter_description"><p>A
+string to compare with <em class="parameter"><code>entry_tag</code></em>
+. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>][non-zero length][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>The <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--match-data" title="The “match-data” property"><span class="type">“match-data”</span></a>
+property. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="GnuiTaggedEntryMatchFunc.returns"></a><h4>Returns</h4>
+<p>    <code class="literal">true</code> if the two strings match, <code class="literal">false</code> otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiTaggedEntrySanitizeFunc"></a><h3>GnuiTaggedEntrySanitizeFunc ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+<span class="c_punctuation">(</span>*GnuiTaggedEntrySanitizeFunc<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> *self</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *tag</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>A function type for allocating the strings that are added to the tagged
+    entry as tags based on the given input</p>
+<p>    It is granted that the strings passed to the sanitize function are always
+    non-<code class="literal">NULL</code> and with a length greater than zero, therefore the sanitize
+    function must not check for <code class="literal">NULL</code> or <code class="literal">""</code>.</p>
+<p>    If <em class="parameter"><code>tag</code></em>
+ must not be inserted this function must return <code class="literal">NULL</code>.</p>
+<div class="refsect3">
+<a name="GnuiTaggedEntrySanitizeFunc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tag</p></td>
+<td class="parameter_description"><p>The
+tag to sanitize. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>][non-zero length][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>The <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--sanitize-data" title="The “sanitize-data” property"><span class="type">“sanitize-data”</span></a>
+property. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="GnuiTaggedEntrySanitizeFunc.returns"></a><h4>Returns</h4>
+<p>A newly allocated string. </p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiTaggedEntrySortFunc"></a><h3>GnuiTaggedEntrySortFunc ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+<span class="c_punctuation">(</span>*GnuiTaggedEntrySortFunc<span class="c_punctuation">)</span> (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *tag_1</code></em>,
+                            <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *tag_2</code></em>,
+                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>A function type for sorting the tags added to the tagged entry</p>
+<p>    It is granted that the strings passed to the sort function are always
+    non-<code class="literal">NULL</code> and with a length greater than zero, therefore the sort function
+    must not check for <code class="literal">NULL</code> or <code class="literal">""</code>.</p>
+<div class="refsect3">
+<a name="GnuiTaggedEntrySortFunc.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>tag_1</p></td>
+<td class="parameter_description"><p>The
+first tag. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>][non-zero length][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tag_2</p></td>
+<td class="parameter_description"><p>The
+second tag. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>][non-zero length][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>The <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--sort-data" title="The “sort-data” property"><span class="type">“sort-data”</span></a>
+property. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="GnuiTaggedEntrySortFunc.returns"></a><h4>Returns</h4>
+<p>    Zero or a negative number if the order is <em class="parameter"><code>tag_1</code></em>
+followed by
+<em class="parameter"><code>tag_2</code></em>
+, a positive number otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-new"></a><h3>gnui_tagged_entry_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *
+gnui_tagged_entry_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Create a new tagged entry widget</p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-new.returns"></a><h4>Returns</h4>
+<p>    The newly created tagged entry widget</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-has-tag"></a><h3>gnui_tagged_entry_has_tag ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gnui_tagged_entry_has_tag (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>,
+                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const tag</code></em>);</pre>
+<p>Get whether a tagged entry has a particular tag</p>
+<p>    A tagged entry must always have a match function; if the
+    <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--match-function" title="The “match-function” property"><span class="type">“match-function”</span></a> property is set to <code class="literal">NULL</code> literal equality
+    checks between strings will be performed in order to find the given tag.</p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-has-tag.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry to query. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tag</p></td>
+<td class="parameter_description"><p>A string matching a tag to find. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-has-tag.returns"></a><h4>Returns</h4>
+<p>    <code class="literal">true</code> if the tagged entry has the given tag, <code class="literal">false</code> otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-remove-tag"></a><h3>gnui_tagged_entry_remove_tag ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gnui_tagged_entry_remove_tag (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>,
+                              <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const tag</code></em>);</pre>
+<p>Remove a particular tag from a tagged entry</p>
+<p>    A tagged entry must always have a match function; if the
+    <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--match-function" title="The “match-function” property"><span class="type">“match-function”</span></a> property is set to <code class="literal">NULL</code> literal equality
+    checks between strings will be performed in order to find the tag to
+    remove.</p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-remove-tag.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry to modify. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tag</p></td>
+<td class="parameter_description"><p>A string matching a tag to remove from the
+tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-remove-tag.returns"></a><h4>Returns</h4>
+<p>    <code class="literal">true</code> if the tagged entry had the tag, <code class="literal">false</code> otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-remove-all-tags"></a><h3>gnui_tagged_entry_remove_all_tags ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_tagged_entry_remove_all_tags (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>);</pre>
+<p>Remove all the tags from a tagged entry</p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-remove-all-tags.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry to clear. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-populate"></a><h3>gnui_tagged_entry_populate ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gnui_tagged_entry_populate (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>,
+                            <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> pinned</code></em>,
+                            <em class="parameter"><code>...</code></em>);</pre>
+<p>Clear and populate a tagged entry</p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-populate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry to populate. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pinned</p></td>
+<td class="parameter_description"><p>Whether the tags added must be pinned</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>Zero or more strings to insert into the tagged entry as tags,
+followed by <code class="literal">NULL</code> (if no strings are provided the tagged entry
+will only be cleared)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-populate.returns"></a><h4>Returns</h4>
+<p>    <code class="literal">true</code> if all the tags were successfully added, <code class="literal">false</code>
+otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-populate-strv"></a><h3>gnui_tagged_entry_populate_strv ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gnui_tagged_entry_populate_strv (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>,
+                                 <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const * const tags</code></em>,
+                                 <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> pinned</code></em>);</pre>
+<p>Clear and populate a tagged entry, using an array of strings as input</p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-populate-strv.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry to populate. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tags</p></td>
+<td class="parameter_description"><p>An array containing zero or more
+strings to insert into the tagged entry as tags, followed by
+<code class="literal">NULL</code> (if no strings are provided, or if the array is <code class="literal">NULL</code>,
+the tagged entry will only be cleared). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pinned</p></td>
+<td class="parameter_description"><p>Whether the tags added must be pinned</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-populate-strv.returns"></a><h4>Returns</h4>
+<p>    <code class="literal">true</code> if all the tags were successfully added, <code class="literal">false</code>
+otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-add-tag"></a><h3>gnui_tagged_entry_add_tag ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gnui_tagged_entry_add_tag (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>,
+                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const tag</code></em>,
+                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> pinned</code></em>);</pre>
+<p>Add a a tag to a tagged entry</p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-add-tag.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry to populate. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tag</p></td>
+<td class="parameter_description"><p>A string to insert into the tagged entry as tag. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pinned</p></td>
+<td class="parameter_description"><p>Whether the tag added must be pinned</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-add-tag.returns"></a><h4>Returns</h4>
+<p>    <code class="literal">true</code> if the tag was successfully added, <code class="literal">false</code> otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-add-tags"></a><h3>gnui_tagged_entry_add_tags ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gnui_tagged_entry_add_tags (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>,
+                            <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> pinned</code></em>,
+                            <em class="parameter"><code>...</code></em>);</pre>
+<p>Add a group of tags to a tagged entry</p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-add-tags.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry to populate. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pinned</p></td>
+<td class="parameter_description"><p>Whether the tags inserted must be pinned</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>Zero or more strings to insert into the tagged entry as tags,
+followed by <code class="literal">NULL</code> (if no strings are provided the function is
+no-op)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-add-tags.returns"></a><h4>Returns</h4>
+<p>    <code class="literal">true</code> if all the tags were successfully added, <code class="literal">false</code>
+otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-parse-expression"></a><h3>gnui_tagged_entry_parse_expression ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gsize"><span class="returnvalue">gsize</span></a>
+gnui_tagged_entry_parse_expression (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>,
+                                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const expression</code></em>,
+                                    <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> pinned</code></em>);</pre>
+<p>Parse a delimited string and add its tags to a tagged entry</p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-parse-expression.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry to populate. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>expression</p></td>
+<td class="parameter_description"><p>A delimited string containing one or more
+tags to add to the tagged entry                                                                 []. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pinned</p></td>
+<td class="parameter_description"><p>Whether the tags inserted must be pinned</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-parse-expression.returns"></a><h4>Returns</h4>
+<p>    <code class="literal">true</code> if all the tags were successfully added, <code class="literal">false</code>
+otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-rename-tag"></a><h3>gnui_tagged_entry_rename_tag ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gnui_tagged_entry_rename_tag (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>,
+                              <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const old_name</code></em>,
+                              <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const new_name</code></em>);</pre>
+<p>Rename a particular tag in a tagged entry</p>
+<p>    A tagged entry must always have a match function; if the
+    <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--match-function" title="The “match-function” property"><span class="type">“match-function”</span></a> property is set to <code class="literal">NULL</code>, in order to find
+    the tag to rename literal equality checks between strings will be
+    performed.</p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-rename-tag.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry to modify. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>old_name</p></td>
+<td class="parameter_description"><p>A string matching a tag to rename in the tagged
+entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>new_name</p></td>
+<td class="parameter_description"><p>The new value for the tag. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-rename-tag.returns"></a><h4>Returns</h4>
+<p>    <code class="literal">true</code> if the tagged entry had the tag, <code class="literal">false</code> otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-set-pin"></a><h3>gnui_tagged_entry_set_pin ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gnui_tagged_entry_set_pin (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>,
+                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const tag</code></em>,
+                           <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> pinned</code></em>);</pre>
+<p>Pin/unpin a given tag</p>
+<p>    A tagged entry must always have a match function; if the
+    <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--match-function" title="The “match-function” property"><span class="type">“match-function”</span></a> property is set to <code class="literal">NULL</code>, in order to find
+    the tag to pin/unpin literal equality checks between strings will be
+    performed.</p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-set-pin.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tag</p></td>
+<td class="parameter_description"><p>A string matching a tag to pin or unpin in the
+tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pinned</p></td>
+<td class="parameter_description"><p>Whether the state of the tag must be marked as pinned</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-set-pin.returns"></a><h4>Returns</h4>
+<p>    <code class="literal">true</code> if the tag is found, <code class="literal">false</code> otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-set-pins"></a><h3>gnui_tagged_entry_set_pins ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gnui_tagged_entry_set_pins (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>,
+                            <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> pinned</code></em>,
+                            <em class="parameter"><code>...</code></em>);</pre>
+<p>Pin/unpin a group of tags</p>
+<p>    A tagged entry must always have a match function; if the
+    <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--match-function" title="The “match-function” property"><span class="type">“match-function”</span></a> property is set to <code class="literal">NULL</code>, in order to find
+    the tag to pin/unpin literal equality checks between strings will be
+    performed.</p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-set-pins.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pinned</p></td>
+<td class="parameter_description"><p>Whether the state of the tag must be marked as pinned</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>...</p></td>
+<td class="parameter_description"><p>Zero or more strings matching tags in the tagged entry to
+pin/unpin, followed by <code class="literal">NULL</code> (if no strings are provided the
+function is no-op)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-set-pins.returns"></a><h4>Returns</h4>
+<p>    <code class="literal">true</code> if all the tags were found, <code class="literal">false</code> otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-activate"></a><h3>gnui_tagged_entry_activate ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_tagged_entry_activate (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>);</pre>
+<p>Activate a tagged entry (similar to pressing <code class="literal">ENTER</code>)</p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-activate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry to activate. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-get-delimiter-chars"></a><h3>gnui_tagged_entry_get_delimiter_chars ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+gnui_tagged_entry_get_delimiter_chars (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>);</pre>
+<p>Get the delimiter characters of a tagged entry</p>
+<p><span class="annotation">[get-property delimiter-chars]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-delimiter-chars.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-delimiter-chars.returns"></a><h4>Returns</h4>
+<p>A <code class="literal">NIL</code>-terminated array of delimiter
+characters (i.e. a “C string”), or <code class="literal">NULL</code> if the tagged entry
+has no delimiters. The returned array must not be freed or
+modified. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-set-delimiter-chars"></a><h3>gnui_tagged_entry_set_delimiter_chars ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_tagged_entry_set_delimiter_chars (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>,
+                                       <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *delimiter_chars</code></em>);</pre>
+<p>Set the delimiter characters of a tagged entry</p>
+<p>    If no delimiters are set, new tags can be added only by activating the
+    tagged entry (usually by pressing <code class="literal">ENTER</code>).</p>
+<p><span class="annotation">[set-property delimiter-chars]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-set-delimiter-chars.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>delimiter_chars</p></td>
+<td class="parameter_description"><p>A <code class="literal">NIL</code>-terminated array of
+characters (i.e. a "C string") to use as input
+delimiters between different tags, or <code class="literal">NULL</code> for
+setting no delimiters. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-get-filter-data"></a><h3>gnui_tagged_entry_get_filter_data ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+gnui_tagged_entry_get_filter_data (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>);</pre>
+<p>Get the closure data passed to the <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--filter-function" title="The “filter-function” property"><span class="type">“filter-function”</span></a></p>
+<p><span class="annotation">[get-property filter-data]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-filter-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-filter-data.returns"></a><h4>Returns</h4>
+<p>    The closure data passed to the <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--filter-function" title="The “filter-function” property"><span class="type">“filter-function”</span></a></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-set-filter-data"></a><h3>gnui_tagged_entry_set_filter_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_tagged_entry_set_filter_data (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>,
+                                   <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> filter_data</code></em>);</pre>
+<p>Set the closure data passed to the <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--filter-function" title="The “filter-function” property"><span class="type">“filter-function”</span></a></p>
+<p>    If later you need to destroy <em class="parameter"><code>filter_data</code></em>
+, connect the address to the
+    tagged entry's <span class="type">“destroy”</span> signal.</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">g_signal_connect_swapped</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">my_tagged_entry</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;destroy&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">G_CALLBACK</span><span class="p">(</span><span class="n">my_destroy_listener</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">filter_data</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p></p>
+<p><span class="annotation">[set-property filter-data]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-set-filter-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filter_data    (nullable)</p></td>
+<td class="parameter_description"><p>The closure data to pass to the
+<a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--filter-function" title="The “filter-function” property"><span class="type">“filter-function”</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-get-filter-function"></a><h3>gnui_tagged_entry_get_filter_function ()</h3>
+<pre class="programlisting"><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntryFilterFunc" title="GnuiTaggedEntryFilterFunc ()"><span class="returnvalue">GnuiTaggedEntryFilterFunc</span></a>
+gnui_tagged_entry_get_filter_function (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>);</pre>
+<p>Get the function that determines whether a tag can be added</p>
+<p><span class="annotation">[get-property filter-function]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-filter-function.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-filter-function.returns"></a><h4>Returns</h4>
+<p>    The filter function</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-set-filter-function"></a><h3>gnui_tagged_entry_set_filter_function ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_tagged_entry_set_filter_function (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>,
+                                       <em class="parameter"><code>const <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntryFilterFunc" title="GnuiTaggedEntryFilterFunc ()"><span class="type">GnuiTaggedEntryFilterFunc</span></a> filter_func</code></em>);</pre>
+<p>Set the function that determines whether a tag can be added</p>
+<p>    It is granted that the strings passed to the filter function are always
+    non-<code class="literal">NULL</code> and with a length greater than zero, therefore the filter
+    function must not check for <code class="literal">NULL</code> or <code class="literal">""</code>.</p>
+<p><span class="annotation">[set-property filter-function]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-set-filter-function.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>filter_func</p></td>
+<td class="parameter_description"><p>The filter function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-get-invalid"></a><h3>gnui_tagged_entry_get_invalid ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gnui_tagged_entry_get_invalid (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>);</pre>
+<p>Get whether the tagged entry is in invalid state</p>
+<p><span class="annotation">[get-property invalid]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-invalid.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-invalid.returns"></a><h4>Returns</h4>
+<p>    <code class="literal">true</code> if the tagged entry is in invalid state, <code class="literal">false</code>
+otherwise</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-set-invalid"></a><h3>gnui_tagged_entry_set_invalid ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_tagged_entry_set_invalid (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>,
+                               <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> invalid</code></em>);</pre>
+<p>Set whether the tagged entry is in invalid state</p>
+<p><span class="annotation">[set-property invalid]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-set-invalid.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>invalid</p></td>
+<td class="parameter_description"><p><code class="literal">true</code> if the tagged entry must be set in invalid state,
+<code class="literal">false</code> otherwise</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-get-match-data"></a><h3>gnui_tagged_entry_get_match_data ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+gnui_tagged_entry_get_match_data (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>);</pre>
+<p>Get the closure data passed to the <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--match-function" title="The “match-function” property"><span class="type">“match-function”</span></a></p>
+<p><span class="annotation">[get-property match-data]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-match-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-match-data.returns"></a><h4>Returns</h4>
+<p>    The closure data passed to the <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--match-function" title="The “match-function” property"><span class="type">“match-function”</span></a></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-set-match-data"></a><h3>gnui_tagged_entry_set_match_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_tagged_entry_set_match_data (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>,
+                                  <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> match_data</code></em>);</pre>
+<p>Set the closure data passed to the <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--match-function" title="The “match-function” property"><span class="type">“match-function”</span></a></p>
+<p>    If later you need to destroy <em class="parameter"><code>match_data</code></em>
+, connect the address to the tagged
+    entry's <span class="type">“destroy”</span> signal.</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">g_signal_connect_swapped</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">my_tagged_entry</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;destroy&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">G_CALLBACK</span><span class="p">(</span><span class="n">my_destroy_listener</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">match_data</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p></p>
+<p><span class="annotation">[set-property match-data]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-set-match-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>match_data</p></td>
+<td class="parameter_description"><p>The closure data to pass to the
+<a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--match-function" title="The “match-function” property"><span class="type">“match-function”</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-get-match-function"></a><h3>gnui_tagged_entry_get_match_function ()</h3>
+<pre class="programlisting"><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntryMatchFunc" title="GnuiTaggedEntryMatchFunc ()"><span class="returnvalue">GnuiTaggedEntryMatchFunc</span></a>
+gnui_tagged_entry_get_match_function (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>);</pre>
+<p>Get the function that determines whether two tags match</p>
+<p><span class="annotation">[get-property match-function]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-match-function.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-match-function.returns"></a><h4>Returns</h4>
+<p>    The match function</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-set-match-function"></a><h3>gnui_tagged_entry_set_match_function ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_tagged_entry_set_match_function (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>,
+                                      <em class="parameter"><code>const <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntryMatchFunc" title="GnuiTaggedEntryMatchFunc ()"><span class="type">GnuiTaggedEntryMatchFunc</span></a> match_func</code></em>);</pre>
+<p>Set the function that determines whether two tags match</p>
+<p>    The first argument passed to the match function is always a tag already in
+    the entry, whereas the second argument is what is being checked for
+    equality.</p>
+<p>    It is granted that the strings passed to the match function are always
+    non-<code class="literal">NULL</code> and with a length greater than zero, therefore the match
+    function must not check for <code class="literal">NULL</code> or <code class="literal">""</code>.</p>
+<p>    A tagged entry must always have a match function; if <em class="parameter"><code>match_func</code></em>
+ is set to
+    <code class="literal">NULL</code> a literal equality check between string will be used as the match
+    function.</p>
+<p><span class="annotation">[set-property match-function]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-set-match-function.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>match_func</p></td>
+<td class="parameter_description"><p>The match function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-get-modified"></a><h3>gnui_tagged_entry_get_modified ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+gnui_tagged_entry_get_modified (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>);</pre>
+<p>Get whether the tagged entry has been modified by the user</p>
+<p><span class="annotation">[get-property modified]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-modified.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-modified.returns"></a><h4>Returns</h4>
+<p>    Whether the tagged entry has been modified by the user</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-set-modified"></a><h3>gnui_tagged_entry_set_modified ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_tagged_entry_set_modified (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> modified</code></em>);</pre>
+<p>Set whether the tagged entry has been modified by the user</p>
+<p><span class="annotation">[set-property modified]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-set-modified.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>modified</p></td>
+<td class="parameter_description"><p><code class="literal">true</code> if the tagged entry's state must be set to "modified",
+<code class="literal">false</code> otherwise</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-get-placeholder-text"></a><h3>gnui_tagged_entry_get_placeholder_text ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+gnui_tagged_entry_get_placeholder_text
+                               (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>);</pre>
+<p>Get the text that must be displayed when the tagged entry is empty</p>
+<p><span class="annotation">[get-property placeholder-text]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-placeholder-text.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-placeholder-text.returns"></a><h4>Returns</h4>
+<p>The text that must be displayed when the tagged
+entry is empty. </p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-set-placeholder-text"></a><h3>gnui_tagged_entry_set_placeholder_text ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_tagged_entry_set_placeholder_text
+                               (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>,
+                                <em class="parameter"><code>const <span class="type">char</span> * const placeholder_text</code></em>);</pre>
+<p>Set the text that must be displayed when the tagged entry is empty</p>
+<p><span class="annotation">[set-property placeholder-text]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-set-placeholder-text.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>placeholder_text</p></td>
+<td class="parameter_description"><p>The text that must be
+displayed when the tagged entry is empty. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-get-sanitize-data"></a><h3>gnui_tagged_entry_get_sanitize_data ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+gnui_tagged_entry_get_sanitize_data (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>);</pre>
+<p>Get the closure data passed to the <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--sanitize-function" title="The “sanitize-function” property"><span class="type">“sanitize-function”</span></a></p>
+<p><span class="annotation">[get-property sanitize-data]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-sanitize-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-sanitize-data.returns"></a><h4>Returns</h4>
+<p>    The closure data passed to the
+<a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--sanitize-function" title="The “sanitize-function” property"><span class="type">“sanitize-function”</span></a></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-set-sanitize-data"></a><h3>gnui_tagged_entry_set_sanitize_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_tagged_entry_set_sanitize_data (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>,
+                                     <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> sanitize_data</code></em>);</pre>
+<p>Set the closure data passed to the <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--sanitize-function" title="The “sanitize-function” property"><span class="type">“sanitize-function”</span></a></p>
+<p>    If later you need to destroy <em class="parameter"><code>sanitize_data</code></em>
+, connect the address to the
+    tagged entry's <span class="type">“destroy”</span> signal.</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">g_signal_connect_swapped</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">my_tagged_entry</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;destroy&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">G_CALLBACK</span><span class="p">(</span><span class="n">my_destroy_listener</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">sanitize_data</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p></p>
+<p><span class="annotation">[set-property sanitize-data]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-set-sanitize-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sanitize_data  (nullable)</p></td>
+<td class="parameter_description"><p>The closure data to pass to the
+<a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--sanitize-function" title="The “sanitize-function” property"><span class="type">“sanitize-function”</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-get-sanitize-function"></a><h3>gnui_tagged_entry_get_sanitize_function ()</h3>
+<pre class="programlisting"><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntrySanitizeFunc" title="GnuiTaggedEntrySanitizeFunc ()"><span class="returnvalue">GnuiTaggedEntrySanitizeFunc</span></a>
+gnui_tagged_entry_get_sanitize_function
+                               (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>);</pre>
+<p>Get the function that allocates the strings that must be added to the
+    tagged entry as tags, based on the given input</p>
+<p>    It is granted that the strings passed to the sanitize function are always
+    non-<code class="literal">NULL</code> and with a length greater than zero, therefore the sanitize
+    function must not check for <code class="literal">NULL</code> or <code class="literal">""</code>.</p>
+<p><span class="annotation">[get-property sanitize-function]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-sanitize-function.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-sanitize-function.returns"></a><h4>Returns</h4>
+<p>    The sanitize function</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-set-sanitize-function"></a><h3>gnui_tagged_entry_set_sanitize_function ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_tagged_entry_set_sanitize_function
+                               (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>,
+                                <em class="parameter"><code>const <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntrySanitizeFunc" title="GnuiTaggedEntrySanitizeFunc ()"><span class="type">GnuiTaggedEntrySanitizeFunc</span></a> sanitize_func</code></em>);</pre>
+<p>Set the function that allocates the strings that must be added to the
+    tagged entry as tags, based on the given input</p>
+<p>    It is granted that the strings passed to the sanitize function are always
+    non-<code class="literal">NULL</code> and with a length greater than zero, therefore the sanitize
+    function must not check for <code class="literal">NULL</code> or <code class="literal">""</code>.</p>
+<p>    If this function set to <code class="literal">NULL</code>, <code class="literal"><a href="/usr/share/gtk-doc/html/glib/glib-String-Utility-Functions.html#g-strdup"><code class="function">g_strdup()</code></a></code> will be used.</p>
+<p><span class="annotation">[set-property sanitize-function]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-set-sanitize-function.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sanitize_func</p></td>
+<td class="parameter_description"><p>The sanitize function. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-get-sort-data"></a><h3>gnui_tagged_entry_get_sort_data ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
+gnui_tagged_entry_get_sort_data (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>);</pre>
+<p>Get the closure data passed to the <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--sort-function" title="The “sort-function” property"><span class="type">“sort-function”</span></a></p>
+<p><span class="annotation">[get-property sort-data]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-sort-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-sort-data.returns"></a><h4>Returns</h4>
+<p>    The closure data passed to the <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--sort-function" title="The “sort-function” property"><span class="type">“sort-function”</span></a></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-set-sort-data"></a><h3>gnui_tagged_entry_set_sort_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_tagged_entry_set_sort_data (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>,
+                                 <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> sort_data</code></em>);</pre>
+<p>Get the closure data passed to the <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--sort-function" title="The “sort-function” property"><span class="type">“sort-function”</span></a></p>
+<p>    If later you need to destroy <em class="parameter"><code>sort_data</code></em>
+, connect the address to the tagged
+    entry's <span class="type">“destroy”</span> signal.</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">g_signal_connect_swapped</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">my_tagged_entry</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s">&quot;destroy&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">G_CALLBACK</span><span class="p">(</span><span class="n">my_destroy_listener</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">sort_data</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p></p>
+<p><span class="annotation">[set-property sort-data]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-set-sort-data.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sort_data  (nullable)</p></td>
+<td class="parameter_description"><p>The closure data to pass to the
+<a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--sort-function" title="The “sort-function” property"><span class="type">“sort-function”</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-get-sort-function"></a><h3>gnui_tagged_entry_get_sort_function ()</h3>
+<pre class="programlisting"><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntrySortFunc" title="GnuiTaggedEntrySortFunc ()"><span class="returnvalue">GnuiTaggedEntrySortFunc</span></a>
+gnui_tagged_entry_get_sort_function (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>);</pre>
+<p>Get the function that sorts the tags added to the tagged entry</p>
+<p><span class="annotation">[get-property sort-function]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-sort-function.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-sort-function.returns"></a><h4>Returns</h4>
+<p>    The <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--sort-function" title="The “sort-function” property"><span class="type">“sort-function”</span></a></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-set-sort-function"></a><h3>gnui_tagged_entry_set_sort_function ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_tagged_entry_set_sort_function (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>,
+                                     <em class="parameter"><code>const <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntrySortFunc" title="GnuiTaggedEntrySortFunc ()"><span class="type">GnuiTaggedEntrySortFunc</span></a> sort_func</code></em>);</pre>
+<p>Set the function that sorts the tags added to the tagged entry</p>
+<p>    It is granted that the strings passed to the sort function are always
+    non-<code class="literal">NULL</code> and with a length greater than zero, therefore the sort function
+    must not check for <code class="literal">NULL</code> or <code class="literal">""</code>.</p>
+<p>    Even if <code class="literal"><code class="function">strcmp()</code></code> takes less parameters than a <code class="literal">GnuiTaggedEntrySortFunc</code>,
+    you can use <code class="literal"><code class="function">strcmp()</code></code> too as sort function.</p>
+<p><span class="annotation">[set-property sort-function]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-set-sort-function.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>sort_func</p></td>
+<td class="parameter_description"><p>The function that will sort the tags added to the
+tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-get-tags"></a><h3>gnui_tagged_entry_get_tags ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> * const *
+gnui_tagged_entry_get_tags (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>);</pre>
+<p>Get the tagged entry's tags</p>
+<p><span class="annotation">[get-property tags]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-tags.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-tags.returns"></a><h4>Returns</h4>
+<p>An array of trings containing the
+tagged entry's tags. The returned array must not be freed or
+modified. </p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-set-tags"></a><h3>gnui_tagged_entry_set_tags ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_tagged_entry_set_tags (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>,
+                            <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const * const tags</code></em>);</pre>
+<p>Set the tagged entry's tags</p>
+<p>    The tags added using this function (or, equivalently, using
+    <code class="literal"><a href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#g-object-set-property"><code class="function">g_object_set_property()</code></a></code>) are always unpinned. For populating a tagged
+    entry with pinned tags please use <code class="literal"><a class="link" href="gnui-tagged-entry.html#gnui-tagged-entry-populate-strv" title="gnui_tagged_entry_populate_strv ()"><code class="function">gnui_tagged_entry_populate_strv()</code></a></code>.</p>
+<p><span class="annotation">[set-property tags]</span></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-set-tags.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tags</p></td>
+<td class="parameter_description"><p>Zero or more strings to insert into
+the (tagged entry as tags, followed by <code class="literal">NULL</code> if no strings are
+provided, or if this argument is <code class="literal">NULL</code>, the tagged entry will
+only be cleared). </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-invalidate-filter"></a><h3>gnui_tagged_entry_invalidate_filter ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_tagged_entry_invalidate_filter (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>);</pre>
+<p>For each tag in the tagged entry call the <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--filter-function" title="The “filter-function” property"><span class="type">“filter-function”</span></a></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-invalidate-filter.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-invalidate-sort"></a><h3>gnui_tagged_entry_invalidate_sort ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+gnui_tagged_entry_invalidate_sort (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>);</pre>
+<p>For each tag in the tagged entry call the <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--sort-function" title="The “sort-function” property"><span class="type">“sort-function”</span></a></p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-invalidate-sort.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gnui-tagged-entry-get-text-delegate"></a><h3>gnui_tagged_entry_get_text_delegate ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkText</span> *
+gnui_tagged_entry_get_text_delegate (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> * const self</code></em>);</pre>
+<p>Get the tagged entry's <code class="literal">GtkText</code> delegate</p>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-text-delegate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="gnui-tagged-entry-get-text-delegate.returns"></a><h4>Returns</h4>
+<p>    The tagged entry's <code class="literal">GtkText</code> delegate</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiTaggedEntrySignalHandlerTagAdded"></a><h3>GnuiTaggedEntrySignalHandlerTagAdded ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*GnuiTaggedEntrySignalHandlerTagAdded<span class="c_punctuation">)</span>
+                               (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> *self</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *tag</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>A handler function type for the <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry-tag-added" title="The “tag-added” signal"><span class="type">“tag-added”</span></a> signal</p>
+<div class="refsect3">
+<a name="GnuiTaggedEntrySignalHandlerTagAdded.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tag</p></td>
+<td class="parameter_description"><p>The
+tag added. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>][non-zero length][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>The custom data passed to the
+signal. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiTaggedEntrySignalHandlerTagRemoved"></a><h3>GnuiTaggedEntrySignalHandlerTagRemoved ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*GnuiTaggedEntrySignalHandlerTagRemoved<span class="c_punctuation">)</span>
+                               (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> *self</code></em>,
+                                <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *tag</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>A handler function type for the <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry-tag-removed" title="The “tag-removed” signal"><span class="type">“tag-removed”</span></a> signal</p>
+<div class="refsect3">
+<a name="GnuiTaggedEntrySignalHandlerTagRemoved.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tag</p></td>
+<td class="parameter_description"><p>The
+tag removed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>][non-zero length][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>The custom data passed to the
+signal. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiTaggedEntrySignalHandlerActivate"></a><h3>GnuiTaggedEntrySignalHandlerActivate ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*GnuiTaggedEntrySignalHandlerActivate<span class="c_punctuation">)</span>
+                               (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>A handler function type for the <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry-activate" title="The “activate” signal"><span class="type">“activate”</span></a> signal</p>
+<div class="refsect3">
+<a name="GnuiTaggedEntrySignalHandlerActivate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>The custom data passed to the
+signal. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiTaggedEntrySignalHandlerModifiedChanged"></a><h3>GnuiTaggedEntrySignalHandlerModifiedChanged ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+<span class="c_punctuation">(</span>*GnuiTaggedEntrySignalHandlerModifiedChanged<span class="c_punctuation">)</span>
+                               (<em class="parameter"><code><a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> *self</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> modified</code></em>,
+                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>A handler function type for the <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry-modified-changed" title="The “modified-changed” signal"><span class="type">“modified-changed”</span></a> signal</p>
+<div class="refsect3">
+<a name="GnuiTaggedEntrySignalHandlerModifiedChanged.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>modified</p></td>
+<td class="parameter_description"><p>The current state of the <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--modified" title="The “modified” property"><span class="type">“modified”</span></a>
+property. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>The custom data passed to the
+signal. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>][<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="gnui-tagged-entry.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="GNUI-TYPE-TAGGED-ENTRY:CAPS"></a><h3>GNUI_TYPE_TAGGED_ENTRY</h3>
+<pre class="programlisting">#define GNUI_TYPE_TAGGED_ENTRY (gnui_tagged_entry_get_type())
+</pre>
+<p>The <code class="literal">GType</code> of <code class="literal">GnuiTaggedEntry</code></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiTaggedEntry-struct"></a><h3>GnuiTaggedEntry</h3>
+<pre class="programlisting">typedef struct _GnuiTaggedEntry GnuiTaggedEntry;</pre>
+<p>The <code class="literal">GnuiTaggedEntry</code> widget</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="gnui-tagged-entry.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GnuiTaggedEntry--delimiter-chars"></a><h3>The <code class="literal">“delimiter-chars”</code> property</h3>
+<pre class="programlisting">  “delimiter-chars”          <span class="type">char</span> *</pre>
+<p>A NIL-terminated array of characters (i.e. a “C string”) to use as input delimiters between different tags.</p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+<p>Owner: GnuiTaggedEntry</p>
+<p>Flags: Read / Write</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiTaggedEntry--filter-data"></a><h3>The <code class="literal">“filter-data”</code> property</h3>
+<pre class="programlisting">  “filter-data”              <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></pre>
+<p>Closure data for "filter-function" – use the "destroy" signal if later you want to free it.</p>
+<p><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></p>
+<p>Owner: GnuiTaggedEntry</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiTaggedEntry--filter-function"></a><h3>The <code class="literal">“filter-function”</code> property</h3>
+<pre class="programlisting">  “filter-function”          <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></pre>
+<p>Function to use to determine if a tag is valid.</p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+<p>Owner: GnuiTaggedEntry</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiTaggedEntry--invalid"></a><h3>The <code class="literal">“invalid”</code> property</h3>
+<pre class="programlisting">  “invalid”                  <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether the tagged entry is currently in “invalid” state.</p>
+<p>Owner: GnuiTaggedEntry</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiTaggedEntry--match-data"></a><h3>The <code class="literal">“match-data”</code> property</h3>
+<pre class="programlisting">  “match-data”               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></pre>
+<p>Closure data for "match-function" – use the "destroy" signal if later you want to free it.</p>
+<p><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></p>
+<p>Owner: GnuiTaggedEntry</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiTaggedEntry--match-function"></a><h3>The <code class="literal">“match-function”</code> property</h3>
+<pre class="programlisting">  “match-function”           <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></pre>
+<p>Function to use to determine if two tags match.</p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+<p>Owner: GnuiTaggedEntry</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiTaggedEntry--modified"></a><h3>The <code class="literal">“modified”</code> property</h3>
+<pre class="programlisting">  “modified”                 <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether the tagged entry has been modified.</p>
+<p>Owner: GnuiTaggedEntry</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiTaggedEntry--placeholder-text"></a><h3>The <code class="literal">“placeholder-text”</code> property</h3>
+<pre class="programlisting">  “placeholder-text”         <span class="type">char</span> *</pre>
+<p>The text to be displayed when the tagged entry is empty.</p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+<p>Owner: GnuiTaggedEntry</p>
+<p>Flags: Read / Write</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiTaggedEntry--sanitize-data"></a><h3>The <code class="literal">“sanitize-data”</code> property</h3>
+<pre class="programlisting">  “sanitize-data”            <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></pre>
+<p>Closure data for "sanitize-function" – use the "destroy" signal if later you want to free it.</p>
+<p><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></p>
+<p>Owner: GnuiTaggedEntry</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiTaggedEntry--sanitize-function"></a><h3>The <code class="literal">“sanitize-function”</code> property</h3>
+<pre class="programlisting">  “sanitize-function”        <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></pre>
+<p>Function to use to sanitize (and allocate) each new tag.</p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+<p>Owner: GnuiTaggedEntry</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiTaggedEntry--sort-data"></a><h3>The <code class="literal">“sort-data”</code> property</h3>
+<pre class="programlisting">  “sort-data”                <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></pre>
+<p>Closure data for "sort-function" – use the "destroy" signal if later you want to free it.</p>
+<p><span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></p>
+<p>Owner: GnuiTaggedEntry</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiTaggedEntry--sort-function"></a><h3>The <code class="literal">“sort-function”</code> property</h3>
+<pre class="programlisting">  “sort-function”            <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></pre>
+<p>Function to use to sort the tag order.</p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+<p>Owner: GnuiTaggedEntry</p>
+<p>Flags: Read / Write</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiTaggedEntry--tags"></a><h3>The <code class="literal">“tags”</code> property</h3>
+<pre class="programlisting">  “tags”                     <a href="/usr/share/gtk-doc/html/glib/glib-String-Utility-Functions.html#GStrv"><span class="type">GStrv</span></a></pre>
+<p>The current tags.</p>
+<p><span class="annotation">[<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></p>
+<p>Owner: GnuiTaggedEntry</p>
+<p>Flags: Read / Write</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="gnui-tagged-entry.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="GnuiTaggedEntry-activate"></a><h3>The <code class="literal">“activate”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> *self,
+               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>         user_data)</pre>
+<p>Signal emitted when a tagged entry is activated (usually by pressing
+	    <code class="literal">ENTER</code>)</p>
+<p>	    <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntrySignalHandlerActivate" title="GnuiTaggedEntrySignalHandlerActivate ()"><span class="type">GnuiTaggedEntrySignalHandlerActivate</span></a> is the function type of
+	    reference for this signal, which takes parameters' constness into
+	    account.</p>
+<div class="refsect3">
+<a name="GnuiTaggedEntry-activate.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry that emitted the
+signal. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][non-nullable]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS">Run First</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiTaggedEntry-modified-changed"></a><h3>The <code class="literal">“modified-changed”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> *self,
+               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>         modified,
+               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>         user_data)</pre>
+<p>Signal emitted when the <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--modified" title="The “modified” property"><span class="type">“modified”</span></a> property changes</p>
+<p>	    <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntrySignalHandlerModifiedChanged" title="GnuiTaggedEntrySignalHandlerModifiedChanged ()"><span class="type">GnuiTaggedEntrySignalHandlerModifiedChanged</span></a> is the function type of
+	    reference for this signal, which takes parameters' constness into
+	    account.</p>
+<div class="refsect3">
+<a name="GnuiTaggedEntry-modified-changed.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry that
+emitted the signal. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][non-nullable]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>modified</p></td>
+<td class="parameter_description"><p>The new value of the <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry--modified" title="The “modified” property"><span class="type">“modified”</span></a>
+property. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS">Run First</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiTaggedEntry-tag-added"></a><h3>The <code class="literal">“tag-added”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> *self,
+               <span class="type">char</span>            *tag,
+               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>         user_data)</pre>
+<p>Signal emitted when a new tag is added to the tagged entry</p>
+<p>	    <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntrySignalHandlerTagAdded" title="GnuiTaggedEntrySignalHandlerTagAdded ()"><span class="type">GnuiTaggedEntrySignalHandlerTagAdded</span></a> is the function type of
+	    reference for this signal, which takes parameters' constness into
+	    account.</p>
+<div class="refsect3">
+<a name="GnuiTaggedEntry-tag-added.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry that emitted the
+signal. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][non-nullable]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tag</p></td>
+<td class="parameter_description"><p>The tag added. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS">Run First</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GnuiTaggedEntry-tag-removed"></a><h3>The <code class="literal">“tag-removed”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntry"><span class="type">GnuiTaggedEntry</span></a> *self,
+               <span class="type">char</span>            *tag,
+               <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>         user_data)</pre>
+<p>Signal emitted when a tag is removed from the tagged entry</p>
+<p>	    <a class="link" href="gnui-tagged-entry.html#GnuiTaggedEntrySignalHandlerTagRemoved" title="GnuiTaggedEntrySignalHandlerTagRemoved ()"><span class="type">GnuiTaggedEntrySignalHandlerTagRemoved</span></a> is the function type of
+	    reference for this signal, which takes parameters' constness into
+	    account.</p>
+<div class="refsect3">
+<a name="GnuiTaggedEntry-tag-removed.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>The tagged entry that emitted the
+signal. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][non-nullable]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tag</p></td>
+<td class="parameter_description"><p>The tag removed. </p></td>
+<td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="/usr/share/gtk-doc/html/gobject/gobject-Signals.html#G-SIGNAL-RUN-FIRST:CAPS">Run First</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="gnui-tagged-entry.see-also"></a><h2>See Also</h2>
+<p><span class="type">GtkEntry</span>, <a class="link" href="gnui-flow-layout.html#GnuiFlowLayout"><span class="type">GnuiFlowLayout</span></a></p>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.33.1</div>
+</body>
+</html>
