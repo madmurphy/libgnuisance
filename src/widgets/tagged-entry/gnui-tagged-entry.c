@@ -134,6 +134,7 @@ enum {
 
 	/*  Signals  */
 	SIGNAL_ACTIVATE,
+	SIGNAL_INVALID_CHANGED,
 	SIGNAL_MODIFIED_CHANGED,
 	SIGNAL_TAG_ADDED,
 	SIGNAL_TAG_REMOVED,
@@ -258,7 +259,7 @@ static inline gchar ** gnui_tagged_entry_retrieve_tags (
 
 /**
 
-    gnui_tagged_entry_allocate_sanitized_tag:
+    gnui_tagged_entry_sanitize_and_allocate_tag:
     @self:      (not nullable): The tagged entry
     @tagsrc:    (nullable): The source string of the tag to allocate
 
@@ -267,7 +268,7 @@ static inline gchar ** gnui_tagged_entry_retrieve_tags (
     Returns:    A newly allocated tag or `NULL` if @tagsrc is invalid
 
 **/
-static inline gchar * gnui_tagged_entry_allocate_sanitized_tag (
+static inline gchar * gnui_tagged_entry_sanitize_and_allocate_tag (
 	GnuiTaggedEntry * const self,
 	const gchar * const tagsrc
 ) {
@@ -513,7 +514,6 @@ static void gnui_tagged_entry_add_sanitized_tag (
 ) {
 
 	GtkWidget
-		* _widget_placeholder_,
 		* const tagbox = g_object_new(
 			GTK_TYPE_BOX,
 			"orientation", GTK_ORIENTATION_HORIZONTAL,
@@ -522,7 +522,8 @@ static void gnui_tagged_entry_add_sanitized_tag (
 			"vexpand", false,
 			"halign", GTK_ALIGN_CENTER,
 			NULL
-		);
+		),
+		* _widget_placeholder_;
 
 	TagReference * tagref = g_new(TagReference, 1);
 
@@ -608,7 +609,7 @@ static inline bool gnui_tagged_entry_sanitize_and_add_tag (
 	const gboolean pinned
 ) {
 	gchar * const sanitized_tag =
-		gnui_tagged_entry_allocate_sanitized_tag(self, unsanitized_tag);
+		gnui_tagged_entry_sanitize_and_allocate_tag(self, unsanitized_tag);
 	if (!sanitized_tag) return false;
 	gnui_tagged_entry_add_sanitized_tag(self, priv, sanitized_tag, pinned);
 	return true;
@@ -630,7 +631,7 @@ static inline bool gnui_tagged_entry_sanitize_and_add_tag (
     Tokenize and parse a delimited string containing tags, stopping before the
     last tag
 
-    This function does not perform any check. Before invoking it it is
+    This function does not perform all checks. Before invoking it it is
     important to make sure that `self->delimiters` is not set to `NULL`, or a
     crash will happen.
 
@@ -693,7 +694,6 @@ static bool gnui_tagged_entry_tokenize_parse_expression_but_last (
 	}
 
 	*save_insert_len = last_pos;
-
 	return true;
 
 }
@@ -710,7 +710,7 @@ static bool gnui_tagged_entry_tokenize_parse_expression_but_last (
 
     Tokenize and parse a delimited expression containing tags
 
-    This function does not perform any check. Before invoking it it is
+    This function does not perform all checks. Before invoking it it is
     important to make sure that `self->delimiters` is not set to `NULL`, or a
     crash will happen.
 
@@ -778,7 +778,7 @@ static inline gsize gnui_tagged_entry_tokenize_parse_expression (
 
     Parse an expression containing tags to add
 
-    This function does not perform any check. Before invoking it it is
+    This function does not perform all checks. Before invoking it it is
     important to make sure that `self->delimiters` is not set to `NULL`, or a
     crash will happen.
 
@@ -924,6 +924,13 @@ static void gnui_tagged_entry__on_textbox_change (
 				gtk_widget_add_css_class(v_self, "invalid");
 				g_object_notify_by_pspec(v_self, props[PROPERTY_INVALID]);
 
+				g_signal_emit(
+					v_self,
+					signals[SIGNAL_INVALID_CHANGED],
+					0,
+					true
+				);
+
 			}
 
 			break;
@@ -936,6 +943,13 @@ static void gnui_tagged_entry__on_textbox_change (
 				GNUI_TAGGED_ENTRY(v_self)->invalid = false;
 				gtk_widget_remove_css_class(v_self, "invalid");
 				g_object_notify_by_pspec(v_self, props[PROPERTY_INVALID]);
+
+				g_signal_emit(
+					v_self,
+					signals[SIGNAL_INVALID_CHANGED],
+					0,
+					false
+				);
 
 			}
 
@@ -1009,11 +1023,12 @@ static void gnui_tagged_entry__on_textbox_activate (
 
 	}
 
-	if (end_pos != current_length) {
+	if (end_pos != current_length && !GNUI_TAGGED_ENTRY(v_self)->invalid) {
 
 		GNUI_TAGGED_ENTRY(v_self)->invalid = true;
 		gtk_widget_add_css_class(v_self, "invalid");
 		g_object_notify_by_pspec(v_self, props[PROPERTY_INVALID]);
+		g_signal_emit(v_self, signals[SIGNAL_INVALID_CHANGED], 0, true);
 
 	}
 
@@ -1067,7 +1082,7 @@ static void gnui_tagged_entry__on_textbox_backspace (
 		if (((TagReference *) llnk->data)->id > last_id) {
 
 			delllnk = llnk;
-			last_id = ((TagReference *) delllnk->data)->id;
+			last_id = ((TagReference *) llnk->data)->id;
 
 		}
 
@@ -1165,14 +1180,10 @@ static void gnui_tagged_entry_get_property (
 
 		case PROPERTY_DELIMITER_CHARS:
 
-			/*  Transfer none  */
-
 			g_value_set_string(value, self->delimiter_chars);
 			break;
 
 		case PROPERTY_FILTER_DATA:
-
-			/*  Transfer none  */
 
 			g_value_set_pointer(value, self->filter_data);
 			break;
@@ -1188,8 +1199,6 @@ static void gnui_tagged_entry_get_property (
 			break;
 
 		case PROPERTY_MATCH_DATA:
-
-			/*  Transfer none  */
 
 			g_value_set_pointer(value, self->match_data);
 			break;
@@ -1215,8 +1224,6 @@ static void gnui_tagged_entry_get_property (
 
 		case PROPERTY_SANITIZE_DATA:
 
-			/*  Transfer none  */
-
 			g_value_set_pointer(value, self->sanitize_data);
 			break;
 
@@ -1230,8 +1237,6 @@ static void gnui_tagged_entry_get_property (
 			break;
 
 		case PROPERTY_SORT_DATA:
-
-			/*  Transfer none  */
 
 			g_value_set_pointer(value, self->sort_data);
 			break;
@@ -1309,8 +1314,6 @@ static void gnui_tagged_entry_set_property (
 
 		case PROPERTY_DELIMITER_CHARS:
 
-			/*  Transfer none  */
-
 			val.s = g_value_get_string(value);
 
 			if (!g_strcmp0(self->delimiter_chars, val.s)) {
@@ -1324,8 +1327,6 @@ static void gnui_tagged_entry_set_property (
 			break;
 
 		case PROPERTY_FILTER_DATA:
-
-			/*  Transfer full  */
 
 			if ((val.p = g_value_get_pointer(value)) == self->filter_data) {
 
@@ -1365,11 +1366,13 @@ static void gnui_tagged_entry_set_property (
 				"invalid"
 			);
 
-			break;
+			g_object_notify_by_pspec(G_OBJECT(self), props[prop_id]);
+			g_signal_emit(self, signals[SIGNAL_INVALID_CHANGED], 0, val.b);
+
+			/*  Keep `return` here!  */
+			return;
 
 		case PROPERTY_MATCH_DATA:
-
-			/*  Transfer full  */
 
 			if ((val.p = g_value_get_pointer(value)) == self->match_data) {
 
@@ -1428,8 +1431,6 @@ static void gnui_tagged_entry_set_property (
 
 		case PROPERTY_SANITIZE_DATA:
 
-			/*  Transfer full  */
-
 			if ((val.p = g_value_get_pointer(value)) == self->sanitize_data) {
 
 				return;
@@ -1455,8 +1456,6 @@ static void gnui_tagged_entry_set_property (
 			break;
 
 		case PROPERTY_SORT_DATA:
-
-			/*  Transfer full  */
 
 			if ((val.p = g_value_get_pointer(value)) == self->sort_data) {
 
@@ -1578,8 +1577,9 @@ static void gnui_tagged_entry_class_init (
 	props[PROPERTY_FILTER_DATA] = g_param_spec_pointer(
 		"filter-data",
 		"gpointer",
-		"Closure data for \"filter-function\" \342\200\223 use the "
-			"\"destroy\" signal if later you want to free it",
+		"Closure data for \342\200\234filter-function\342\200\235 "
+			"\342\200\223 use the \342\200\234destroy\342\200\235 signal if "
+			"later you want to free it",
 		G_PARAM_READWRITE | G_PARAM_EXPLICIT_NOTIFY | G_PARAM_STATIC_STRINGS
 	);
 
@@ -1598,8 +1598,7 @@ static void gnui_tagged_entry_class_init (
 	props[PROPERTY_INVALID] = g_param_spec_boolean(
 		"invalid",
 		"gboolean",
-		"Whether the tagged entry is currently in "
-			"\342\200\234invalid\342\200\235 state",
+		"Whether the tagged entry is in \342\200\234invalid\342\200\235 state",
 		false,
 		G_PARAM_READWRITE | G_PARAM_EXPLICIT_NOTIFY | G_PARAM_STATIC_STRINGS
 	);
@@ -1612,8 +1611,9 @@ static void gnui_tagged_entry_class_init (
 	props[PROPERTY_MATCH_DATA] = g_param_spec_pointer(
 		"match-data",
 		"gpointer",
-		"Closure data for \"match-function\" \342\200\223 use the \"destroy\" "
-			"signal if later you want to free it",
+		"Closure data for \342\200\234match-function\342\200\235 \342\200\223 "
+			"use the \342\200\234destroy\342\200\235 signal if later you want "
+			"to free it",
 		G_PARAM_READWRITE | G_PARAM_EXPLICIT_NOTIFY | G_PARAM_STATIC_STRINGS
 	);
 
@@ -1658,8 +1658,9 @@ static void gnui_tagged_entry_class_init (
 	props[PROPERTY_SANITIZE_DATA] = g_param_spec_pointer(
 		"sanitize-data",
 		"gpointer",
-		"Closure data for \"sanitize-function\" \342\200\223 use the "
-			"\"destroy\" signal if later you want to free it",
+		"Closure data for \342\200\234sanitize-function\342\200\235 "
+			"\342\200\223 use the \342\200\234destroy\342\200\235 signal if "
+			"later you want to free it",
 		G_PARAM_READWRITE | G_PARAM_EXPLICIT_NOTIFY | G_PARAM_STATIC_STRINGS
 	);
 
@@ -1683,8 +1684,9 @@ static void gnui_tagged_entry_class_init (
 	props[PROPERTY_SORT_DATA] = g_param_spec_pointer(
 		"sort-data",
 		"gpointer",
-		"Closure data for \"sort-function\" \342\200\223 use the \"destroy\" "
-			"signal if later you want to free it",
+		"Closure data for \342\200\234sort-function\342\200\235 \342\200\223 "
+			"use the \342\200\234destroy\342\200\235 signal if later you want "
+			"to free it",
 		G_PARAM_READWRITE | G_PARAM_EXPLICIT_NOTIFY | G_PARAM_STATIC_STRINGS
 	);
 
@@ -1752,6 +1754,35 @@ static void gnui_tagged_entry_class_init (
 		NULL,
 		G_TYPE_NONE,
 		0
+	);
+
+	/**
+
+	    GnuiTaggedEntry::invalid-changed:
+	    @self:      (auto) (non-nullable): The tagged entry that
+	                emitted the signal
+	    @invalid:   (auto): The new value of the #GnuiTaggedEntry:invalid
+	                property
+
+	    Signal emitted when the #GnuiTaggedEntry:invalid property changes
+
+	    #GnuiTaggedEntrySignalHandlerInvalidChanged is the function type of
+	    reference for this signal, which takes parameters' constness into
+	    account.
+
+	**/
+	signals[SIGNAL_INVALID_CHANGED] = g_signal_new(
+		I_("invalid-changed"),
+		G_TYPE_FROM_CLASS(klass),
+		G_SIGNAL_RUN_FIRST,
+		0,
+		NULL,
+		NULL,
+		g_cclosure_marshal_VOID__BOOLEAN,
+		G_TYPE_NONE,
+		1,
+		/*  Maps `gboolean invalid`  */
+		G_TYPE_BOOLEAN
 	);
 
 	/**
@@ -2129,7 +2160,7 @@ G_GNUC_NULL_TERMINATED gboolean gnui_tagged_entry_populate (
 	if ((tag = va_arg(args, const gchar *))) {
 
 		llnk = old_tags;
-		sanitized_tag = gnui_tagged_entry_allocate_sanitized_tag(self, tag);
+		sanitized_tag = gnui_tagged_entry_sanitize_and_allocate_tag(self, tag);
 
 		if (!sanitized_tag) {
 
@@ -2237,7 +2268,7 @@ gboolean gnui_tagged_entry_populate_strv (
 
 		llnk = old_tags;
 
-		sanitized_tag = gnui_tagged_entry_allocate_sanitized_tag(
+		sanitized_tag = gnui_tagged_entry_sanitize_and_allocate_tag(
 			self,
 			*tagptr
 		);
@@ -2950,6 +2981,7 @@ void gnui_tagged_entry_set_invalid (
 		);
 
 		g_object_notify_by_pspec(G_OBJECT(self), props[PROPERTY_INVALID]);
+		g_signal_emit(self, signals[SIGNAL_INVALID_CHANGED], 0, invalid);
 
 	}
 

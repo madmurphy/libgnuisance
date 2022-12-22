@@ -196,6 +196,7 @@ typedef struct _GnuiFlowLayoutPrivate {
 	GtkTextDirection
 		page_direction,
 		line_direction;
+	guint allocated_fix_size;
 } GnuiFlowLayoutPrivate;
 
 
@@ -520,7 +521,7 @@ static void gnui_flow_layout_update_orientation (
 	}
 
 	priv->orientation = orientation;
-	gtk_orientable_set_orientation(GTK_ORIENTABLE(manager), orientation);
+	priv->allocated_fix_size = 0;
 
 	if (orientation == GTK_ORIENTATION_VERTICAL) {
 
@@ -579,13 +580,23 @@ static void gnui_flow_layout_measure (
 	gint * const natural_baseline
 ) {
 
-	GnuiFlowLayoutPrivate * const priv =
+	const GnuiFlowLayoutPrivate * const priv =
 		gnui_flow_layout_get_instance_private(GNUI_FLOW_LAYOUT(manager));
 
 	GtkWidget * child;
 	gint ret_min = 0, ret_nat = 0;
 
-	if (for_size == -1 || dimension == priv->orientation) {
+	const guint space =
+		dimension == priv->orientation ?
+			0
+		: priv->allocated_fix_size > 0 ?
+			priv->allocated_fix_size
+		: for_size > -1 ?
+			*((guint *) &for_size)
+		:
+			0;
+
+	if (space == 0) {
 
 		#define tmpint ret_min
 
@@ -618,12 +629,13 @@ static void gnui_flow_layout_measure (
 
 	GnuiOrientableAllocation
 		nexta, preva = { 0 };
-	GnuiOrientableRequisition occupied;
-	guint row_size = 0;
-	guint space = for_size > -1 ? *((guint *) &for_size) : 0;
 
-	occupied.fix_size = space;
-	occupied.var_size = 0;
+	GnuiOrientableRequisition occupied = {
+		.fix_size = space,
+		.var_size = 0
+	};
+
+	guint row_size = 0;
 
 	for (
 		child = gtk_widget_get_first_child(widget);
@@ -1119,6 +1131,7 @@ static void gnui_flow_layout_allocate (
 
 			gnui_flow_chinfo_update_style_classes(chinfo, new_flags);
 
+			/*  TODO: Add support for baseline alignment  */
 			gtk_widget_size_allocate(
 				child,
 				&child_allocation,
@@ -1149,6 +1162,13 @@ static void gnui_flow_layout_allocate (
 	#undef l_exp_quota
 	#undef l_n_exp
 	#undef next_offset
+
+	if (priv->allocated_fix_size != occupied.fix_size) {
+
+		priv->allocated_fix_size = occupied.fix_size;
+		gtk_layout_manager_layout_changed(manager);
+
+	}
 
 }
 
@@ -1202,10 +1222,8 @@ static void gnui_flow_layout_get_property (
 	GParamSpec * const pspec
 ) {
 
-	GnuiFlowLayout * const self = GNUI_FLOW_LAYOUT(object);
-
-	GnuiFlowLayoutPrivate * const priv =
-		gnui_flow_layout_get_instance_private(self);
+	const GnuiFlowLayoutPrivate * const priv =
+		gnui_flow_layout_get_instance_private(GNUI_FLOW_LAYOUT(object));
 
 	switch (prop_id) {
 
@@ -1277,11 +1295,6 @@ static void gnui_flow_layout_set_property (
 	GnuiFlowLayoutPrivate * const priv =
 		gnui_flow_layout_get_instance_private(GNUI_FLOW_LAYOUT(object));
 
-	GtkWidget * const widget =
-		gtk_layout_manager_get_widget(GTK_LAYOUT_MANAGER(object));
-
-	GnuiFlowLayoutProperty notify_id = FLOW_LAYOUT_RESERVED_PROPERTY;
-
 	union {
 		gint d;
 		guint u;
@@ -1298,7 +1311,6 @@ static void gnui_flow_layout_set_property (
 			}
 
 			priv->leading = val.d;
-			notify_id = FLOW_LAYOUT_PROPERTY_LEADING;
 			break;
 
 		case FLOW_LAYOUT_PROPERTY_PAGE_DIRECTION:
@@ -1310,7 +1322,6 @@ static void gnui_flow_layout_set_property (
 			}
 
 			priv->page_direction = val.u;
-			notify_id = FLOW_LAYOUT_PROPERTY_PAGE_DIRECTION;
 			break;
 
 		case FLOW_LAYOUT_PROPERTY_PAGE_JUSTIFY:
@@ -1322,14 +1333,13 @@ static void gnui_flow_layout_set_property (
 			}
 
 			priv->page_justify = val.u;
-			notify_id = FLOW_LAYOUT_PROPERTY_PAGE_JUSTIFY;
 			break;
 
 		case FLOW_LAYOUT_PROPERTY_ORIENTATION:
 
 			gnui_flow_layout_update_orientation(
 				GNUI_FLOW_LAYOUT(object),
-				widget,
+				gtk_layout_manager_get_widget(GTK_LAYOUT_MANAGER(object)),
 				g_value_get_enum(value)
 			);
 
@@ -1345,7 +1355,6 @@ static void gnui_flow_layout_set_property (
 			}
 
 			priv->line_direction = val.u;
-			notify_id = FLOW_LAYOUT_PROPERTY_LINE_DIRECTION;
 			break;
 
 		case FLOW_LAYOUT_PROPERTY_LINE_JUSTIFY:
@@ -1357,7 +1366,6 @@ static void gnui_flow_layout_set_property (
 			}
 
 			priv->line_justify = val.u;
-			notify_id = FLOW_LAYOUT_PROPERTY_LINE_JUSTIFY;
 			break;
 
 		case FLOW_LAYOUT_PROPERTY_SPACING:
@@ -1369,7 +1377,6 @@ static void gnui_flow_layout_set_property (
 			}
 
 			priv->spacing = val.d;
-			notify_id = FLOW_LAYOUT_PROPERTY_SPACING;
 			break;
 
 		default:
@@ -1382,7 +1389,7 @@ static void gnui_flow_layout_set_property (
 	}
 
 	gtk_layout_manager_layout_changed(GTK_LAYOUT_MANAGER(object));
-	g_object_notify_by_pspec(object, flow_layout_props[notify_id]);
+	g_object_notify_by_pspec(object, flow_layout_props[prop_id]);
 
 }
 
@@ -1422,7 +1429,7 @@ static void gnui_flow_layout_class_init (
 		"page-direction",
 		"GtkTextDirection",
 		"The direction of child placement perpendicularly to the "
-			"\"orientation\" axis",
+			"\342\200\234orientation\342\200\235 axis",
 		GTK_TYPE_TEXT_DIRECTION,
 		GTK_TEXT_DIR_LTR,
 		G_PARAM_READWRITE | G_PARAM_EXPLICIT_NOTIFY | G_PARAM_STATIC_STRINGS
@@ -1433,8 +1440,9 @@ static void gnui_flow_layout_class_init (
 		"GtkJustification",
 		"The alignment of the lines of children widgets relative to each "
 			"other; this does not affect the alignment of the flow widget "
-			"within its allocation \342\200\223 see \"halign\" and \"valign\" "
-			"for that",
+			"within its allocation \342\200\223 see "
+			"\342\200\234halign\342\200\235 and "
+			"\342\200\234valign\342\200\235 for that",
 		GTK_TYPE_JUSTIFICATION,
 		GTK_JUSTIFY_LEFT,
 		G_PARAM_READWRITE | G_PARAM_EXPLICIT_NOTIFY | G_PARAM_STATIC_STRINGS
@@ -1443,8 +1451,8 @@ static void gnui_flow_layout_class_init (
 	flow_layout_props[FLOW_LAYOUT_PROPERTY_LINE_DIRECTION] = g_param_spec_enum(
 		"line-direction",
 		"GtkTextDirection",
-		"The direction of child placement within the given \"orientation\" "
-			"axis",
+		"The direction of child placement within the given "
+			"\342\200\234orientation\342\200\235 axis",
 		GTK_TYPE_TEXT_DIRECTION,
 		GTK_TEXT_DIR_LTR,
 		G_PARAM_READWRITE | G_PARAM_EXPLICIT_NOTIFY | G_PARAM_STATIC_STRINGS
@@ -1455,8 +1463,9 @@ static void gnui_flow_layout_class_init (
 		"GtkJustification",
 		"The alignment of the children relative to each other within each "
 			"line; this does not affect the alignment of the flow widget "
-			"within its allocation \342\200\223 see \"halign\" and \"valign\" "
-			"for that",
+			"within its allocation \342\200\223 see "
+			"\342\200\234halign\342\200\235 and "
+			"\342\200\234valign\342\200\235 for that",
 		GTK_TYPE_JUSTIFICATION,
 		GTK_JUSTIFY_LEFT,
 		G_PARAM_READWRITE | G_PARAM_EXPLICIT_NOTIFY | G_PARAM_STATIC_STRINGS
@@ -1466,7 +1475,7 @@ static void gnui_flow_layout_class_init (
 		"leading",
 		"gint",
 		"Space between rows of children perpendicularly to the "
-			"\"orientation\" axis",
+			"\342\200\234orientation\342\200\235 axis",
 		G_MININT,
 		G_MAXINT,
 		0,
@@ -1476,7 +1485,8 @@ static void gnui_flow_layout_class_init (
 	flow_layout_props[FLOW_LAYOUT_PROPERTY_SPACING] = g_param_spec_int(
 		"spacing",
 		"gint",
-		"Space between children along the \"orientation\" axis",
+		"Space between children along the \342\200\234orientation\342\200\235 "
+			"axis",
 		G_MININT,
 		G_MAXINT,
 		0,
@@ -1909,7 +1919,7 @@ static void gnui_flow_class_init (
 		"page-direction",
 		"GtkTextDirection",
 		"The direction of child placement perpendicularly to the "
-			"\"orientation\" axis",
+			"\342\200\234orientation\342\200\235 axis",
 		GTK_TYPE_TEXT_DIRECTION,
 		GTK_TEXT_DIR_LTR,
 		G_PARAM_READWRITE | G_PARAM_EXPLICIT_NOTIFY | G_PARAM_STATIC_STRINGS
@@ -1920,8 +1930,9 @@ static void gnui_flow_class_init (
 		"GtkJustification",
 		"The alignment of the lines of children widgets relative to each "
 			"other; this does not affect the alignment of the flow widget "
-			"within its allocation \342\200\223 see \"halign\" and \"valign\" "
-			"for that",
+			"within its allocation \342\200\223 see "
+			"\342\200\234halign\342\200\235 and "
+			"\342\200\234valign\342\200\235 for that",
 		GTK_TYPE_JUSTIFICATION,
 		GTK_JUSTIFY_LEFT,
 		G_PARAM_READWRITE | G_PARAM_EXPLICIT_NOTIFY | G_PARAM_STATIC_STRINGS
@@ -1930,8 +1941,8 @@ static void gnui_flow_class_init (
 	flow_props[FLOW_PROPERTY_LINE_DIRECTION] = g_param_spec_enum(
 		"line-direction",
 		"GtkTextDirection",
-		"The direction of child placement within the given \"orientation\" "
-			"axis",
+		"The direction of child placement within the given "
+			"\342\200\234orientation\342\200\235 axis",
 		GTK_TYPE_TEXT_DIRECTION,
 		GTK_TEXT_DIR_LTR,
 		G_PARAM_READWRITE | G_PARAM_EXPLICIT_NOTIFY | G_PARAM_STATIC_STRINGS
@@ -1942,8 +1953,9 @@ static void gnui_flow_class_init (
 		"GtkJustification",
 		"The alignment of the children relative to each other within each "
 			"line; this does not affect the alignment of the flow widget "
-			"within its allocation \342\200\223 see \"halign\" and \"valign\" "
-			"for that",
+			"within its allocation \342\200\223 see "
+			"\342\200\234halign\342\200\235 and "
+			"\342\200\234valign\342\200\235 for that",
 		GTK_TYPE_JUSTIFICATION,
 		GTK_JUSTIFY_LEFT,
 		G_PARAM_READWRITE | G_PARAM_EXPLICIT_NOTIFY | G_PARAM_STATIC_STRINGS
@@ -1953,7 +1965,7 @@ static void gnui_flow_class_init (
 		"leading",
 		"gint",
 		"Space between rows of children perpendicularly to the "
-			"\"orientation\" axis",
+			"\342\200\234orientation\342\200\235 axis",
 		G_MININT,
 		G_MAXINT,
 		0,
@@ -1963,7 +1975,8 @@ static void gnui_flow_class_init (
 	flow_props[FLOW_PROPERTY_SPACING] = g_param_spec_int(
 		"spacing",
 		"gint",
-		"Space between children along the \"orientation\" axis",
+		"Space between children along the \342\200\234orientation\342\200\235 "
+			"axis",
 		G_MININT,
 		G_MAXINT,
 		0,

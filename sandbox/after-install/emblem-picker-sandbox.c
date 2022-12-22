@@ -224,7 +224,7 @@ static void signal_test__emblem_selected (
 	gpointer user_data G_GNUC_UNUSED
 ) {
 
-	printf("Signal \"emblem-selected\" -- emblem \"%s\"\n", emblem_name);
+	printf("Signal \"emblem-selected\" - emblem \"%s\"\n", emblem_name);
 	printf("Saved state: %u\n", saved_state);
 	printf("Current state: %u\n", current_state);
 
@@ -252,7 +252,7 @@ static void signal_test__modified_changed (
 ) {
 
 	printf(
-		"Signal \"modified-changed\" -- modified: %s\n",
+		"Signal \"modified-changed\" - modified: %s\n",
 		modified ?
 			"true"
 		:

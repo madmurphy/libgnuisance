@@ -2,8 +2,15 @@ NEWS
 ====
 
 
+0.2.0
+-----
+
+Changes:
+
+* A new `"invalid-changed"` signal has been added to `GnuiTaggedEntry`
+
+
 0.1.0
 -----
 
 **libgnuisance** is out!
-

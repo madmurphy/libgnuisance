@@ -1064,7 +1064,24 @@ typedef void (* GnuiTaggedEntrySignalHandlerActivate) (
 
 /**
 
+    GnuiTaggedEntrySignalHandlerInvalidChanged:
+    @self:      (auto) (not nullable): The tagged entry
+    @invalid:   (auto): The current state of the #GnuiTaggedEntry:invalid
+                property
+    @user_data: (auto) (nullable) (closure): The custom data passed to the
+                signal
 
+    A handler function type for the #GnuiTaggedEntry::invalid-changed signal
+
+**/
+typedef void (* GnuiTaggedEntrySignalHandlerInvalidChanged) (
+    GnuiTaggedEntry * self,
+    gboolean invalid,
+    gpointer user_data
+);
+
+
+/**
 
     GnuiTaggedEntrySignalHandlerModifiedChanged:
     @self:      (auto) (not nullable): The tagged entry

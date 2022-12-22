@@ -147,6 +147,7 @@
     <keyword type="function" name="GnuiTaggedEntrySignalHandlerTagAdded ()" link="gnui-tagged-entry.html#GnuiTaggedEntrySignalHandlerTagAdded"/>
     <keyword type="function" name="GnuiTaggedEntrySignalHandlerTagRemoved ()" link="gnui-tagged-entry.html#GnuiTaggedEntrySignalHandlerTagRemoved"/>
     <keyword type="function" name="GnuiTaggedEntrySignalHandlerActivate ()" link="gnui-tagged-entry.html#GnuiTaggedEntrySignalHandlerActivate"/>
+    <keyword type="function" name="GnuiTaggedEntrySignalHandlerInvalidChanged ()" link="gnui-tagged-entry.html#GnuiTaggedEntrySignalHandlerInvalidChanged"/>
     <keyword type="function" name="GnuiTaggedEntrySignalHandlerModifiedChanged ()" link="gnui-tagged-entry.html#GnuiTaggedEntrySignalHandlerModifiedChanged"/>
     <keyword type="macro" name="GNUI_TYPE_TAGGED_ENTRY" link="gnui-tagged-entry.html#GNUI-TYPE-TAGGED-ENTRY:CAPS"/>
     <keyword type="struct" name="GnuiTaggedEntry" link="gnui-tagged-entry.html#GnuiTaggedEntry-struct"/>
@@ -164,6 +165,7 @@
     <keyword type="property" name="The “sort-function” property" link="gnui-tagged-entry.html#GnuiTaggedEntry--sort-function"/>
     <keyword type="property" name="The “tags” property" link="gnui-tagged-entry.html#GnuiTaggedEntry--tags"/>
     <keyword type="signal" name="The “activate” signal" link="gnui-tagged-entry.html#GnuiTaggedEntry-activate"/>
+    <keyword type="signal" name="The “invalid-changed” signal" link="gnui-tagged-entry.html#GnuiTaggedEntry-invalid-changed"/>
     <keyword type="signal" name="The “modified-changed” signal" link="gnui-tagged-entry.html#GnuiTaggedEntry-modified-changed"/>
     <keyword type="signal" name="The “tag-added” signal" link="gnui-tagged-entry.html#GnuiTaggedEntry-tag-added"/>
     <keyword type="signal" name="The “tag-removed” signal" link="gnui-tagged-entry.html#GnuiTaggedEntry-tag-removed"/>

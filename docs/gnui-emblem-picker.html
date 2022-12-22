@@ -411,8 +411,8 @@ GnuiEmblemPicker implements
 <tr>
 <td class="parameter_name"><p>inconsistent_group</p></td>
 <td class="parameter_description"><p>The inconsistent
-group of files that can have the emblem assigned
-independently of the other files. </p></td>
+group of <code class="literal">GFile</code> handles that can have the emblem
+assigned independently of the other files. </p></td>
 <td class="parameter_annotations"><span class="annotation">[auto][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>
@@ -434,7 +434,7 @@ provided by the user. </p></td>
 <a name="GnuiEmblemPickerForeachSavedFileFunc"></a><h3>GnuiEmblemPickerForeachSavedFileFunc ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 <span class="c_punctuation">(</span>*GnuiEmblemPickerForeachSavedFileFunc<span class="c_punctuation">)</span>
-                               (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GFile.html#GFile-struct"><span class="type">GFile</span></a> *self</code></em>,
+                               (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gio/GFile.html#GFile-struct"><span class="type">GFile</span></a> *location</code></em>,
                                 <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const *added_emblems</code></em>,
                                 <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const *removed_emblems</code></em>,
                                 <em class="parameter"><code><a class="link" href="gnui-emblem-picker.html#GnuiEmblemPickerSaveResult" title="enum GnuiEmblemPickerSaveResult"><span class="type">GnuiEmblemPickerSaveResult</span></a> result</code></em>,
@@ -451,8 +451,9 @@ provided by the user. </p></td>
 </colgroup>
 <tbody>
 <tr>
-<td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>The emblem picker. </p></td>
+<td class="parameter_name"><p>location</p></td>
+<td class="parameter_description"><p>The file for which the function
+is being called. </p></td>
 <td class="parameter_annotations"><span class="annotation">[auto][<acronym title="NULL must not be passed as the value in, out, in-out; or as a return value."><span class="acronym">not nullable</span></acronym>]</span></td>
 </tr>
 <tr>
@@ -731,7 +732,7 @@ gnui_emblem_picker_peek_mapped_files (<em class="parameter"><code><a class="link
 </div>
 <div class="refsect3">
 <a name="gnui-emblem-picker-peek-mapped-files.returns"></a><h4>Returns</h4>
-<p>A <code class="literal">GList</code> containing <code class="literal">GFile</code> pointers (do not
+<p>A <code class="literal">GList</code> containing <code class="literal">GFile</code> handles (do not
 free or modify it). </p>
 <p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
@@ -793,7 +794,7 @@ gnui_emblem_picker_set_mapped_files (<em class="parameter"><code><a class="link"
 <tr>
 <td class="parameter_name"><p>file_selection</p></td>
 <td class="parameter_description"><p>A <code class="literal">GList</code> containing
-pointers to <code class="literal">GFile</code> handles to map for their emblems. </p></td>
+<code class="literal">GFile</code> handles to map for their emblems. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -1224,9 +1225,9 @@ emblem name. </p></td>
 <tr>
 <td class="parameter_name"><p>inconsistent_group</p></td>
 <td class="parameter_description"><p>The
-inconsistent group of files that can have
-the emblem assigned independently from the
-other files or <code class="literal">NULL</code>. </p></td>
+inconsistent group of <code class="literal">GFile</code> handles that
+can have the emblem assigned independently
+from the other files, or <code class="literal">NULL</code>. </p></td>
 <td class="parameter_annotations"><span class="annotation">[auto][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
 </tr>
 <tr>

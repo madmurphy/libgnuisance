@@ -7,16 +7,15 @@ dnl  **************************************************************************
 dnl     A U T O C O N F   P R E A M B L E
 dnl  **************************************************************************
 
-
 AC_PREREQ([2.69])
 
 AC_INIT([GNUIsance Library],
-	[0.1.0],
+	[0.2.0],
 	[madmurphy333@gmail.com],
 	[libgnuisance],
 	[https://gitlab.gnome.org/madmurphy/libgnuisance])
 
-###  Temporarily unset `CFLAGS` and let `AC_PROG_CC` guess freely
+#  Temporarily unset `CFLAGS` and let `AC_PROG_CC` guess freely
 NS_MOVEVAR([na_tmpusrcflags], [CFLAGS])
 
 AC_CONFIG_MACRO_DIR([m4])
@@ -33,17 +32,19 @@ AM_SILENT_RULES([yes])
 
 AC_PROG_CC
 
-###  Save the guessed `CFLAGS` for `AM_CFLAGS`
+#  Save the guessed `CFLAGS` for `AM_CFLAGS`
 NC_SUBST_NOTMAKE([GNUISANCE_BUILD_GUESSED_AM_CFLAGS], ["${CFLAGS}"])
 
-###  Restore `CFLAGS` according to the user's will
+#  Restore `CFLAGS` according to the user's will
 NS_MOVEVAR([CFLAGS], [na_tmpusrcflags])
 
-###  Keep the `pkgconfigdir` environment variable when non-empty
+PKG_PROG_PKG_CONFIG([0.29.2])
+
+#  Keep the `pkgconfigdir` environment variable when non-empty
 AS_IF([test "x${pkgconfigdir}" = x],
 	[AS_VAR_SET([pkgconfigdir], ['${libdir}/pkgconfig'])])
 
-###  Add `--with-pkgconfigdir=DIR` option
+#  Add `--with-pkgconfigdir=DIR` option
 AC_ARG_WITH([pkgconfigdir],
 	[AS_HELP_STRING([--with-pkgconfigdir=DIR],
 		[pkg-config installation directory
@@ -113,11 +114,11 @@ LT_INIT
 
 GTK_DOC_CHECK([1.18])
 
-###  Default `AM_CFLAGS` for this project
+#  Default `AM_CFLAGS` for this project
 NC_SUBST_NOTMAKE([GNUISANCE_BUILD_COMMON_AM_CFLAGS],
 	['-Wall -Wextra -Winline -g'])
 
-###  Default `AM_CPPFLAGS` for this project
+#  Default `AM_CPPFLAGS` for this project
 NC_SUBST_NOTMAKE([GNUISANCE_BUILD_COMMON_AM_CPPFLAGS],
 	m4_normalize([\''-DPACKAGE_LOCALE_DIR="$(localedir)"'\''
 	'\''-DPACKAGE_SRC_DIR="$(srcdir)"'\''
@@ -143,3 +144,5 @@ AC_CONFIG_FILES([
 
 AC_OUTPUT
 
+
+#  EOF

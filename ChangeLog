@@ -2,6 +2,19 @@ ChangeLog
 =========
 
 
+0.2.0 (2022-12-22)
+------------------
+
+Changes:
+
+* A new `"invalid-changed"` signal has been added to `GnuiTaggedEntry`
+* A `.measure()` bug has been solved in `GnuiFlowLayout`
+* Code review
+* Stylesheets (`GnuiEmblemPicker`)
+* Added Dutch translation (thanks to Heimen Stoffels)
+* Documentation
+
+
 0.1.0 (2022-12-19)
 ------------------
 

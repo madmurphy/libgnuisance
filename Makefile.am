@@ -92,7 +92,8 @@ undist:
 	@! test -d '@PACKAGE_TARNAME@-@PACKAGE_VERSION@' || (chmod -R +w \
 	'@PACKAGE_TARNAME@-@PACKAGE_VERSION@' && rm -r \
 	'@PACKAGE_TARNAME@-@PACKAGE_VERSION@'); rm -f \
-	'@PACKAGE_TARNAME@-@PACKAGE_VERSION@.tar.gz';
+	'@PACKAGE_TARNAME@-@PACKAGE_VERSION@.tar.gz' \
+	'@PACKAGE_TARNAME@-@PACKAGE_VERSION@.zip';
 
 
 # Remove `$(docdir)` and `$(pkgdatadir)` on uninstall

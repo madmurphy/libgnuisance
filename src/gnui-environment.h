@@ -69,7 +69,7 @@ G_BEGIN_DECLS
     `..._environment_...()` functions can be prevented individually from
     autoloading stylesheets and icons by passing
     `-DGNUI..._BUILD_FLAG_MANUAL_ENVIRONMENT` per-module directives
-    (`-DGNUI_EMBLEM_PICKER_BUILD_FLAG_MANUAL_ENVIRONMENT`,
+    (e.g. `-DGNUI_EMBLEM_PICKER_BUILD_FLAG_MANUAL_ENVIRONMENT`,
     `-DGNUI_TAGGED_ENTRY_BUILD_FLAG_MANUAL_ENVIRONMENT`, etc.).
 
 **/

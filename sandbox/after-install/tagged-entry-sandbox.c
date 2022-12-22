@@ -58,7 +58,7 @@ static void signal_test__tag_added (
 	const gpointer user_data G_GNUC_UNUSED
 ) {
 
-	printf("Signal \"tag-added\" -- added tag \"%s\"\n", tag);
+	printf("Signal \"tag-added\" - added tag \"%s\"\n", tag);
 
 }
 
@@ -69,7 +69,7 @@ static void signal_test__tag_removed (
 	const gpointer user_data G_GNUC_UNUSED
 ) {
 
-	printf("Signal \"tag-removed\" -- removed tag \"%s\"\n", tag);
+	printf("Signal \"tag-removed\" - removed tag \"%s\"\n", tag);
 
 }
 
@@ -84,6 +84,23 @@ static void signal_test__activate (
 }
 
 
+static void signal_test__invalid_changed (
+	GnuiTaggedEntry * self G_GNUC_UNUSED,
+	gboolean invalid,
+	gpointer user_data G_GNUC_UNUSED
+) {
+
+	printf(
+		"Signal \"invalid-changed\" - invalid: %s\n",
+		invalid ?
+			"true"
+		:
+			"false"
+	);
+
+}
+
+
 static void signal_test__modified_changed (
 	GnuiTaggedEntry * self G_GNUC_UNUSED,
 	gboolean modified,
@@ -91,7 +108,7 @@ static void signal_test__modified_changed (
 ) {
 
 	printf(
-		"Signal \"modified-changed\" -- modified: %s\n",
+		"Signal \"modified-changed\" - modified: %s\n",
 		modified ?
 			"true"
 		:
@@ -158,6 +175,13 @@ static void on_app_activate (
 		tagged_entry,
 		"tag-removed",
 		G_CALLBACK(signal_test__tag_removed),
+		NULL
+	);
+
+	g_signal_connect(
+		tagged_entry,
+		"invalid-changed",
+		G_CALLBACK(signal_test__invalid_changed),
 		NULL
 	);
 
